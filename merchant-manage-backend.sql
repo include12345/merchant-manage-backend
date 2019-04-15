@@ -118,7 +118,7 @@ create table if not exists `business`.`transaction`(
   comment='交易流水表';
 
 -- -----------------------------------------------------
--- `business`.`transaction`
+-- `business`.`order`
 -- -----------------------------------------------------
 create table if not exists `business`.`order`(
   `id` varchar(37) not null comment 'UUID',
@@ -139,3 +139,13 @@ create table if not exists `business`.`order`(
   unique index `idx_sn` ('sn' asc) comment ''
 )engine=InnoDB
   comment='交易流水表';
+--
+-- 计数器建表语句
+--
+
+CREATE TABLE `table_name_sn_prefix` (
+    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+    `stub` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+      PRIMARY KEY (`id`),
+       UNIQUE KEY `stub` (`stub`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

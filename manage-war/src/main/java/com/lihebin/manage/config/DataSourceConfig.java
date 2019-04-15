@@ -33,16 +33,16 @@ public class DataSourceConfig {
     }
 
 
-    @Bean(name= "blogDataSource")
+    @Bean(name= "manageDataSource")
     @Primary
-    @ConfigurationProperties(prefix = "spring.datasource.blog")
+    @ConfigurationProperties(prefix = "spring.datasource.manage")
     public DataSource blogDataSource() {
         return DataSourceBuilder.create().type(DruidDataSource.class).build();
     }
 
 
-    @Bean(name = "blogJdbcTemplate")
-    public JdbcTemplate blogJdbcTemplate(@Qualifier("blogDataSource") DataSource dataSource) {
+    @Bean(name = "manageJdbcTemplate")
+    public JdbcTemplate blogJdbcTemplate(@Qualifier("manageDataSource") DataSource dataSource) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         jdbcTemplate.setQueryTimeout(3);
         return jdbcTemplate;
