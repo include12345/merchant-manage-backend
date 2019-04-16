@@ -49,10 +49,14 @@ public class SimpleSnGeneratorDao {
     };
 
 
-
-
+    /**
+     * 商户号生成器
+     *
+     * @return
+     * @throws BackendRepeatException
+     */
     public String nextMerchantSn() throws BackendRepeatException {
-        return orderSnPrefix + nextSn("order_sn_ticket", orderSnPrefix, 16);
+        return orderSnPrefix + nextSn("order_sn_ticket", orderSnPrefix, 10);
     }
 
     private String nextSn(String tableName, String prefix, int length) throws BackendRepeatException {

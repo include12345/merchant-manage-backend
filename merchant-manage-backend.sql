@@ -19,6 +19,25 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant` (
   COMMENT = '商户基本信息表';
 
 -- -----------------------------------------------------
+-- Table `business`.`merchant_user`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `business`.`merchant_user` (
+  `id` VARCHAR(36) NOT NULL COMMENT '主键',
+  `username` VARCHAR(36) NOT NULL COMMENT '商户用户名',
+  `password` VARCHAR(64) NOT NULL COMMENT '商户登录密码',
+  `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
+  `type` int(1) NOT NULL DEFAULT '1' COMMENT '用户类型 1:管理员 2:收银员',
+  `ctime` BIGINT(20) NULL DEFAULT NULL COMMENT '',
+  `mtime` BIGINT(20) NULL DEFAULT NULL COMMENT '',
+  `deleted` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '',
+  `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
+  PRIMARY KEY (`id`) COMMENT '',
+  KEY `idx_merchant_id` (`merchant_id`) USING BTREE,
+  UNIQUE INDEX `username` (`username`))
+  ENGINE = InnoDB
+  COMMENT = '商户账户表';
+
+-- -----------------------------------------------------
 -- Table `business`.`consumer`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`consumer` (
@@ -80,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer_wallet` (
 CREATE TABLE IF NOT EXISTS `business`.`wallet_add_transaction` (
   `id` VARCHAR(36) NOT NULL COMMENT '主键',
   `wallet_id` VARCHAR(36) NOT NULL COMMENT '商户会员钱包id',
-  `before_balance` BIGINT(20) NULL DEFAULT '0' '变更前金额',
+  `before_balance` BIGINT(20) NULL DEFAULT '0' COMMENT '变更前金额',
   `add_amount` BIGINT(20) NULL DEFAULT '0' COMMENT '会员充值金额',
   `after_balance` BIGINT(20) NULL DEFAULT '0' COMMENT '变更后余额',
   `ctime` BIGINT(20) NULL DEFAULT NULL COMMENT '',
@@ -112,8 +131,8 @@ create table if not exists `business`.`transaction`(
   `mtime` bigint(20) null default null comment '',
   `deleted` tinyint(1) not null default '0' comment '',
   primary key (`id`) comment '',
-  unique index `idx_tsn` ('tsn' asc) comment '',
-    index `order_sn` ('order_sn' asc) comment ''
+  unique index `idx_tsn` (`tsn` asc) comment '',
+  index `order_sn` (`order_sn` asc) comment ''
 )engine=InnoDB
   comment='交易流水表';
 
@@ -136,16 +155,17 @@ create table if not exists `business`.`order`(
   `mtime` bigint(20) null default null comment '',
   `deleted` tinyint(1) not null default '0' comment '',
   primary key (`id`) comment '',
-  unique index `idx_sn` ('sn' asc) comment ''
+  unique index `idx_sn` (`sn` asc) comment ''
 )engine=InnoDB
   comment='交易流水表';
+
 --
 -- 计数器建表语句
 --
 
-CREATE TABLE `table_name_sn_prefix` (
-    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-    `stub` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-      PRIMARY KEY (`id`),
-       UNIQUE KEY `stub` (`stub`)
-  ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `business`.`table_name_sn_prefix` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `stub` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `stub` (`stub`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
