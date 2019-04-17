@@ -1,4 +1,4 @@
-package com.lihebin.manage.dao;
+package com.lihebin.manage.dao.manage;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

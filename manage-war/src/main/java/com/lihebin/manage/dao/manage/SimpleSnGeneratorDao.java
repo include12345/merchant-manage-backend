@@ -1,4 +1,4 @@
-package com.lihebin.manage.dao;
+package com.lihebin.manage.dao.manage;
 
 import com.lihebin.manage.exception.BackendRepeatException;
 import org.slf4j.Logger;

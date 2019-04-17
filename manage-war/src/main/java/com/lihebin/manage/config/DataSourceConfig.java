@@ -17,16 +17,16 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceConfig {
 
-    @Bean(name= "backendDataSource")
+    @Bean(name= "userDataSource")
     @Primary
-    @ConfigurationProperties(prefix = "spring.datasource.backend")
-    public DataSource backendDataSource() {
+    @ConfigurationProperties(prefix = "spring.datasource.user")
+    public DataSource userDataSource() {
         return DataSourceBuilder.create().type(DruidDataSource.class).build();
     }
 
 
-    @Bean(name = "backendJdbcTemplate")
-    public JdbcTemplate backendJdbcTemplate(@Qualifier("backendDataSource") DataSource dataSource) {
+    @Bean(name = "userJdbcTemplate")
+    public JdbcTemplate userJdbcTemplate(@Qualifier("userDataSource") DataSource dataSource) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         jdbcTemplate.setQueryTimeout(3);
         return jdbcTemplate;
@@ -36,13 +36,13 @@ public class DataSourceConfig {
     @Bean(name= "manageDataSource")
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource.manage")
-    public DataSource blogDataSource() {
+    public DataSource manageDataSource() {
         return DataSourceBuilder.create().type(DruidDataSource.class).build();
     }
 
 
     @Bean(name = "manageJdbcTemplate")
-    public JdbcTemplate blogJdbcTemplate(@Qualifier("manageDataSource") DataSource dataSource) {
+    public JdbcTemplate manageJdbcTemplate(@Qualifier("manageDataSource") DataSource dataSource) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         jdbcTemplate.setQueryTimeout(3);
         return jdbcTemplate;
