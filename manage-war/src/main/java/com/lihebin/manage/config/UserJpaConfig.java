@@ -32,25 +32,22 @@ public class UserJpaConfig {
     @Autowired
     private JpaProperties jpaUserProperties;
 
-    @Primary
     @Bean
     public EntityManager entityManager(EntityManagerFactoryBuilder builder) {
-        return entityManagerFactoryPrimary(builder).getObject().createEntityManager();
+        return entityManagerFactoryUser(builder).getObject().createEntityManager();
     }
 
-    @Primary
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryPrimary (EntityManagerFactoryBuilder builder) {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactoryUser(EntityManagerFactoryBuilder builder) {
         return builder
-                .dataSource(userDataSource).packages("com.lihebin.manage.dao.user")//设置实体类所在位置
+                .dataSource(userDataSource).packages("com.lihebin.manage.bean")//设置实体类所在位置
                 .properties(jpaUserProperties.getProperties())
                 .persistenceUnit("userPersistenceUnit")//持久化单元创建一个默认即可，多个便要分别命名
                 .build();
     }
 
-    @Primary
     @Bean
-    public PlatformTransactionManager transactionManagerPrimary(EntityManagerFactoryBuilder builder) {
-        return new JpaTransactionManager(entityManagerFactoryPrimary(builder).getObject());
+    public PlatformTransactionManager transactionManagerUser(EntityManagerFactoryBuilder builder) {
+        return new JpaTransactionManager(entityManagerFactoryUser(builder).getObject());
     }
 }

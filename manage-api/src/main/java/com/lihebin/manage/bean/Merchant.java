@@ -1,13 +1,21 @@
 package com.lihebin.manage.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 商户
  * Created by lihebin on 2019/4/15.
  */
+@Entity
+@Table(name = "merchant")
 public class Merchant extends Base{
 
+    @Column
     private String sn;
 
+    @Column
     private String cellphone;
 
     public String getSn() {

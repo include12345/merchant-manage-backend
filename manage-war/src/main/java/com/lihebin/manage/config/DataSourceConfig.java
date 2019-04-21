@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
     @Bean(name= "userDataSource")
-    @Primary
+    @Qualifier("userDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.user")
     public DataSource userDataSource() {
         return DataSourceBuilder.create().type(DruidDataSource.class).build();
@@ -35,6 +35,7 @@ public class DataSourceConfig {
 
     @Bean(name= "manageDataSource")
     @Primary
+    @Qualifier("manageDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.manage")
     public DataSource manageDataSource() {
         return DataSourceBuilder.create().type(DruidDataSource.class).build();

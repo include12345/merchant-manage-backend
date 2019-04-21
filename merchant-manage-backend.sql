@@ -6,7 +6,7 @@ create schema if not exists `business` default character set utf8mb4 collate utf
 -- Table `business`.`merchant`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant` (
-  `id` VARCHAR(36) NOT NULL COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `sn` VARCHAR(36) NOT NULL COMMENT '商户sn',
   `name` VARCHAR(128) NOT NULL COMMENT '商户名',
   `cellphone` VARCHAR(36) NOT NULL COMMENT '部门id',
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant` (
 -- Table `business`.`merchant_user`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant_user` (
-  `id` VARCHAR(36) NOT NULL COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(36) NOT NULL COMMENT '商户用户名',
   `password` VARCHAR(64) NOT NULL COMMENT '商户登录密码',
   `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_user` (
 -- Table `business`.`consumer`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`consumer` (
-  `id` VARCHAR(36) NOT NULL COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `sn` VARCHAR(36) NOT NULL COMMENT '会员sn',
   `name` VARCHAR(128) NOT NULL COMMENT '会员名称',
   `cellphone` VARCHAR(36) NOT NULL COMMENT '会员手机号',
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `business`.`consumer` (
 -- Table `business`.`merchant_consumer`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer` (
-  `id` VARCHAR(36) NOT NULL COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
   `consumer_id` VARCHAR(36) NOT NULL COMMENT '会员id',
   `ctime` BIGINT(20) NULL DEFAULT NULL COMMENT '',
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer` (
 -- Table `business`.`merchant_consumer_wallet`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer_wallet` (
-  `id` VARCHAR(36) NOT NULL COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
   `consumer_id` VARCHAR(36) NOT NULL COMMENT '会员id',
   `balance` BIGINT(20) NULL DEFAULT '0' COMMENT '会员余额',
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer_wallet` (
 -- Table `business`.`wallet_add_transaction`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`wallet_add_transaction` (
-  `id` VARCHAR(36) NOT NULL COMMENT '主键',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `wallet_id` VARCHAR(36) NOT NULL COMMENT '商户会员钱包id',
   `before_balance` BIGINT(20) NULL DEFAULT '0' COMMENT '变更前金额',
   `add_amount` BIGINT(20) NULL DEFAULT '0' COMMENT '会员充值金额',
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `business`.`wallet_add_transaction` (
 -- `business`.`transaction`
 -- -----------------------------------------------------
 create table if not exists `business`.`transaction`(
-  `id` varchar(37) not null comment 'UUID',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `tsn` varchar(32) not null comment '订单流水号',
   `order_sn` varchar(32) not null comment '订单号',
   `name` varchar(128) not null comment '流水描述',
@@ -140,7 +140,7 @@ create table if not exists `business`.`transaction`(
 -- `business`.`order`
 -- -----------------------------------------------------
 create table if not exists `business`.`order`(
-  `id` varchar(37) not null comment 'UUID',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `sn` varchar(32) not null comment '订单号',
   `name` varchar(128) not null comment '流水描述',
   `remark` varchar(128) null comment '流水备注',

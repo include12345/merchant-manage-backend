@@ -36,14 +36,14 @@ public class ManageJpaConfig {
     @Primary
     @Bean
     public EntityManager entityManager(EntityManagerFactoryBuilder builder) {
-        return entityManagerFactoryPrimary(builder).getObject().createEntityManager();
+        return entityManagerFactoryManage(builder).getObject().createEntityManager();
     }
 
     @Primary
-    @Bean(name = "entityManagerFactoryPrimary")
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryPrimary (EntityManagerFactoryBuilder builder) {
+    @Bean(name = "entityManagerFactoryManage")
+    public LocalContainerEntityManagerFactoryBean entityManagerFactoryManage(EntityManagerFactoryBuilder builder) {
         return builder
-                .dataSource(manageDataSource).packages("com.lihebin.manage.dao.manage")//设置实体类所在位置
+                .dataSource(manageDataSource).packages("com.lihebin.manage.bean")//设置实体类所在位置
                 .properties(jpaManageProperties.getProperties())
                 .persistenceUnit("managePersistenceUnit")//持久化单元创建一个默认即可，多个便要分别命名
                 .build();
@@ -51,8 +51,8 @@ public class ManageJpaConfig {
 
     @Primary
     @Bean
-    public PlatformTransactionManager transactionManagerPrimary(EntityManagerFactoryBuilder builder) {
-        return new JpaTransactionManager(entityManagerFactoryPrimary(builder).getObject());
+    public PlatformTransactionManager transactionManagerManage(EntityManagerFactoryBuilder builder) {
+        return new JpaTransactionManager(entityManagerFactoryManage(builder).getObject());
     }
 
 }

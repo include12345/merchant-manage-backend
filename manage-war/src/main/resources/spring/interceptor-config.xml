@@ -9,7 +9,7 @@
         <mvc:interceptor>
             <mvc:mapping path="/api/**"/>
             <!--<mvc:exclude-mapping path="/admin/**"/>-->
-            <bean class="com.lihebin.blog.config.TokenInterceptor"/>
+            <bean class="com.lihebin.manage.config.TokenInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>

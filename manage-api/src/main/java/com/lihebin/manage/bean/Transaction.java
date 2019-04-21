@@ -1,31 +1,48 @@
 package com.lihebin.manage.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 流水
  * Created by lihebin on 2019/4/15.
  */
+@Entity
+@Table(name = "transaction")
 public class Transaction extends Base {
 
+    @Column
     private String tsn;
 
+    @Column
     private String order_sn;
 
+    @Column
     private String name;
 
+    @Column
     private String remark;
 
+    @Column
     private Long original_amount;
 
+    @Column
     private Long pay_amount;
 
+    @Column
     private Long discount;
 
+    @Column
     private String merchant_id;
 
+    @Column
     private String consumer_id;
 
+    @Column
     private Integer type;
 
+    @Column
     private Integer status;
 
     public String getTsn() {

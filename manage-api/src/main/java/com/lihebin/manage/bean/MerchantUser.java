@@ -1,16 +1,26 @@
 package com.lihebin.manage.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * Created by lihebin on 2019/4/16.
  */
+@Entity
+@Table(name = "merchant_user")
 public class MerchantUser extends Base {
 
+    @Column
     private String username;
 
+    @Column
     private String password;
 
+    @Column
     private String merchant_id;
 
+    @Column
     private Integer type;
 
     public String getUsername() {

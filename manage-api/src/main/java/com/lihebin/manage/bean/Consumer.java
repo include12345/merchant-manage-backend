@@ -1,19 +1,30 @@
 package com.lihebin.manage.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 会员
  * Created by lihebin on 2019/4/15.
  */
+@Entity
+@Table(name = "consumer")
 public class Consumer extends Base{
 
+    @Column
     private String sn;
 
+    @Column
     private String name;
 
+    @Column
     private String cellphone;
 
+    @Column
     private String email;
 
+    @Column
     private String wechat;
 
     public String getSn() {

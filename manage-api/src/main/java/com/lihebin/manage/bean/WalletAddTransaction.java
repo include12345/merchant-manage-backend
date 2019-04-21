@@ -1,17 +1,27 @@
 package com.lihebin.manage.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 充值流水
  * Created by lihebin on 2019/4/15.
  */
+@Entity
+@Table(name = "wallet_add_transaction")
 public class WalletAddTransaction extends Base {
 
+    @Column
     private String wallet_id;
 
+    @Column
     private Long before_balance;
 
+    @Column
     private Long add_amount;
 
+    @Column
     private Long after_balance;
 
     public String getWallet_id() {

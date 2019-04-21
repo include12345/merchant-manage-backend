@@ -1,25 +1,34 @@
 package com.lihebin.manage.bean;
 
+import javax.persistence.*;
+
 /**
  * Created by lihebin on 2019/4/15.
  */
+@Entity
 public class Base {
 
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    @Column
     private Long ctime;
 
+    @Column
     private Long mtime;
 
+    @Column
     private Boolean deleted;
 
+    @Column
     private Long version;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

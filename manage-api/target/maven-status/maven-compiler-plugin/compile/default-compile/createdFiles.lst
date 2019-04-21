@@ -1,0 +1,12 @@
+com/lihebin/manage/bean/Merchant.class
+com/lihebin/manage/bean/OrderBy$OrderType.class
+com/lihebin/manage/bean/MerchantUser.class
+com/lihebin/manage/bean/PageInfo.class
+com/lihebin/manage/bean/WalletAddTransaction.class
+com/lihebin/manage/bean/Base.class
+com/lihebin/manage/bean/OrderBy.class
+com/lihebin/manage/bean/Order.class
+com/lihebin/manage/bean/MerchantConsumer.class
+com/lihebin/manage/bean/Consumer.class
+com/lihebin/manage/bean/Transaction.class
+com/lihebin/manage/bean/MerchantConsumerWallet.class
