@@ -1,18 +1,20 @@
-package com.lihebin.manage.bean;
+package com.lihebin.manage.model;
+
+import com.lihebin.manage.bean.Base;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 /**
  * 会员
  * Created by lihebin on 2019/4/15.
  */
+@Entity
+@Table(name = "consumer")
+public class Consumer extends Base {
 
-public class Consumer extends Base{
-
-    @NotNull
+    @Column
     private String sn;
 
     @Column

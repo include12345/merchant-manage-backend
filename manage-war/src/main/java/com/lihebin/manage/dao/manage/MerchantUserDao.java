@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface MerchantUserDao extends JpaRepository<MerchantUser, Long> {
 
 
+    MerchantUser findMerchantUserByUsername(String username);
 }

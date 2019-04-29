@@ -142,13 +142,13 @@ Consider marking one of the beans as @Primary, updating the consumer to accept m
 21:15:49.802 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
 21:15:49.854 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 21:15:50.002 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:15:50.227 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:15:50.231 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:15:50.233 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:15:50.234 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:15:50.236 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:15:50.239 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:15:50.241 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:15:50.227 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:15:50.231 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:15:50.233 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:15:50.234 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:15:50.236 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:15:50.239 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:15:50.241 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:15:50.266 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:15:50.642 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
 21:15:50.681 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
@@ -156,13 +156,13 @@ Consider marking one of the beans as @Primary, updating the consumer to accept m
 	name: userPersistenceUnit
 	...]
 21:15:50.690 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:15:50.698 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:15:50.699 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:15:50.700 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:15:50.701 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:15:50.703 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:15:50.705 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:15:50.706 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:15:50.698 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:15:50.699 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:15:50.700 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:15:50.701 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:15:50.703 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:15:50.705 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:15:50.706 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:15:50.709 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:15:50.757 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
 21:15:51.086 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [com/lihebin/manage/config/CorsConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.handler.MappedInterceptor#0': Cannot create inner bean 'com.lihebin.blog.config.TokenInterceptor#0' of type [com.lihebin.blog.config.TokenInterceptor] while setting constructor argument; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.lihebin.blog.config.TokenInterceptor] for bean with name 'com.lihebin.blog.config.TokenInterceptor#0' defined in file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]; nested exception is java.lang.ClassNotFoundException: com.lihebin.blog.config.TokenInterceptor
@@ -355,13 +355,13 @@ Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: 
 21:17:05.002 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
 21:17:05.061 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 21:17:05.228 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:17:05.467 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:17:05.471 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:17:05.472 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:17:05.473 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:17:05.475 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:17:05.478 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:17:05.481 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:17:05.467 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:17:05.471 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:17:05.472 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:17:05.473 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:17:05.475 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:17:05.478 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:17:05.481 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:17:05.508 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:17:06.000 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
 21:17:06.036 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
@@ -369,19 +369,19 @@ Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: 
 	name: userPersistenceUnit
 	...]
 21:17:06.048 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:17:06.057 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:17:06.059 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:17:06.060 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:17:06.061 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:17:06.062 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:17:06.065 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:17:06.067 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:17:06.057 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:17:06.059 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:17:06.060 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:17:06.061 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:17:06.062 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:17:06.065 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:17:06.067 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:17:06.070 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:17:06.121 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
 21:17:06.382 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 21:17:06.384 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
 21:17:06.524 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@383dc82c: startup date [Sun Apr 21 21:17:00 CST 2019]; root of context hierarchy
-21:17:07.229 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerWalletDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.lihebin.manage.bean.MerchantConsumerWallet
+21:17:07.229 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerWalletDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.lihebin.manage.model.MerchantConsumerWallet
 21:17:07.230 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
 21:17:07.231 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
 21:17:07.237 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
@@ -390,7 +390,7 @@ Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: 
 
 Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
 21:17:07.258 [main] ERROR o.s.boot.SpringApplication - Application startup failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerWalletDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.lihebin.manage.bean.MerchantConsumerWallet
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerWalletDao': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class com.lihebin.manage.model.MerchantConsumerWallet
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
@@ -408,7 +408,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
 	at com.lihebin.manage.Application.main(Application.java:20)
-Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.lihebin.manage.bean.MerchantConsumerWallet
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.lihebin.manage.model.MerchantConsumerWallet
 	at org.hibernate.jpa.internal.metamodel.MetamodelImpl.managedType(MetamodelImpl.java:210)
 	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:70)
 	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:68)
@@ -455,14 +455,14 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.lih
 21:18:09.163 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
 21:18:09.215 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 21:18:09.364 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:18:09.590 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:18:09.593 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:18:09.595 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:18:09.597 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumerWallet
-21:18:09.599 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:18:09.600 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:18:09.602 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:18:09.605 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:18:09.590 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:18:09.593 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:18:09.595 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:18:09.597 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumerWallet
+21:18:09.599 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:18:09.600 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:18:09.602 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:18:09.605 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:18:09.630 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:18:10.012 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
 21:18:10.049 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
@@ -470,14 +470,14 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.lih
 	name: userPersistenceUnit
 	...]
 21:18:10.059 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:18:10.068 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:18:10.069 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:18:10.070 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:18:10.071 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumerWallet
-21:18:10.072 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:18:10.073 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:18:10.075 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:18:10.077 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:18:10.068 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:18:10.069 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:18:10.070 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:18:10.071 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumerWallet
+21:18:10.072 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:18:10.073 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:18:10.075 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:18:10.077 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:18:10.079 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:18:10.143 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
 21:18:10.480 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
@@ -554,14 +554,14 @@ Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No
 21:19:00.286 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
 21:19:00.341 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
 21:19:00.501 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:19:00.756 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:19:00.760 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:19:00.762 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:19:00.763 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumerWallet
-21:19:00.766 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:19:00.768 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:19:00.772 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:19:00.775 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:19:00.756 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:19:00.760 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:19:00.762 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:19:00.763 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumerWallet
+21:19:00.766 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:19:00.768 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:19:00.772 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:19:00.775 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:19:00.805 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:19:01.293 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
 21:19:01.335 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
@@ -569,14 +569,14 @@ Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No
 	name: userPersistenceUnit
 	...]
 21:19:01.346 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:19:01.355 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Consumer
-21:19:01.356 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Merchant
-21:19:01.357 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumer
-21:19:01.358 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantConsumerWallet
-21:19:01.358 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.MerchantUser
-21:19:01.359 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Order
-21:19:01.361 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.Transaction
-21:19:01.363 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.bean.WalletAddTransaction
+21:19:01.355 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Consumer
+21:19:01.356 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Merchant
+21:19:01.357 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumer
+21:19:01.358 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantConsumerWallet
+21:19:01.358 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.MerchantUser
+21:19:01.359 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Order
+21:19:01.361 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.Transaction
+21:19:01.363 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.lihebin.manage.model.WalletAddTransaction
 21:19:01.366 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
 21:19:01.422 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
 21:19:01.690 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)

@@ -43,7 +43,7 @@ public class ManageJpaConfig {
     @Bean(name = "entityManagerFactoryManage")
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryManage(EntityManagerFactoryBuilder builder) {
         return builder
-                .dataSource(manageDataSource).packages("com.lihebin.manage.bean")//设置实体类所在位置
+                .dataSource(manageDataSource).packages("com.lihebin.manage.model")//设置实体类所在位置
                 .properties(jpaManageProperties.getProperties())
                 .persistenceUnit("managePersistenceUnit")//持久化单元创建一个默认即可，多个便要分别命名
                 .build();

@@ -40,7 +40,7 @@ public class UserJpaConfig {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryUser(EntityManagerFactoryBuilder builder) {
         return builder
-                .dataSource(userDataSource).packages("com.lihebin.manage.bean")//设置实体类所在位置
+                .dataSource(userDataSource).packages("com.lihebin.manage.model")//设置实体类所在位置
                 .properties(jpaUserProperties.getProperties())
                 .persistenceUnit("userPersistenceUnit")//持久化单元创建一个默认即可，多个便要分别命名
                 .build();

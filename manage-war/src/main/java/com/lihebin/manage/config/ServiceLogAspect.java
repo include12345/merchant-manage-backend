@@ -22,23 +22,23 @@ public class ServiceLogAspect {
   private final Logger log= LoggerFactory.getLogger(getClass());
 
 
-  //申明一个切点 里面是 execution表达式
-  @Pointcut("execution(public * com.lihebin.blog.service.*.*(..))")
-    private void serviceAspect(){
-
-  }
-
-  //请求method前打印内容
-    @Before(value = "serviceAspect()")
-    public void methodBefore(JoinPoint joinPoint){
-        log.info("[ID{}][{}] request>>{}", Thread.currentThread().getId(), joinPoint.getSignature().getName(), Arrays.toString(joinPoint.getArgs()));
-    }
-
-    //在方法执行完结后打印返回内容
-    @AfterReturning(returning = "returnObject",pointcut = "serviceAspect()")
-    public void methodAfterReturning(JoinPoint joinPoint,Object returnObject){
-        log.info("[ID{}][{}] response>>{}", Thread.currentThread().getId(), joinPoint.getSignature().getName(),returnObject);
-    }
+//  //申明一个切点 里面是 execution表达式
+//  @Pointcut("execution(public * com.lihebin.manage.service.*.*(..))")
+//    private void serviceAspect(){
+//
+//  }
+//
+//  //请求method前打印内容
+//    @Before(value = "serviceAspect()")
+//    public void methodBefore(JoinPoint joinPoint){
+//        log.info("[ID{}][{}] request>>{}", Thread.currentThread().getId(), joinPoint.getSignature().getName(), Arrays.toString(joinPoint.getArgs()));
+//    }
+//
+//    //在方法执行完结后打印返回内容
+//    @AfterReturning(returning = "returnObject",pointcut = "serviceAspect()")
+//    public void methodAfterReturning(JoinPoint joinPoint,Object returnObject){
+//        log.info("[ID{}][{}] response>>{}", Thread.currentThread().getId(), joinPoint.getSignature().getName(),returnObject);
+//    }
 
 
 //  //申明一个切点 里面是 execution表达式
@@ -63,7 +63,7 @@ public class ServiceLogAspect {
 
 
     //申明一个切点 里面是 execution表达式
-  @Pointcut("execution(public * com.lihebin.blog.web.*.*(..))")
+  @Pointcut("execution(public * com.lihebin.manage.web.*.*(..))")
   private void webAspect(){
 
   }

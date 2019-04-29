@@ -4,8 +4,6 @@ import com.lihebin.manage.bean.Merchant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
-
 /**
  * Created by lihebin on 2019/4/16.
  */

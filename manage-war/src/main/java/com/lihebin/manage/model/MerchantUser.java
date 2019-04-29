@@ -1,4 +1,6 @@
-package com.lihebin.manage.bean;
+package com.lihebin.manage.model;
+
+import com.lihebin.manage.bean.Base;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
