@@ -1,10 +1,8 @@
 package com.lihebin.manage.config;
 
 import com.lihebin.manage.exception.BackendLoginException;
-import com.lihebin.manage.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 

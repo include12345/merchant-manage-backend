@@ -7,17 +7,12 @@ import javax.persistence.Table;
 /**
  * Created by lihebin on 2019/4/15.
  */
-@Entity
-@Table(name = "merchant_consumer_wallet")
 public class MerchantConsumerWallet extends Base {
 
-    @Column
     private String merchant_id;
 
-    @Column
     private String consumer_id;
 
-    @Column
     private Long balance;
 
     public String getMerchant_id() {

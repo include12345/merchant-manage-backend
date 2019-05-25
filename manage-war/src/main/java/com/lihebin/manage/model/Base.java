@@ -5,7 +5,6 @@ import javax.persistence.*;
 /**
  * Created by lihebin on 2019/4/15.
  */
-@Entity
 public class Base {
 
     @Id

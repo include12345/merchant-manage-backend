@@ -1,6 +1,6 @@
 package com.lihebin.manage.dao.manage;
 
-import com.lihebin.manage.bean.Consumer;
+import com.lihebin.manage.model.Consumer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.lihebin.manage.dao.manage;
 
-import com.lihebin.manage.bean.MerchantUser;
+import com.lihebin.manage.model.MerchantUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +10,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MerchantUserDao extends JpaRepository<MerchantUser, Long> {
 
-
+    /**
+     * 获取商户用户账号信息
+     *
+     * @param username
+     * @return
+     */
     MerchantUser findMerchantUserByUsername(String username);
+
+
 }
