@@ -1,6 +1,7 @@
 package com.lihebin.manage.config;
 
 import com.lihebin.manage.bean.Code;
+import com.lihebin.manage.bean.UserMessage;
 import com.lihebin.manage.dao.cache.RedisDao;
 import com.lihebin.manage.dao.manage.MerchantUserDao;
 import com.lihebin.manage.exception.BackendException;
@@ -38,7 +39,7 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
         try {
             token = request.getHeader("token");
         } catch (Exception e) {
-            throw new BackendLoginException("登录超时");
+            throw new BackendException(Code.CODE_TIME_OUT, "无令牌");
         }
         log.info("TokenInterceptor:{}", token);
 //        String[] param = token.split("-");
@@ -49,6 +50,25 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
         }
 //
         return true;
+    }
+
+
+    public UserMessage getUserMessage(HttpServletRequest request) {
+        String token;
+        try {
+            token = request.getHeader("token");
+        } catch (Exception e) {
+            throw new BackendException(Code.CODE_TIME_OUT, "无令牌");
+        }
+        UserMessage userMessage = new UserMessage();
+        String value = redisDao.getValue(token);
+        if (StringUtil.empty(value)) {
+            throw new BackendException(Code.CODE_NOT_EXIST, "用户信息不存在");
+        }
+        String[] userValue = value.split("-");
+        userMessage.setUsername(userValue[0]);
+        userMessage.setMerchantId(Long.valueOf(userValue[1]));
+        return userMessage;
     }
 
 }

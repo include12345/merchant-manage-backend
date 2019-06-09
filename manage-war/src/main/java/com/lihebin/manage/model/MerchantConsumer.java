@@ -77,28 +77,27 @@ public class MerchantConsumer {
         this.version = version;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "merchant_id")
-    private Merchant merchant;
 
-    @ManyToOne
-    @JoinColumn(name = "consumer_id")
-    private Consumer consumer;
+    @Column
+    private Long merchant_id;
+
+    @Column
+    private Long consumer_id;
 
 
-    public Merchant getMerchant() {
-        return merchant;
+    public Long getMerchant() {
+        return merchant_id;
     }
 
-    public void setMerchant(Merchant merchant) {
-        this.merchant = merchant;
+    public void setMerchant(Long merchant_id) {
+        this.merchant_id = merchant_id;
     }
 
-    public Consumer getConsumer() {
-        return consumer;
+    public Long getConsumer() {
+        return consumer_id;
     }
 
-    public void setConsumer(Consumer consumer) {
-        this.consumer = consumer;
+    public void setConsumer(Long consumer_id) {
+        this.consumer_id = consumer_id;
     }
 }

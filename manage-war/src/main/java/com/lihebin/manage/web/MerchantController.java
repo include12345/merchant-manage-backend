@@ -23,7 +23,7 @@ public class MerchantController {
     private MerchantService merchantService;
 
     @RequestMapping(value = "/listMerchantCustomerPaging", method = RequestMethod.GET)
-    public Page<MerchantConsumerRes> listMerchantCustomerPaging(@RequestParam(value = "token", required = true) String token,
+    public Page<MerchantConsumerRes> listMerchantCustomerPaging(@RequestHeader("token") String token,
                                                                 @RequestParam(value = "pageNo", defaultValue = "0") int pageNo,
                                                                 @RequestParam(value = "pageSize", defaultValue = "30") int pageSize
     ) {
@@ -44,6 +44,8 @@ public class MerchantController {
     public MerchantRes updateMerchant(@Valid @RequestBody MerchantUpdate merchant) {
         return merchantService.updateMerchant(merchant);
     }
+
+
 
 
 }

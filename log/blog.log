@@ -1,67 +1,1158 @@
-16:00:33.695 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 15:58:58 CST 2019]; root of context hierarchy
-16:00:33.707 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
-16:00:33.708 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
-16:00:33.709 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-16:00:33.709 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-16:00:33.712 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
-16:00:33.713 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
-16:00:33.718 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
-16:00:40.085 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 2597 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
-16:00:40.089 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
-16:00:40.249 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:00:40 CST 2019]; root of context hierarchy
-16:00:41.097 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-16:00:41.195 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
-16:00:41.198 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-16:00:41.202 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
-16:00:41.505 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-16:00:41.550 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
-16:00:41.552 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
-16:00:41.553 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
-16:00:41.554 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
-16:00:41.555 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
-16:00:41.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
-16:00:42.083 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$d891db8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-16:00:43.174 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
-16:00:43.193 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-16:00:43.195 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
-16:00:43.350 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-16:00:43.350 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3101 ms
-16:00:43.660 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-16:00:43.661 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
-16:00:43.661 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
-16:00:44.668 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-16:00:44.727 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
-16:00:44.750 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+21:00:42.615 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+21:00:42.749 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+21:00:42.793 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+21:00:42.893 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+21:00:42.937 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+21:00:43.521 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+21:00:43.564 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+21:01:04.926 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 20:59:42 CST 2019]; root of context hierarchy
+21:01:14.545 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+21:01:34.444 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+21:01:34.446 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+21:01:34.446 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+21:01:34.454 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+21:01:34.455 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+21:01:34.459 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+21:01:34.543 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+21:01:34.551 [main] INFO  com.lihebin.manage.Application - Started Application in 112.512 seconds (JVM running for 113.289)
+21:01:43.766 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+21:01:43.766 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+21:01:43.799 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+21:01:43.847 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantCustomerPaging] web request>>[b3ca3c3423f9486395d21455eeead062, 1, 30]
+21:01:48.164 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S1009
+21:01:48.165 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Parameter index out of range (2 > number of parameters, which is 1).
+21:01:55.189 [http-nio-8080-exec-2] ERROR c.l.manage.exception.ExceptionHandle - 【系统异常】
+org.springframework.orm.jpa.JpaSystemException: could not execute query; nested exception is org.hibernate.exception.GenericJDBCException: could not execute query
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:488)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:213)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy106.findAllByMerchantId(Unknown Source)
+	at com.lihebin.manage.service.MerchantServiceImpl.listMerchantCustomerPaging(MerchantServiceImpl.java:46)
+	at com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(MerchantController.java:30)
+	at com.lihebin.manage.web.MerchantController$$FastClassBySpringCGLIB$$22963dd9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lihebin.manage.web.MerchantController$$EnhancerBySpringCGLIB$$8a868301.listMerchantCustomerPaging(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute query
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.loader.Loader.doList(Loader.java:2620)
+	at org.hibernate.loader.Loader.doList(Loader.java:2600)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2429)
+	at org.hibernate.loader.Loader.list(Loader.java:2424)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:336)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1967)
+	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:322)
+	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:125)
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:372)
+	at com.sun.proxy.$Proxy119.getResultList(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:188)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:87)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:116)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:483)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:461)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	... 69 common frames omitted
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3327)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3312)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3351)
+	at com.mysql.jdbc.PreparedStatement.setInt(PreparedStatement.java:3302)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.setInt(DruidPooledPreparedStatement.java:315)
+	at org.hibernate.dialect.pagination.AbstractLimitHandler.bindLimitParameters(AbstractLimitHandler.java:154)
+	at org.hibernate.dialect.pagination.AbstractLimitHandler.bindLimitParametersAtEndOfQuery(AbstractLimitHandler.java:128)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1947)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1898)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1876)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336)
+	at org.hibernate.loader.Loader.doList(Loader.java:2617)
+	... 98 common frames omitted
+21:02:04.533 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantCustomerPaging] web request>>[b3ca3c3423f9486395d21455eeead062, 1, 30]
+21:02:07.781 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S1009
+21:02:07.781 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Parameter index out of range (2 > number of parameters, which is 1).
+21:02:07.783 [http-nio-8080-exec-3] ERROR c.l.manage.exception.ExceptionHandle - 【系统异常】
+org.springframework.orm.jpa.JpaSystemException: could not execute query; nested exception is org.hibernate.exception.GenericJDBCException: could not execute query
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:488)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:213)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy106.findAllByMerchantId(Unknown Source)
+	at com.lihebin.manage.service.MerchantServiceImpl.listMerchantCustomerPaging(MerchantServiceImpl.java:46)
+	at com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(MerchantController.java:30)
+	at com.lihebin.manage.web.MerchantController$$FastClassBySpringCGLIB$$22963dd9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lihebin.manage.web.MerchantController$$EnhancerBySpringCGLIB$$8a868301.listMerchantCustomerPaging(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute query
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.loader.Loader.doList(Loader.java:2620)
+	at org.hibernate.loader.Loader.doList(Loader.java:2600)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2429)
+	at org.hibernate.loader.Loader.list(Loader.java:2424)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:336)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1967)
+	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:322)
+	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:125)
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:372)
+	at com.sun.proxy.$Proxy119.getResultList(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:188)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:87)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:116)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:483)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:461)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	... 69 common frames omitted
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3327)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3312)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3351)
+	at com.mysql.jdbc.PreparedStatement.setInt(PreparedStatement.java:3302)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.setInt(DruidPooledPreparedStatement.java:315)
+	at org.hibernate.dialect.pagination.AbstractLimitHandler.bindLimitParameters(AbstractLimitHandler.java:154)
+	at org.hibernate.dialect.pagination.AbstractLimitHandler.bindLimitParametersAtEndOfQuery(AbstractLimitHandler.java:128)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1947)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1898)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1876)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336)
+	at org.hibernate.loader.Loader.doList(Loader.java:2617)
+	... 98 common frames omitted
+21:02:15.773 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID30][listMerchantCustomerPaging] web request>>[b3ca3c3423f9486395d21455eeead062, 1, 30]
+21:02:19.428 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S1009
+21:02:19.429 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Parameter index out of range (2 > number of parameters, which is 1).
+21:02:19.431 [http-nio-8080-exec-4] ERROR c.l.manage.exception.ExceptionHandle - 【系统异常】
+org.springframework.orm.jpa.JpaSystemException: could not execute query; nested exception is org.hibernate.exception.GenericJDBCException: could not execute query
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:333)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:488)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:213)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy106.findAllByMerchantId(Unknown Source)
+	at com.lihebin.manage.service.MerchantServiceImpl.listMerchantCustomerPaging(MerchantServiceImpl.java:46)
+	at com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(MerchantController.java:30)
+	at com.lihebin.manage.web.MerchantController$$FastClassBySpringCGLIB$$22963dd9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lihebin.manage.web.MerchantController$$EnhancerBySpringCGLIB$$8a868301.listMerchantCustomerPaging(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute query
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.loader.Loader.doList(Loader.java:2620)
+	at org.hibernate.loader.Loader.doList(Loader.java:2600)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2429)
+	at org.hibernate.loader.Loader.list(Loader.java:2424)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:336)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:1967)
+	at org.hibernate.internal.AbstractSessionImpl.list(AbstractSessionImpl.java:322)
+	at org.hibernate.internal.SQLQueryImpl.list(SQLQueryImpl.java:125)
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:606)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:483)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:372)
+	at com.sun.proxy.$Proxy119.getResultList(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:188)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:87)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:116)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:483)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:461)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	... 69 common frames omitted
+Caused by: java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3327)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3312)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3351)
+	at com.mysql.jdbc.PreparedStatement.setInt(PreparedStatement.java:3302)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.setInt(DruidPooledPreparedStatement.java:315)
+	at org.hibernate.dialect.pagination.AbstractLimitHandler.bindLimitParameters(AbstractLimitHandler.java:154)
+	at org.hibernate.dialect.pagination.AbstractLimitHandler.bindLimitParametersAtEndOfQuery(AbstractLimitHandler.java:128)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1947)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1898)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1876)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:919)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:336)
+	at org.hibernate.loader.Loader.doList(Loader.java:2617)
+	... 98 common frames omitted
+21:07:09.061 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 20:59:42 CST 2019]; root of context hierarchy
+21:07:09.063 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+21:07:09.063 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+21:07:09.064 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+21:07:09.064 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+21:07:09.066 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:07:09.067 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:07:09.070 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+21:07:15.885 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindeMacBook-Pro.local with PID 27056 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+21:07:15.889 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+21:07:15.978 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:07:15 CST 2019]; root of context hierarchy
+21:07:16.668 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:07:16.753 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+21:07:16.756 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:07:16.759 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+21:07:17.044 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:07:17.087 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+21:07:17.089 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+21:07:17.090 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+21:07:17.090 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+21:07:17.091 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+21:07:17.092 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+21:07:17.571 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$24eb1033] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:07:18.627 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+21:07:18.646 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:07:18.648 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+21:07:18.801 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:07:18.801 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2823 ms
+21:07:19.096 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+21:07:19.098 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+21:07:19.098 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+21:07:20.040 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+21:07:20.097 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:07:20.119 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: managePersistenceUnit
 	...]
-16:00:44.868 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
-16:00:44.870 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-16:00:44.872 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
-16:00:44.932 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-16:00:45.103 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-16:00:45.414 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
-16:00:45.915 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
-16:00:45.950 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
-16:00:45.951 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+21:07:20.233 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+21:07:20.235 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+21:07:20.237 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+21:07:20.292 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:07:20.440 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:07:20.679 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:07:21.127 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:07:21.156 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:07:21.156 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: userPersistenceUnit
 	...]
-16:00:45.967 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-16:00:45.990 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
-16:00:46.066 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
-16:00:46.846 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
-16:00:46.848 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
-16:00:46.848 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
-16:00:46.850 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
-16:00:46.850 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
-16:00:46.855 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-16:00:46.856 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-16:00:46.981 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:00:40 CST 2019]; root of context hierarchy
-16:00:47.083 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
-16:00:48.305 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-16:00:48.306 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
-16:00:48.306 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
-16:00:48.314 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
-16:00:48.315 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
-16:00:48.320 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
-16:00:48.398 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
-16:00:48.405 [main] INFO  com.lihebin.manage.Application - Started Application in 8.819 seconds (JVM running for 9.549)
+21:07:21.167 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:07:21.189 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:07:21.248 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:07:22.213 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+21:07:22.215 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+21:07:22.216 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+21:07:22.217 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+21:07:22.217 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+21:07:22.222 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+21:07:22.222 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+21:07:22.361 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:07:15 CST 2019]; root of context hierarchy
+21:07:22.467 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+21:07:23.735 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+21:07:23.737 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+21:07:23.737 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+21:07:23.744 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+21:07:23.745 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+21:07:23.750 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+21:07:23.830 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+21:07:23.837 [main] INFO  com.lihebin.manage.Application - Started Application in 8.466 seconds (JVM running for 9.285)
+21:07:31.626 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+21:07:31.626 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+21:07:31.657 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+21:07:31.709 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantCustomerPaging] web request>>[b3ca3c3423f9486395d21455eeead062, 1, 30]
+21:07:34.692 [http-nio-8080-exec-1] WARN  o.s.d.j.r.q.SpelExpressionStringQueryParameterBinder - Setting the parameter with name 'null' and position '2' lead to an exception.
+java.lang.IllegalArgumentException: Parameter with that position [2] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:372)
+	at com.sun.proxy.$Proxy119.setParameter(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SpelExpressionStringQueryParameterBinder.potentiallyBindExpressionParameters(SpelExpressionStringQueryParameterBinder.java:102)
+	at org.springframework.data.jpa.repository.query.SpelExpressionStringQueryParameterBinder.bind(SpelExpressionStringQueryParameterBinder.java:76)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateCountQuery(AbstractStringBasedJpaQuery.java:104)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createCountQuery(AbstractJpaQuery.java:217)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution$1.get(JpaQueryExecution.java:193)
+	at org.springframework.data.repository.support.PageableExecutionUtils.getPage(PageableExecutionUtils.java:64)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:188)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:87)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:116)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:483)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:461)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy106.findAllByMerchantId(Unknown Source)
+	at com.lihebin.manage.service.MerchantServiceImpl.listMerchantCustomerPaging(MerchantServiceImpl.java:46)
+	at com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(MerchantController.java:30)
+	at com.lihebin.manage.web.MerchantController$$FastClassBySpringCGLIB$$22963dd9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lihebin.manage.web.MerchantController$$EnhancerBySpringCGLIB$$75e1e593.listMerchantCustomerPaging(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+21:08:02.003 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantCustomerPaging] web response>>null
+21:08:25.338 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:07:15 CST 2019]; root of context hierarchy
+21:08:25.339 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+21:08:25.340 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+21:08:25.341 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+21:08:25.341 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+21:08:25.344 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:08:25.345 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:08:25.348 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+21:08:31.839 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindeMacBook-Pro.local with PID 27405 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+21:08:31.844 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+21:08:32.007 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:08:32 CST 2019]; root of context hierarchy
+21:08:32.842 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:08:32.891 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+21:08:32.895 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:08:32.898 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+21:08:33.211 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:08:33.251 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+21:08:33.253 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+21:08:33.254 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+21:08:33.254 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+21:08:33.255 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+21:08:33.256 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+21:08:33.809 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$f52e6502] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:08:34.898 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+21:08:34.915 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:08:34.916 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+21:08:35.076 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:08:35.077 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3070 ms
+21:08:35.352 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+21:08:35.353 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+21:08:35.354 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+21:08:36.336 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+21:08:36.391 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:08:36.414 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+21:08:36.535 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+21:08:36.537 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+21:08:36.539 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+21:08:36.595 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:08:36.756 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:08:37.019 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:08:37.521 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:08:37.555 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:08:37.556 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+21:08:37.568 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:08:37.592 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:08:37.667 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:08:38.391 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchantServiceImpl': Unsatisfied dependency expressed through field 'consumerDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+21:08:38.392 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:08:38.393 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:08:38.398 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+21:08:38.401 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+21:08:38.416 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+21:08:38.423 [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchantServiceImpl': Unsatisfied dependency expressed through field 'consumerDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.lihebin.manage.Application.main(Application.java:22)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.data.jpa.repository.query.NativeJpaQuery.<init>(NativeJpaQuery.java:60)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:72)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:53)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:77)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:436)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:221)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+21:09:13.422 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindeMacBook-Pro.local with PID 27564 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+21:09:13.426 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+21:09:13.574 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:09:13 CST 2019]; root of context hierarchy
+21:09:14.454 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:09:14.554 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+21:09:14.558 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:09:14.561 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+21:09:14.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:09:14.928 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+21:09:14.931 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+21:09:14.932 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+21:09:14.932 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+21:09:14.933 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+21:09:14.934 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+21:09:15.459 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$b7a4739c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:09:16.534 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+21:09:16.552 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:09:16.554 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+21:09:16.712 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:09:16.713 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3138 ms
+21:09:17.021 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+21:09:17.023 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+21:09:17.023 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+21:09:18.033 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+21:09:18.093 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:09:18.117 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+21:09:18.238 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+21:09:18.241 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+21:09:18.243 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+21:09:18.309 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:09:18.478 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:09:18.732 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:09:19.152 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:09:19.181 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:09:19.182 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+21:09:19.193 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:09:19.213 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:09:19.276 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:09:19.953 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchantServiceImpl': Unsatisfied dependency expressed through field 'consumerDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+21:09:19.954 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:09:19.955 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:09:19.960 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+21:09:19.963 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+21:09:19.977 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+21:09:19.983 [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchantServiceImpl': Unsatisfied dependency expressed through field 'consumerDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.lihebin.manage.Application.main(Application.java:22)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'consumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.ConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.data.jpa.repository.query.NativeJpaQuery.<init>(NativeJpaQuery.java:60)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:72)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:53)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:77)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:436)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:221)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
+21:10:12.448 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindeMacBook-Pro.local with PID 27813 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+21:10:12.452 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+21:10:12.589 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:10:12 CST 2019]; root of context hierarchy
+21:10:13.440 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:10:13.538 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+21:10:13.541 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:10:13.543 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+21:10:13.894 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:10:13.940 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+21:10:13.943 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+21:10:13.943 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+21:10:13.944 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+21:10:13.945 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+21:10:13.946 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+21:10:14.479 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$ef26ef54] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:10:15.574 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+21:10:15.591 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:10:15.593 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+21:10:15.740 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:10:15.741 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3152 ms
+21:10:16.030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+21:10:16.031 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+21:10:16.031 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+21:10:16.983 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+21:10:17.053 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:10:17.077 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+21:10:17.209 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+21:10:17.211 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+21:10:17.214 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+21:10:17.275 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:10:17.425 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:10:17.663 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:10:18.103 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:10:18.135 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:10:18.136 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+21:10:18.147 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:10:18.165 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:10:18.223 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:10:19.112 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+21:10:19.114 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+21:10:19.114 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+21:10:19.115 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+21:10:19.116 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+21:10:19.121 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+21:10:19.122 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+21:10:19.249 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:10:12 CST 2019]; root of context hierarchy
+21:10:19.352 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+21:10:20.675 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+21:10:20.677 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+21:10:20.677 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+21:10:20.684 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+21:10:20.685 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+21:10:20.690 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+21:10:20.771 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+21:10:20.777 [main] INFO  com.lihebin.manage.Application - Started Application in 8.869 seconds (JVM running for 9.588)
+21:10:25.316 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+21:10:25.316 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+21:10:25.347 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+21:10:25.393 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantCustomerPaging] web request>>[b3ca3c3423f9486395d21455eeead062, 1, 30]
+21:10:28.595 [http-nio-8080-exec-1] ERROR c.l.manage.exception.ExceptionHandle - 【系统异常】
+org.springframework.dao.InvalidDataAccessApiUsageException: Cannot mix JPA positional parameters and native Hibernate positional/ordinal parameters; nested exception is java.lang.IllegalArgumentException: Cannot mix JPA positional parameters and native Hibernate positional/ordinal parameters
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:384)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:488)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:59)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:213)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:147)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy106.findAllByMerchantId(Unknown Source)
+	at com.lihebin.manage.service.MerchantServiceImpl.listMerchantCustomerPaging(MerchantServiceImpl.java:46)
+	at com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(MerchantController.java:30)
+	at com.lihebin.manage.web.MerchantController$$FastClassBySpringCGLIB$$22963dd9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lihebin.manage.web.MerchantController$$EnhancerBySpringCGLIB$$3dace21f.listMerchantCustomerPaging(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Cannot mix JPA positional parameters and native Hibernate positional/ordinal parameters
+	at org.hibernate.jpa.internal.QueryImpl.extractParameterInfo(QueryImpl.java:130)
+	at org.hibernate.jpa.internal.QueryImpl.<init>(QueryImpl.java:77)
+	at org.hibernate.jpa.internal.QueryImpl.<init>(QueryImpl.java:68)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createNativeQuery(AbstractEntityManagerImpl.java:918)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:347)
+	at com.sun.proxy.$Proxy96.createNativeQuery(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)
+	at com.sun.proxy.$Proxy96.createNativeQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.NativeJpaQuery.createJpaQuery(NativeJpaQuery.java:77)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:79)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:190)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:186)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:87)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:116)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:483)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:461)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	... 69 common frames omitted
+21:25:39.538 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:10:12 CST 2019]; root of context hierarchy
+21:25:39.540 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+21:25:39.541 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+21:25:39.541 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+21:25:39.542 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+21:25:39.546 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:25:39.548 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:25:39.556 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+21:25:46.178 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindeMacBook-Pro.local with PID 29498 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+21:25:46.181 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+21:25:46.309 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:25:46 CST 2019]; root of context hierarchy
+21:25:47.046 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:25:47.139 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+21:25:47.143 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:25:47.147 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+21:25:47.459 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:25:47.501 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+21:25:47.504 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+21:25:47.505 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+21:25:47.506 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+21:25:47.507 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+21:25:47.508 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+21:25:48.022 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$52cd2ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:25:49.102 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+21:25:49.125 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:25:49.126 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+21:25:49.276 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:25:49.276 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2967 ms
+21:25:49.555 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+21:25:49.556 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+21:25:49.556 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+21:25:50.567 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+21:25:50.625 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:25:50.649 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+21:25:50.766 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+21:25:50.768 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+21:25:50.770 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+21:25:50.822 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:25:50.973 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:25:51.219 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:25:51.686 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:25:51.726 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:25:51.727 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+21:25:51.738 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:25:51.760 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:25:51.820 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:25:52.764 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+21:25:52.766 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+21:25:52.766 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+21:25:52.768 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+21:25:52.768 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+21:25:52.774 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+21:25:52.775 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+21:25:52.911 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:25:46 CST 2019]; root of context hierarchy
+21:25:53.017 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+21:25:54.236 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+21:25:54.238 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+21:25:54.238 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+21:25:54.246 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+21:25:54.248 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+21:25:54.253 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+21:25:54.332 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+21:25:54.339 [main] INFO  com.lihebin.manage.Application - Started Application in 8.722 seconds (JVM running for 9.436)
+21:25:59.445 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+21:25:59.445 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+21:25:59.476 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+21:25:59.528 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantCustomerPaging] web request>>[b3ca3c3423f9486395d21455eeead062, 1, 30]
+21:26:02.867 [http-nio-8080-exec-1] WARN  o.s.d.j.r.q.SpelExpressionStringQueryParameterBinder - Setting the parameter with name 'null' and position '2' lead to an exception.
+java.lang.IllegalArgumentException: Parameter with that position [2] did not exist
+	at org.hibernate.jpa.spi.BaseQueryImpl.findParameterRegistration(BaseQueryImpl.java:502)
+	at org.hibernate.jpa.spi.BaseQueryImpl.setParameter(BaseQueryImpl.java:692)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:181)
+	at org.hibernate.jpa.spi.AbstractQueryImpl.setParameter(AbstractQueryImpl.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:372)
+	at com.sun.proxy.$Proxy119.setParameter(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SpelExpressionStringQueryParameterBinder.potentiallyBindExpressionParameters(SpelExpressionStringQueryParameterBinder.java:102)
+	at org.springframework.data.jpa.repository.query.SpelExpressionStringQueryParameterBinder.bind(SpelExpressionStringQueryParameterBinder.java:76)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateCountQuery(AbstractStringBasedJpaQuery.java:104)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createCountQuery(AbstractJpaQuery.java:217)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution$1.get(JpaQueryExecution.java:193)
+	at org.springframework.data.repository.support.PageableExecutionUtils.getPage(PageableExecutionUtils.java:64)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:188)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:87)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:116)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:106)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:483)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:461)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:133)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy106.findAllByMerchantId(Unknown Source)
+	at com.lihebin.manage.service.MerchantServiceImpl.listMerchantCustomerPaging(MerchantServiceImpl.java:46)
+	at com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(MerchantController.java:30)
+	at com.lihebin.manage.web.MerchantController$$FastClassBySpringCGLIB$$22963dd9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lihebin.manage.web.MerchantController$$EnhancerBySpringCGLIB$$24cd3953.listMerchantCustomerPaging(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+21:26:30.777 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantCustomerPaging] web response>>null
+21:26:37.602 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantCustomerPaging] web request>>[b3ca3c3423f9486395d21455eeead062, 0, 30]
+21:26:48.200 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantCustomerPaging] web response>>null
+21:27:05.055 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 21:25:46 CST 2019]; root of context hierarchy
+21:27:05.057 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+21:27:05.057 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+21:27:05.058 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+21:27:05.058 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+21:27:05.062 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:27:05.063 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:27:05.070 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

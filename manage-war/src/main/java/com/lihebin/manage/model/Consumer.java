@@ -51,8 +51,8 @@ public class Consumer {
     @Column
     private Long version;
 
-    @OneToMany(mappedBy = "consumer")
-    private Set<MerchantConsumer> merchantConsumerSet;
+//    @OneToMany(mappedBy = "consumer")
+//    private Set<MerchantConsumer> merchantConsumerSet;
 
     public Long getId() {
         return id;
@@ -134,11 +134,11 @@ public class Consumer {
         this.wechat = wechat;
     }
 
-    public Set<MerchantConsumer> getMerchantConsumerSet() {
-        return merchantConsumerSet;
-    }
-
-    public void setMerchantConsumerSet(Set<MerchantConsumer> merchantConsumerSet) {
-        this.merchantConsumerSet = merchantConsumerSet;
-    }
+//    public Set<MerchantConsumer> getMerchantConsumerSet() {
+//        return merchantConsumerSet;
+//    }
+//
+//    public void setMerchantConsumerSet(Set<MerchantConsumer> merchantConsumerSet) {
+//        this.merchantConsumerSet = merchantConsumerSet;
+//    }
 }

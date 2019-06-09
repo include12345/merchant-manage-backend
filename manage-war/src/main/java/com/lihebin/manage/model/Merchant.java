@@ -45,8 +45,8 @@ public class Merchant {
     @Version
     private Long version;
 
-    @OneToMany(mappedBy = "merchant", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<MerchantConsumer> merchantConsumerSet;
+//    @OneToMany(mappedBy = "merchant", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private Set<MerchantConsumer> merchantConsumerSet;
 
     public Long getId() {
         return id;
@@ -112,11 +112,11 @@ public class Merchant {
         this.cellphone = cellphone;
     }
 
-    public Set<MerchantConsumer> getMerchantConsumerSet() {
-        return merchantConsumerSet;
-    }
-
-    public void setMerchantConsumerSet(Set<MerchantConsumer> merchantConsumerSet) {
-        this.merchantConsumerSet = merchantConsumerSet;
-    }
+//    public Set<MerchantConsumer> getMerchantConsumerSet() {
+//        return merchantConsumerSet;
+//    }
+//
+//    public void setMerchantConsumerSet(Set<MerchantConsumer> merchantConsumerSet) {
+//        this.merchantConsumerSet = merchantConsumerSet;
+//    }
 }

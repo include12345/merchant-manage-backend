@@ -1,15 +1,20 @@
 package com.lihebin.manage.service;
 
 import com.lihebin.manage.bean.*;
+import com.lihebin.manage.dao.manage.ConsumerDao;
+import com.lihebin.manage.dao.manage.MerchantConsumerDao;
 import com.lihebin.manage.dao.manage.MerchantDao;
 import com.lihebin.manage.dao.manage.SimpleSnGeneratorDao;
 import com.lihebin.manage.exception.BackendException;
+import com.lihebin.manage.model.Consumer;
 import com.lihebin.manage.model.Merchant;
-import com.lihebin.manage.utils.StringUtil;
+import com.lihebin.manage.model.MerchantConsumerInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 /**
@@ -26,13 +31,21 @@ public class MerchantServiceImpl implements MerchantService{
     private MerchantDao merchantDao;
 
     @Autowired
+    private ConsumerDao consumerDao;
+
+    @Autowired
+    private MerchantConsumerDao merchantConsumerDao;
+
+    @Autowired
     private SimpleSnGeneratorDao simpleSnGeneratorDao;
 
 
     @Override
     public Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, int pageNo, int pageSize) {
         UserMessage userMessage = merchantUserService.getUserMessage(token);
-        Page<Merchant> merchantPage = merchantDao.findAllByIdOrderByMerchantConsumerSetCtimeDesc(userMessage.getMerchantId(), new PageRequest(pageNo, pageSize));
+        Page<Consumer> merchantPage = consumerDao.findAllByMerchantId(userMessage.getMerchantId(), new PageRequest(pageNo, pageSize));
+        long count = merchantPage.getTotalElements();
+        List<Consumer> merchantList = merchantPage.getContent();
         return null;
     }
 

@@ -21,11 +21,4 @@ public interface MerchantDao extends JpaRepository<Merchant, Long> {
      */
     Merchant findByName(String name);
 
-    /**
-     * 获取商户下所有的粉丝
-     *
-     * @param pageable
-     * @return
-     */
-    Page<Merchant> findAllByIdOrderByMerchantConsumerSetCtimeDesc(Long id, Pageable pageable);
 }

@@ -1,0 +1,506 @@
+16:00:33.695 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 15:58:58 CST 2019]; root of context hierarchy
+16:00:33.707 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+16:00:33.708 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+16:00:33.709 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:00:33.709 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:00:33.712 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:00:33.713 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:00:33.718 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:00:40.085 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 2597 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+16:00:40.089 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+16:00:40.249 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:00:40 CST 2019]; root of context hierarchy
+16:00:41.097 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:00:41.195 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+16:00:41.198 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:00:41.202 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+16:00:41.505 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:00:41.550 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+16:00:41.552 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+16:00:41.553 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+16:00:41.554 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+16:00:41.555 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+16:00:41.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+16:00:42.083 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$d891db8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:00:43.174 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:00:43.193 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:00:43.195 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+16:00:43.350 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:00:43.350 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3101 ms
+16:00:43.660 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:00:43.661 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+16:00:43.661 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:00:44.668 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+16:00:44.727 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:00:44.750 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+16:00:44.868 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+16:00:44.870 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:00:44.872 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:00:44.932 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:00:45.103 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:00:45.414 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:00:45.915 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:00:45.950 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:00:45.951 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+16:00:45.967 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:00:45.990 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:00:46.066 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:00:46.846 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+16:00:46.848 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+16:00:46.848 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+16:00:46.850 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+16:00:46.850 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+16:00:46.855 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:00:46.856 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:00:46.981 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:00:40 CST 2019]; root of context hierarchy
+16:00:47.083 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+16:00:48.305 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:00:48.306 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+16:00:48.306 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+16:00:48.314 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+16:00:48.315 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+16:00:48.320 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+16:00:48.398 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+16:00:48.405 [main] INFO  com.lihebin.manage.Application - Started Application in 8.819 seconds (JVM running for 9.549)
+16:03:34.726 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:03:34.727 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+16:03:34.762 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+16:03:34.964 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][addMerchant] web request>>[com.lihebin.manage.bean.MerchantNew@23e2d72d]
+16:03:35.007 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+16:03:35.541 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][addMerchant] web response>>null
+16:17:52.064 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:00:40 CST 2019]; root of context hierarchy
+16:17:52.066 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+16:17:52.066 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+16:17:52.067 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:17:52.068 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:17:52.071 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:17:52.072 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:17:52.079 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:17:58.434 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 2803 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+16:17:58.438 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+16:17:58.572 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:17:58 CST 2019]; root of context hierarchy
+16:17:59.418 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:17:59.509 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+16:17:59.512 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:17:59.516 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+16:17:59.842 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:17:59.891 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+16:17:59.894 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+16:17:59.894 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+16:17:59.895 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+16:17:59.896 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+16:17:59.897 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+16:18:00.406 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$7905919e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:18:01.452 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:18:01.470 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:18:01.471 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+16:18:01.645 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:18:01.645 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3073 ms
+16:18:01.941 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:18:01.942 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+16:18:01.943 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:18:02.928 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+16:18:02.991 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:18:03.013 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+16:18:03.122 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+16:18:03.124 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:18:03.126 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:18:03.177 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:18:03.330 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:18:03.604 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:18:04.077 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:18:04.104 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:18:04.104 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+16:18:04.117 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:18:04.138 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:18:04.206 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:18:04.964 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+16:18:04.966 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+16:18:04.967 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+16:18:04.968 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+16:18:04.969 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+16:18:04.974 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:18:04.974 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:18:05.092 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:17:58 CST 2019]; root of context hierarchy
+16:18:05.193 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+16:18:06.419 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:18:06.420 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+16:18:06.421 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+16:18:06.428 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+16:18:06.429 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+16:18:06.434 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+16:18:06.510 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+16:18:06.517 [main] INFO  com.lihebin.manage.Application - Started Application in 8.519 seconds (JVM running for 9.166)
+16:24:52.530 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:24:52.530 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+16:24:52.565 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+16:24:52.735 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][login] web request>>[com.lihebin.manage.bean.Login@37e2ff63]
+16:24:52.768 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+16:26:09.064 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][login] web request>>[com.lihebin.manage.bean.Login@384b2301]
+16:27:32.884 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][login] web request>>[com.lihebin.manage.bean.Login@27ccf87a]
+16:27:38.493 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][login] web response>>com.lihebin.manage.bean.LoginRes@7f45d40e
+16:29:03.669 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web request>>[com.lihebin.manage.bean.Login@5ab2fcef]
+16:29:11.612 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web response>>com.lihebin.manage.bean.LoginRes@4d90da26
+16:30:14.980 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web request>>[eb3467eaa09b44531791fde2501a3747, 1, 30]
+16:30:54.900 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web response>>null
+16:31:52.395 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:17:58 CST 2019]; root of context hierarchy
+16:31:52.397 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+16:31:52.397 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+16:31:52.398 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:31:52.398 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:31:52.401 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:31:52.401 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:31:52.404 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:31:58.602 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 2942 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+16:31:58.605 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+16:31:58.737 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:31:58 CST 2019]; root of context hierarchy
+16:31:59.604 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:31:59.700 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+16:31:59.703 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:31:59.706 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+16:32:00.042 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:32:00.088 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+16:32:00.090 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+16:32:00.091 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+16:32:00.092 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+16:32:00.093 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+16:32:00.094 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+16:32:00.602 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$49b2145b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:32:01.667 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:32:01.684 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:32:01.686 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+16:32:01.850 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:32:01.850 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3114 ms
+16:32:02.135 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:32:02.136 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+16:32:02.137 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:32:03.140 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+16:32:03.194 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:32:03.216 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+16:32:03.324 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+16:32:03.326 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:32:03.328 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:32:03.381 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:32:03.546 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:32:03.819 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:32:04.304 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:32:04.339 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:32:04.339 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+16:32:04.356 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:32:04.378 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:32:04.456 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:32:05.215 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+16:32:05.216 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+16:32:05.217 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+16:32:05.218 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+16:32:05.218 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+16:32:05.224 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:32:05.224 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:32:05.343 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:31:58 CST 2019]; root of context hierarchy
+16:32:05.450 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+16:32:06.687 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+16:32:06.688 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+16:32:06.689 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+16:32:06.695 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+16:32:06.696 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+16:32:06.700 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+16:32:06.778 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+16:32:06.784 [main] INFO  com.lihebin.manage.Application - Started Application in 8.603 seconds (JVM running for 9.19)
+16:32:18.775 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:32:18.775 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+16:32:18.808 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+16:32:18.859 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web request>>[eb3467eaa09b44531791fde2501a3747, 1, 30]
+16:32:23.205 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+16:33:07.165 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web response>>null
+16:34:48.200 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][listMerchantCustomerPaging] web request>>[eb3467eaa09b44531791fde2501a3747, 1, 30]
+16:35:32.536 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][listMerchantCustomerPaging] web response>>null
+16:37:42.769 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:31:58 CST 2019]; root of context hierarchy
+16:37:42.771 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+16:37:42.771 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+16:37:42.772 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:37:42.772 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:37:42.775 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:37:42.776 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:37:42.779 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:37:49.121 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 2995 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+16:37:49.125 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+16:37:49.254 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:37:49 CST 2019]; root of context hierarchy
+16:37:50.084 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:37:50.184 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+16:37:50.188 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:37:50.192 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+16:37:50.508 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:37:50.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+16:37:50.559 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+16:37:50.560 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+16:37:50.561 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+16:37:50.561 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+16:37:50.562 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+16:37:51.092 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$d88663b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:37:52.180 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:37:52.197 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:37:52.199 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+16:37:52.362 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:37:52.362 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3108 ms
+16:37:52.680 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:37:52.681 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+16:37:52.681 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:37:53.657 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+16:37:53.717 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:37:53.739 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+16:37:53.859 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+16:37:53.861 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:37:53.863 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:37:53.920 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:37:54.097 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:37:54.423 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:37:54.443 [main] WARN  org.hibernate.mapping.RootClass - HHH000038: Composite-id class does not override equals(): com.lihebin.manage.model.MerchantConsumer
+16:37:54.444 [main] WARN  org.hibernate.mapping.RootClass - HHH000039: Composite-id class does not override hashCode(): com.lihebin.manage.model.MerchantConsumer
+16:37:54.444 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryManage' defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: managePersistenceUnit] Unable to build Hibernate SessionFactory
+16:37:54.449 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:37:54.452 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:37:54.465 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+16:37:54.471 [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryManage' defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: managePersistenceUnit] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.lihebin.manage.Application.main(Application.java:22)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: managePersistenceUnit] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:353)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:370)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:359)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 16 common frames omitted
+Caused by: org.hibernate.MappingException: Composite-id class must implement Serializable: com.lihebin.manage.model.MerchantConsumer
+	at org.hibernate.mapping.RootClass.checkCompositeIdentifier(RootClass.java:291)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:274)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:329)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:443)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 22 common frames omitted
+16:54:25.718 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 3106 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+16:54:25.722 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+16:54:25.864 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:54:25 CST 2019]; root of context hierarchy
+16:54:26.758 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:54:26.857 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+16:54:26.860 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:54:26.863 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+16:54:27.187 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:54:27.232 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+16:54:27.234 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+16:54:27.234 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+16:54:27.235 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+16:54:27.236 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+16:54:27.237 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+16:54:27.741 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$534543b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:54:28.840 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:54:28.857 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:54:28.858 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+16:54:29.007 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:54:29.007 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3143 ms
+16:54:29.278 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:54:29.278 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+16:54:29.279 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:54:30.220 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+16:54:30.277 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:54:30.301 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+16:54:30.418 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+16:54:30.421 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:54:30.423 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:54:30.481 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:54:30.646 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:54:30.930 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:54:31.450 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:54:31.494 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:54:31.495 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+16:54:31.515 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:54:31.546 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:54:31.622 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:54:32.480 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+16:54:32.490 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+16:54:32.491 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+16:54:32.492 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+16:54:32.493 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+16:54:32.498 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16:54:32.499 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16:54:32.626 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:54:25 CST 2019]; root of context hierarchy
+16:54:32.729 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+16:54:32.958 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.MerchantConsumerDao.findAllById(java.lang.Long,org.springframework.data.domain.Pageable)
+16:54:32.959 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:54:32.960 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:54:32.966 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:54:32.969 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:54:32.984 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+16:54:32.990 [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.MerchantConsumerDao.findAllById(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:742)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.lihebin.manage.Application.main(Application.java:22)
+Caused by: org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.MerchantConsumerDao.findAllById(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.data.jpa.repository.query.NativeJpaQuery.<init>(NativeJpaQuery.java:60)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:72)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:53)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:77)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:436)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:221)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 16 common frames omitted
+16:59:18.182 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 3147 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+16:59:18.186 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+16:59:18.340 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Sun Jun 09 16:59:18 CST 2019]; root of context hierarchy
+16:59:19.230 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:59:19.327 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+16:59:19.330 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:59:19.334 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+16:59:19.647 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+16:59:19.696 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+16:59:19.699 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+16:59:19.700 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+16:59:19.700 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+16:59:19.701 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+16:59:19.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+16:59:20.228 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$53c5aefb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:59:21.300 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+16:59:21.318 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:59:21.320 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+16:59:21.466 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:59:21.466 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3127 ms
+16:59:21.736 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16:59:21.737 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+16:59:21.737 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16:59:22.727 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+16:59:22.788 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:59:22.810 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+16:59:22.932 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+16:59:22.934 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:59:22.936 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:59:22.992 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16:59:23.157 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:59:23.465 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:59:23.959 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:59:23.989 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:59:23.989 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+16:59:24.003 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+16:59:24.031 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+16:59:24.107 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:59:24.793 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchantServiceImpl': Unsatisfied dependency expressed through field 'merchantConsumerDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.MerchantConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+16:59:24.794 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+16:59:24.795 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+16:59:24.801 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:59:24.803 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+16:59:24.816 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+16:59:24.822 [main] ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchantServiceImpl': Unsatisfied dependency expressed through field 'merchantConsumerDao'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.MerchantConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.lihebin.manage.Application.main(Application.java:22)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'merchantConsumerDao': Invocation of init method failed; nested exception is org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.MerchantConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException: Cannot use native queries with dynamic sorting and/or pagination in method public abstract org.springframework.data.domain.Page com.lihebin.manage.dao.manage.MerchantConsumerDao.findAllByMerchantId(java.lang.Long,org.springframework.data.domain.Pageable)
+	at org.springframework.data.jpa.repository.query.NativeJpaQuery.<init>(NativeJpaQuery.java:60)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:72)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:53)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:144)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:211)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:77)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:436)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:221)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.initAndReturn(RepositoryFactoryBeanSupport.java:277)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:263)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 29 common frames omitted
