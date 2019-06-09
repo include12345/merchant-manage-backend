@@ -14,4 +14,3 @@ com/lihebin/manage/service/MerchantUserService.class
 com/lihebin/manage/bean/Base.class
 com/lihebin/manage/bean/Consumer.class
 com/lihebin/manage/bean/Transaction.class
-com/lihebin/manage/exception/BackendException.class

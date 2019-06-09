@@ -1,7 +1,13 @@
 package com.lihebin.manage.model;
 
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
+import java.util.Date;
+import java.util.Set;
 
 /**
  * 商户
@@ -9,6 +15,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "merchant")
+@EntityListeners(AuditingEntityListener.class)
 public class Merchant {
 
     @Id
@@ -16,16 +23,30 @@ public class Merchant {
     private Long id;
 
     @Column
-    private Long ctime;
+    private String sn;
 
     @Column
-    private Long mtime;
+    private String name;
+
+    @Column
+    private String cellphone;
+
+    @CreatedDate
+    @Column(name = "ctime")
+    private Date ctime;
+
+    @LastModifiedDate
+    @Column(name = "mtime")
+    private Date mtime;
 
     @Column
     private Boolean deleted;
 
-    @Column
+    @Version
     private Long version;
+
+    @OneToMany(mappedBy = "merchant", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<MerchantConsumer> merchantConsumerSet;
 
     public Long getId() {
         return id;
@@ -35,19 +56,19 @@ public class Merchant {
         this.id = id;
     }
 
-    public Long getCtime() {
+    public Date getCtime() {
         return ctime;
     }
 
-    public void setCtime(Long ctime) {
+    public void setCtime(Date ctime) {
         this.ctime = ctime;
     }
 
-    public Long getMtime() {
+    public Date getMtime() {
         return mtime;
     }
 
-    public void setMtime(Long mtime) {
+    public void setMtime(Date mtime) {
         this.mtime = mtime;
     }
 
@@ -67,11 +88,13 @@ public class Merchant {
         this.version = version;
     }
 
-    @Column
-    private String sn;
+    public String getName() {
+        return name;
+    }
 
-    @Column
-    private String cellphone;
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getSn() {
         return sn;
@@ -87,5 +110,13 @@ public class Merchant {
 
     public void setCellphone(String cellphone) {
         this.cellphone = cellphone;
+    }
+
+    public Set<MerchantConsumer> getMerchantConsumerSet() {
+        return merchantConsumerSet;
+    }
+
+    public void setMerchantConsumerSet(Set<MerchantConsumer> merchantConsumerSet) {
+        this.merchantConsumerSet = merchantConsumerSet;
     }
 }

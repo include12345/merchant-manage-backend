@@ -1,8 +1,14 @@
 package com.lihebin.manage.config;
 
+import com.lihebin.manage.bean.Code;
+import com.lihebin.manage.dao.cache.RedisDao;
+import com.lihebin.manage.dao.manage.MerchantUserDao;
+import com.lihebin.manage.exception.BackendException;
 import com.lihebin.manage.exception.BackendLoginException;
+import com.lihebin.manage.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -16,11 +22,11 @@ import javax.servlet.http.HttpServletResponse;
 public class TokenInterceptor extends HandlerInterceptorAdapter {
     private final Logger log = LoggerFactory.getLogger(getClass());
 
-//    @Autowired
-//    private UserDao userDao;
-//
-//    @Autowired
-//    private CacheDao cacheDao;
+    @Autowired
+    private MerchantUserDao merchantUserDao;
+
+    @Autowired
+    private RedisDao redisDao;
 
 
 
@@ -35,25 +41,14 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
             throw new BackendLoginException("登录超时");
         }
         log.info("TokenInterceptor:{}", token);
-        String[] param = token.split("-");
-        String method = request.getRequestURI();
-//        String timeOut = cacheService.getCache(token);
-//        if (!StringUtil.empty(timeOut)) {
-//            throw new BackendRepeatException("请求过于频繁");
-//        }
-//        cacheService.setCache(token,  "timeOut",  100, "milliseconds");
-        if (!method.contains(param[1])) {
-            if (!((method.contains("getMenuAll") || method.contains("getAllUsername") || method.contains("getMenuByUsername")) && param[1].equals("relevanceUserAndMenu"))) {
-                throw new BackendLoginException("登录超时");
-            }
+//        String[] param = token.split("-");
+//        String method = request.getRequestURI();
+        String username = redisDao.getValue(token);
+        if (!StringUtil.empty(username)) {
+            throw new BackendException(Code.CODE_TIME_OUT, "登录超时");
         }
-//        String username = cacheDao.getValue(param[0]);
-//        log.info("request:{},{}", method, username);
-//        if(!StringUtil.empty(username) && userDao.queryUserAndMenu(username, param[1])){
-//            return true;
-//        } else {
-//            throw new BackendLoginException("登录超时");
-//        }
+//
         return true;
     }
+
 }

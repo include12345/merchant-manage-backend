@@ -1,5 +1,7 @@
 package com.lihebin.manage.dao.manage;
 
+import com.lihebin.manage.bean.Code;
+import com.lihebin.manage.exception.BackendException;
 import com.lihebin.manage.exception.BackendRepeatException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,15 +57,15 @@ public class SimpleSnGeneratorDao {
      * @return
      * @throws BackendRepeatException
      */
-    public String nextMerchantSn() throws BackendRepeatException {
-        return orderSnPrefix + nextSn("order_sn_ticket", orderSnPrefix, 10);
+    public String nextMerchantSn() throws BackendException {
+        return orderSnPrefix + nextSn("table_name_sn_prefix", orderSnPrefix, 10);
     }
 
-    private String nextSn(String tableName, String prefix, int length) throws BackendRepeatException {
+    private String nextSn(String tableName, String prefix, int length) throws BackendException {
         return nextSn(tableName, prefix, length, false);
     }
 
-    private String nextSn(String tableName, final String prefix, int length, boolean needShuffle) throws BackendRepeatException {
+    private String nextSn(String tableName, final String prefix, int length, boolean needShuffle) throws BackendException {
         final String getTicketSql = String.format("replace into %s_%s (stub) values ( ? )", tableName, prefix);
         final KeyHolder keyHolder = new GeneratedKeyHolder();
         for (int i=0; i< retries; ++i) {
@@ -94,10 +96,10 @@ public class SimpleSnGeneratorDao {
                 logger.warn("failed to generate sn due to transient jdbc error", ex);
                 sleepRandom(50);
             }catch(Exception ex) {
-                throw new BackendRepeatException("序列号产生器异常:" + ex.getMessage());
+                throw new BackendException(Code.CODE_PARAM_ERROR, "序列号产生器异常:" + ex.getMessage());
             }
         }
-        throw new BackendRepeatException(String.format("序列号产生器失败（已经试了%d次）", retries));
+        throw new BackendException(Code.CODE_PARAM_ERROR, String.format("序列号产生器失败（已经试了%d次）", retries));
     }
 
     private static void sleepRandom(int upTo) {

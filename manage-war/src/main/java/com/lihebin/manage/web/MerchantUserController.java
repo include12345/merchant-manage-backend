@@ -29,4 +29,6 @@ public class MerchantUserController {
         merchantUserService.logout(token);
     }
 
+
+
 }

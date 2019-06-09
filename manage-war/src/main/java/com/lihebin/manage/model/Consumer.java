@@ -1,7 +1,13 @@
 package com.lihebin.manage.model;
 
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
+import java.util.Date;
+import java.util.Set;
 
 /**
  * 会员
@@ -9,6 +15,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "consumer")
+@EntityListeners(AuditingEntityListener.class)
 public class Consumer {
 
     @Id
@@ -16,16 +23,36 @@ public class Consumer {
     private Long id;
 
     @Column
-    private Long ctime;
+    private String sn;
 
     @Column
-    private Long mtime;
+    private String name;
+
+    @Column
+    private String cellphone;
+
+    @Column
+    private String email;
+
+    @Column
+    private String wechat;
+
+    @CreatedDate
+    @Column(name = "ctime")
+    private Date ctime;
+
+    @LastModifiedDate
+    @Column(name = "mtime")
+    private Date mtime;
 
     @Column
     private Boolean deleted;
 
     @Column
     private Long version;
+
+    @OneToMany(mappedBy = "consumer")
+    private Set<MerchantConsumer> merchantConsumerSet;
 
     public Long getId() {
         return id;
@@ -35,19 +62,19 @@ public class Consumer {
         this.id = id;
     }
 
-    public Long getCtime() {
+    public Date getCtime() {
         return ctime;
     }
 
-    public void setCtime(Long ctime) {
+    public void setCtime(Date ctime) {
         this.ctime = ctime;
     }
 
-    public Long getMtime() {
+    public Date getMtime() {
         return mtime;
     }
 
-    public void setMtime(Long mtime) {
+    public void setMtime(Date mtime) {
         this.mtime = mtime;
     }
 
@@ -66,21 +93,6 @@ public class Consumer {
     public void setVersion(Long version) {
         this.version = version;
     }
-
-    @Column
-    private String sn;
-
-    @Column
-    private String name;
-
-    @Column
-    private String cellphone;
-
-    @Column
-    private String email;
-
-    @Column
-    private String wechat;
 
     public String getSn() {
         return sn;
@@ -120,5 +132,13 @@ public class Consumer {
 
     public void setWechat(String wechat) {
         this.wechat = wechat;
+    }
+
+    public Set<MerchantConsumer> getMerchantConsumerSet() {
+        return merchantConsumerSet;
+    }
+
+    public void setMerchantConsumerSet(Set<MerchantConsumer> merchantConsumerSet) {
+        this.merchantConsumerSet = merchantConsumerSet;
     }
 }

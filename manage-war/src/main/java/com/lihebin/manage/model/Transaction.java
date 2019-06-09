@@ -1,7 +1,12 @@
 package com.lihebin.manage.model;
 
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * 流水
@@ -9,17 +14,20 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "transaction")
+@EntityListeners(AuditingEntityListener.class)
 public class Transaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private Long ctime;
+    @CreatedDate
+    @Column(name = "ctime")
+    private Date ctime;
 
-    @Column
-    private Long mtime;
+    @LastModifiedDate
+    @Column(name = "mtime")
+    private Date mtime;
 
     @Column
     private Boolean deleted;
@@ -35,19 +43,19 @@ public class Transaction {
         this.id = id;
     }
 
-    public Long getCtime() {
+    public Date getCtime() {
         return ctime;
     }
 
-    public void setCtime(Long ctime) {
+    public void setCtime(Date ctime) {
         this.ctime = ctime;
     }
 
-    public Long getMtime() {
+    public Date getMtime() {
         return mtime;
     }
 
-    public void setMtime(Long mtime) {
+    public void setMtime(Date mtime) {
         this.mtime = mtime;
     }
 

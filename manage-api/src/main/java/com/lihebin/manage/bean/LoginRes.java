@@ -6,17 +6,17 @@ package com.lihebin.manage.bean;
  */
 public class LoginRes {
 
-    private String merchantId;
+    private Long merchantId;
 
     private String token;
 
     private Integer type;
 
-    public String getMerchantId() {
+    public Long getMerchantId() {
         return merchantId;
     }
 
-    public void setMerchantId(String merchantId) {
+    public void setMerchantId(Long merchantId) {
         this.merchantId = merchantId;
     }
 

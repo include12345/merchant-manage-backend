@@ -3,7 +3,6 @@
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Code.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Login.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Order.java
-/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/exception/BackendException.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumerWallet.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Transaction.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumer.java
