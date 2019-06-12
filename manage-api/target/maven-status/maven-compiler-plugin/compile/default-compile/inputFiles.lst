@@ -5,11 +5,15 @@
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Order.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumerWallet.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Transaction.java
-/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumer.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/UserMessage.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Result.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/service/MerchantUserService.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantNew.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/OrderBy.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/service/MerchantService.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Base.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/PageInfo.java
-/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Merchant.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumerRes.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantUpdate.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantRes.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/LoginRes.java

@@ -1,0 +1,76 @@
+21:45:27.820 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindembp with PID 38744 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+21:45:27.826 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+21:45:27.920 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Wed Jun 12 21:45:27 CST 2019]; root of context hierarchy
+21:45:28.655 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:45:28.747 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+21:45:28.750 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:45:28.752 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+21:45:29.111 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+21:45:29.154 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+21:45:29.156 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.ConsumerDao.
+21:45:29.157 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+21:45:29.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+21:45:29.158 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+21:45:29.159 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+21:45:29.657 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$aba3851a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:45:30.897 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+21:45:30.915 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:45:30.917 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+21:45:31.055 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:45:31.056 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3136 ms
+21:45:31.342 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+21:45:31.343 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+21:45:31.343 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+21:45:39.860 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+21:45:39.929 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:45:39.953 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+21:45:40.049 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+21:45:40.051 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+21:45:40.053 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+21:45:40.112 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21:45:40.285 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:45:40.573 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:45:41.091 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+21:45:41.121 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:45:41.122 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+21:45:41.133 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21:45:41.156 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+21:45:41.220 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+21:45:42.112 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public org.springframework.data.domain.Page<com.lihebin.manage.bean.MerchantConsumerRes> com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,int,int)
+21:45:42.114 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+21:45:42.114 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.MerchantRes com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+21:45:42.116 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.LoginRes com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+21:45:42.116 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public void com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+21:45:42.120 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+21:45:42.121 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+21:45:42.263 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Wed Jun 12 21:45:27 CST 2019]; root of context hierarchy
+21:45:42.368 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+21:45:43.852 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+21:45:43.854 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+21:45:43.854 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+21:45:43.861 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+21:45:43.862 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+21:45:43.866 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+21:45:43.955 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+21:45:43.962 [main] INFO  com.lihebin.manage.Application - Started Application in 16.525 seconds (JVM running for 17.159)
+21:46:18.348 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+21:46:18.350 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+21:46:18.376 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+21:46:18.395 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/sockjs-node/info] in DispatcherServlet with name 'dispatcherServlet'
+21:46:20.512 [http-nio-8080-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/sockjs-node/info] in DispatcherServlet with name 'dispatcherServlet'
+21:46:24.618 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/sockjs-node/info] in DispatcherServlet with name 'dispatcherServlet'
+21:46:32.715 [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/sockjs-node/info] in DispatcherServlet with name 'dispatcherServlet'
+21:46:44.632 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][login] web request>>[com.lihebin.manage.bean.Login@412ef32]
+21:46:44.663 [http-nio-8080-exec-6] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+21:46:57.716 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][login] web request>>[com.lihebin.manage.bean.Login@3c2ee0aa]
+21:48:14.289 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][login] web request>>[com.lihebin.manage.bean.Login@379cb3be]
+21:51:47.130 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][login] web request>>[com.lihebin.manage.bean.Login@5b9d9a15]
+21:51:48.074 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][login] web response>>com.lihebin.manage.bean.LoginRes@526afedb
+21:57:49.503 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][logout] web request>>[15902b9e881a81af97e75b2f63a35d80]
+21:57:49.736 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][logout] web response>>null
+21:57:59.647 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web request>>[com.lihebin.manage.bean.Login@2c632b74]
+21:58:03.249 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web response>>com.lihebin.manage.bean.LoginRes@426b054c

@@ -51,8 +51,19 @@ public class Consumer {
     @Column
     private Long version;
 
+
+    private Long merchant_id;
 //    @OneToMany(mappedBy = "consumer")
 //    private Set<MerchantConsumer> merchantConsumerSet;
+
+
+    public Long getMerchant_id() {
+        return merchant_id;
+    }
+
+    public void setMerchant_id(Long merchant_id) {
+        this.merchant_id = merchant_id;
+    }
 
     public Long getId() {
         return id;

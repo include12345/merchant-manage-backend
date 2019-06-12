@@ -18,9 +18,9 @@ public class MerchantConsumerRes {
 
     private String consumerWechat;
 
-    private String merchantId;
+    private Long merchantId;
 
-    private String consumerId;
+    private Long consumerId;
 
     public String getConsumerSn() {
         return consumerSn;
@@ -62,19 +62,19 @@ public class MerchantConsumerRes {
         this.consumerWechat = consumerWechat;
     }
 
-    public String getMerchantId() {
+    public Long getMerchantId() {
         return merchantId;
     }
 
-    public void setMerchantId(String merchantId) {
+    public void setMerchantId(Long merchantId) {
         this.merchantId = merchantId;
     }
 
-    public String getConsumerId() {
+    public Long getConsumerId() {
         return consumerId;
     }
 
-    public void setConsumerId(String consumerId) {
+    public void setConsumerId(Long consumerId) {
         this.consumerId = consumerId;
     }
 }

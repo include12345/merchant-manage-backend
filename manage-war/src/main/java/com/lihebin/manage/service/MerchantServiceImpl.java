@@ -11,17 +11,19 @@ import com.lihebin.manage.model.Merchant;
 import com.lihebin.manage.model.MerchantConsumerInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 /**
  * Created by lihebin on 2019/4/29.
  */
 @Service
-public class MerchantServiceImpl implements MerchantService{
+public class MerchantServiceImpl implements MerchantService {
 
 
     @Autowired
@@ -34,9 +36,6 @@ public class MerchantServiceImpl implements MerchantService{
     private ConsumerDao consumerDao;
 
     @Autowired
-    private MerchantConsumerDao merchantConsumerDao;
-
-    @Autowired
     private SimpleSnGeneratorDao simpleSnGeneratorDao;
 
 
@@ -44,9 +43,31 @@ public class MerchantServiceImpl implements MerchantService{
     public Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, int pageNo, int pageSize) {
         UserMessage userMessage = merchantUserService.getUserMessage(token);
         Page<Consumer> merchantPage = consumerDao.findAllByMerchantId(userMessage.getMerchantId(), new PageRequest(pageNo, pageSize));
-        long count = merchantPage.getTotalElements();
-        List<Consumer> merchantList = merchantPage.getContent();
-        return null;
+        return new PageImpl<>(
+                merchantPage.getContent()
+                        .stream()
+                        .map(this::buildMerchantConsumerRes)
+                        .collect(Collectors.toList()),
+                merchantPage.previousPageable(), merchantPage.getTotalElements());
+    }
+
+
+    /**
+     * build MerchantConsumerRes
+     *
+     * @param consumer
+     * @return
+     */
+    private MerchantConsumerRes buildMerchantConsumerRes(Consumer consumer) {
+        MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();
+        merchantConsumerRes.setConsumerId(consumer.getId());
+        merchantConsumerRes.setMerchantId(consumer.getMerchant_id());
+        merchantConsumerRes.setConsumerCellphone(consumer.getCellphone());
+        merchantConsumerRes.setConsumerEmail(consumer.getEmail());
+        merchantConsumerRes.setConsumerName(consumer.getName());
+        merchantConsumerRes.setConsumerSn(consumer.getSn());
+        merchantConsumerRes.setConsumerWechat(consumer.getWechat());
+        return merchantConsumerRes;
     }
 
     @Override
@@ -61,9 +82,13 @@ public class MerchantServiceImpl implements MerchantService{
         merchantAdd.setCellphone(merchant.getCellphone());
         merchantAdd.setName(merchant.getName());
         merchantAdd.setDeleted(false);
-        merchantDao.save(merchantAdd);
-        return null;
+        merchantAdd = merchantDao.save(merchantAdd);
+        MerchantRes merchantRes = new MerchantRes();
+        merchantRes.setId(merchantAdd.getId());
+        return merchantRes;
     }
+
+
 
     @Override
     public MerchantRes updateMerchant(MerchantUpdate merchant) {
@@ -85,7 +110,9 @@ public class MerchantServiceImpl implements MerchantService{
         if (merchant.getDeleted() != null && !merchantQuery.getDeleted().equals(merchant.getDeleted())) {
             merchantQuery.setDeleted(merchant.getDeleted());
         }
-        merchantDao.save(merchantQuery);
-        return null;
+        merchantQuery = merchantDao.save(merchantQuery);
+        MerchantRes merchantRes = new MerchantRes();
+        merchantRes.setId(merchantQuery.getId());
+        return merchantRes;
     }
 }

@@ -21,7 +21,7 @@ public interface ConsumerDao extends JpaRepository<Consumer, Long>{
      * @param pageable
      * @return
      */
-    @Query(nativeQuery = true, value = "select c.*" +
+    @Query(nativeQuery = true, value = "select c.*, mc.merchant_id" +
             " FROM consumer c " +
             "left join merchant_consumer mc " +
             "on mc.consumer_id = c.id " +
