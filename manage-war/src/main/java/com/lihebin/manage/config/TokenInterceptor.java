@@ -45,7 +45,7 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
 //        String[] param = token.split("-");
 //        String method = request.getRequestURI();
         String username = redisDao.getValue(token);
-        if (!StringUtil.empty(username)) {
+        if (StringUtil.empty(username)) {
             throw new BackendException(Code.CODE_TIME_OUT, "登录超时");
         }
 //

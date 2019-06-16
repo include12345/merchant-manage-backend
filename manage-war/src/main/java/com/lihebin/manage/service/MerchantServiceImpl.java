@@ -1,21 +1,24 @@
 package com.lihebin.manage.service;
 
 import com.lihebin.manage.bean.*;
-import com.lihebin.manage.dao.manage.ConsumerDao;
 import com.lihebin.manage.dao.manage.MerchantConsumerDao;
 import com.lihebin.manage.dao.manage.MerchantDao;
 import com.lihebin.manage.dao.manage.SimpleSnGeneratorDao;
 import com.lihebin.manage.exception.BackendException;
-import com.lihebin.manage.model.Consumer;
 import com.lihebin.manage.model.Merchant;
-import com.lihebin.manage.model.MerchantConsumerInfo;
+import com.lihebin.manage.model.MerchantConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 
@@ -33,16 +36,26 @@ public class MerchantServiceImpl implements MerchantService {
     private MerchantDao merchantDao;
 
     @Autowired
-    private ConsumerDao consumerDao;
+    private MerchantConsumerDao merchantConsumerDao;
 
     @Autowired
     private SimpleSnGeneratorDao simpleSnGeneratorDao;
 
 
     @Override
-    public Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, int pageNo, int pageSize) {
+    public Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, Optional<String> name, Optional<String> cellphone,  int pageNo, int pageSize) {
         UserMessage userMessage = merchantUserService.getUserMessage(token);
-        Page<Consumer> merchantPage = consumerDao.findAllByMerchantId(userMessage.getMerchantId(), new PageRequest(pageNo, pageSize));
+        Page<MerchantConsumer> merchantPage = merchantConsumerDao.findAll((root, criteriaQuery, criteriaBuilder) -> {
+            Path<Long> merchantIdPath = root.get("merchant_id");
+            Path<String> namePath = root.get("name");
+            Path<String> cellphonePath = root.get("cellphone");
+            List<Predicate> predicateList = new ArrayList<>();
+            predicateList.add(criteriaBuilder.equal(merchantIdPath, userMessage.getMerchantId()));
+            name.ifPresent(s -> predicateList.add(criteriaBuilder.like(namePath, "%" + s + "%")));
+            cellphone.ifPresent(s -> predicateList.add(criteriaBuilder.equal(cellphonePath, s)));
+            Predicate[] p = new Predicate[predicateList.size()];
+            return criteriaBuilder.and(predicateList.toArray(p));
+        }, new PageRequest(pageNo, pageSize));
         return new PageImpl<>(
                 merchantPage.getContent()
                         .stream()
@@ -55,18 +68,20 @@ public class MerchantServiceImpl implements MerchantService {
     /**
      * build MerchantConsumerRes
      *
-     * @param consumer
+     * @param merchantConsumer
      * @return
      */
-    private MerchantConsumerRes buildMerchantConsumerRes(Consumer consumer) {
+    private MerchantConsumerRes buildMerchantConsumerRes(MerchantConsumer merchantConsumer) {
         MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();
-        merchantConsumerRes.setConsumerId(consumer.getId());
-        merchantConsumerRes.setMerchantId(consumer.getMerchant_id());
-        merchantConsumerRes.setConsumerCellphone(consumer.getCellphone());
-        merchantConsumerRes.setConsumerEmail(consumer.getEmail());
-        merchantConsumerRes.setConsumerName(consumer.getName());
-        merchantConsumerRes.setConsumerSn(consumer.getSn());
-        merchantConsumerRes.setConsumerWechat(consumer.getWechat());
+        merchantConsumerRes.setId(merchantConsumer.getId());
+        merchantConsumerRes.setMerchantId(merchantConsumer.getMerchant_id());
+        merchantConsumerRes.setConsumerCellphone(merchantConsumer.getCellphone());
+        merchantConsumerRes.setConsumerEmail(merchantConsumer.getEmail());
+        merchantConsumerRes.setConsumerName(merchantConsumer.getName());
+        merchantConsumerRes.setConsumerSn(merchantConsumer.getSn());
+        merchantConsumerRes.setConsumerWechat(merchantConsumer.getWechat());
+        merchantConsumerRes.setCtime(merchantConsumer.getCtime());
+        merchantConsumerRes.setMtime(merchantConsumer.getMtime());
         return merchantConsumerRes;
     }
 

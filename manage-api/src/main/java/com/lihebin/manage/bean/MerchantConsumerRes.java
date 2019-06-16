@@ -1,6 +1,8 @@
 package com.lihebin.manage.bean;
 
 
+import java.util.Date;
+
 /**
  * 商户会员
  * Created by lihebin on 2019/4/15.
@@ -20,7 +22,11 @@ public class MerchantConsumerRes {
 
     private Long merchantId;
 
-    private Long consumerId;
+    private Long id;
+
+    private Date ctime;
+
+    private Date mtime;
 
     public String getConsumerSn() {
         return consumerSn;
@@ -70,11 +76,27 @@ public class MerchantConsumerRes {
         this.merchantId = merchantId;
     }
 
-    public Long getConsumerId() {
-        return consumerId;
+    public Long getId() {
+        return id;
     }
 
-    public void setConsumerId(Long consumerId) {
-        this.consumerId = consumerId;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getCtime() {
+        return ctime;
+    }
+
+    public void setCtime(Date ctime) {
+        this.ctime = ctime;
+    }
+
+    public Date getMtime() {
+        return mtime;
+    }
+
+    public void setMtime(Date mtime) {
+        this.mtime = mtime;
     }
 }

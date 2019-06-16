@@ -8,7 +8,12 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/api/**"/>
-            <!--<mvc:exclude-mapping path="/admin/**"/>-->
+            <!--<mvc:exclude-mapping path="/user/api/check"/>-->
+            <bean class="com.lihebin.manage.config.TokenInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/api/check"/>
+            <!--<mvc:exclude-mapping path="/user/api/check"/>-->
             <bean class="com.lihebin.manage.config.TokenInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

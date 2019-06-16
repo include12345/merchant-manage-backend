@@ -1,0 +1,15 @@
+18:23:42.512 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:45f423123e881140542c494b1c64f656
+18:23:42.737 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web request>>:[[]]
+18:23:42.737 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web response>>:[com.lihebin.manage.bean.Result@45fb39e6]
+18:24:04.112 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:45f423123e881140542c494b1c64f656
+18:24:04.245 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web request>>:[[]]
+18:24:04.245 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web response>>:[com.lihebin.manage.bean.Result@3433582]
+18:25:05.189 [http-nio-8080-exec-6] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:45f423123e881140542c494b1c64f656
+18:25:05.321 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web request>>:[[]]
+18:25:05.321 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web response>>:[com.lihebin.manage.bean.Result@235f437a]
+18:28:26.687 [http-nio-8080-exec-8] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:45f423123e881140542c494b1c64f656
+18:28:26.883 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][checkToken] web request>>:[[]]
+18:28:26.884 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][checkToken] web response>>:[com.lihebin.manage.bean.Result@7a8142]
+18:29:35.075 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:45f423123e881140542c494b1c64f656
+18:29:35.201 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][checkToken] web request>>:[[]]
+18:29:35.201 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][checkToken] web response>>:[com.lihebin.manage.bean.Result@7702a197]

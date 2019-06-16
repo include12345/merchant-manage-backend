@@ -23,6 +23,25 @@ public class MerchantConsumer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
+    private String sn;
+
+    @Column
+    private String name;
+
+    @Column
+    private String cellphone;
+
+    @Column
+    private String email;
+
+    @Column
+    private String wechat;
+
+
+    @Column
+    private Long merchant_id;
+
     @CreatedDate
     @Column(name = "ctime")
     private Date ctime;
@@ -43,6 +62,54 @@ public class MerchantConsumer {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getSn() {
+        return sn;
+    }
+
+    public void setSn(String sn) {
+        this.sn = sn;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getWechat() {
+        return wechat;
+    }
+
+    public void setWechat(String wechat) {
+        this.wechat = wechat;
+    }
+
+    public Long getMerchant_id() {
+        return merchant_id;
+    }
+
+    public void setMerchant_id(Long merchant_id) {
+        this.merchant_id = merchant_id;
     }
 
     public Date getCtime() {
@@ -75,29 +142,5 @@ public class MerchantConsumer {
 
     public void setVersion(Long version) {
         this.version = version;
-    }
-
-
-    @Column
-    private Long merchant_id;
-
-    @Column
-    private Long consumer_id;
-
-
-    public Long getMerchant() {
-        return merchant_id;
-    }
-
-    public void setMerchant(Long merchant_id) {
-        this.merchant_id = merchant_id;
-    }
-
-    public Long getConsumer() {
-        return consumer_id;
-    }
-
-    public void setConsumer(Long consumer_id) {
-        this.consumer_id = consumer_id;
     }
 }

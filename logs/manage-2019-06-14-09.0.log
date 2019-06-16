@@ -1,0 +1,13 @@
+09:04:25.907 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web request>>[com.lihebin.manage.bean.Login@7d9891b5]
+09:04:25.929 [http-nio-8080-exec-8] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+09:04:27.033 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web response>>com.lihebin.manage.bean.LoginRes@282be1b3
+09:04:27.057 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID36][checkToken] web request>>[]
+09:04:27.057 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID36][checkToken] web response>>null
+09:04:35.563 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Fri Jun 14 08:48:20 CST 2019]; root of context hierarchy
+09:04:35.564 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+09:04:35.565 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+09:04:35.565 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+09:04:35.566 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+09:04:35.568 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+09:04:35.570 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+09:04:35.575 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

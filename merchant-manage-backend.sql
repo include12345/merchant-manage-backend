@@ -61,18 +61,20 @@ CREATE TABLE IF NOT EXISTS `business`.`consumer` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `sn` VARCHAR(36) NOT NULL COMMENT '会员sn',
+  `name` VARCHAR(128) NOT NULL COMMENT '会员名称',
+  `cellphone` VARCHAR(36) NOT NULL COMMENT '会员手机号',
+  `email` VARCHAR(36) NOT NULL COMMENT '会员email',
+  `wechat` VARCHAR(36) NOT NULL COMMENT '微信',
   `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
-  `consumer_id` VARCHAR(36) NOT NULL COMMENT '会员id',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
   `deleted` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '',
   `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
   PRIMARY KEY (`id`) COMMENT '',
-  KEY `idx_merchant_id` (`merchant_id`) USING BTREE,
-  KEY `idx_consumer_id` (`consumer_id`) USING BTREE,
-  UNIQUE INDEX `merchant_id_consumer_id` (`merchant_id`,`consumer_id`))
+  KEY `idx_merchant_id` (`merchant_id`) USING BTREE)
   ENGINE = InnoDB
-  COMMENT = '商户会员关系表';
+  COMMENT = '商户会员表';
 
 -- -----------------------------------------------------
 -- Table `business`.`merchant_consumer_wallet`

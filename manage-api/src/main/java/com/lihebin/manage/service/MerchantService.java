@@ -6,6 +6,8 @@ import com.lihebin.manage.bean.MerchantRes;
 import com.lihebin.manage.bean.MerchantUpdate;
 import org.springframework.data.domain.Page;
 
+import java.util.Optional;
+
 /**
  * Created by lihebin on 2019/4/29.
  */
@@ -20,7 +22,7 @@ public interface MerchantService {
      * @param pageSize
      * @return
      */
-    Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, int pageNo, int pageSize);
+    Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, Optional<String> name, Optional<String> cellphone, int pageNo, int pageSize);
 
     /**
      * 创建商户
