@@ -43,7 +43,7 @@ public class MerchantServiceImpl implements MerchantService {
 
 
     @Override
-    public Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, Optional<String> name, Optional<String> cellphone,  int pageNo, int pageSize) {
+    public Page<MerchantConsumerRes> listMerchantConsumerPaging(String token, Optional<String> name, Optional<String> cellphone,  int pageNo, int pageSize) {
         UserMessage userMessage = merchantUserService.getUserMessage(token);
         Page<MerchantConsumer> merchantPage = merchantConsumerDao.findAll((root, criteriaQuery, criteriaBuilder) -> {
             Path<Long> merchantIdPath = root.get("merchant_id");
@@ -129,5 +129,18 @@ public class MerchantServiceImpl implements MerchantService {
         MerchantRes merchantRes = new MerchantRes();
         merchantRes.setId(merchantQuery.getId());
         return merchantRes;
+    }
+
+    @Override
+    public void deleteMerchantConsumer(String token, long id) {
+        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        MerchantConsumer merchantConsumer = merchantConsumerDao.findOne(id);
+        if (merchantConsumer == null) {
+            throw new BackendException(Code.CODE_NOT_EXIST, "商户不存在");
+        }
+        if (!merchantConsumer.getMerchant_id().equals(userMessage.getMerchantId())) {
+            throw new BackendException(Code.CODE_PARAM_ERROR, "账户无权限删除会员");
+        }
+        merchantConsumerDao.delete(id);
     }
 }

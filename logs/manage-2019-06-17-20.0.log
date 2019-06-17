@@ -1,0 +1,100 @@
+20:01:16.391 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22f59fa: startup date [Mon Jun 17 17:08:12 CST 2019]; root of context hierarchy
+20:01:16.397 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+20:01:16.406 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+20:01:16.407 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+20:01:16.407 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+20:01:16.411 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+20:01:16.413 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+20:01:16.424 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+20:01:23.668 [main] INFO  com.lihebin.manage.Application - Starting Application on lihebindeMacBook-Pro.local with PID 50614 (/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes started by lihebin in /Users/lihebin/github/merchant-manage-backend)
+20:01:23.676 [main] INFO  com.lihebin.manage.Application - The following profiles are active: test
+20:01:23.838 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22f59fa: startup date [Mon Jun 17 20:01:23 CST 2019]; root of context hierarchy
+20:01:24.774 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+20:01:24.874 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'entityManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=true; factoryBeanName=manageJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/ManageJpaConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=userJpaConfig; factoryMethodName=entityManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/lihebin/manage/config/UserJpaConfig.class]]
+20:01:24.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+20:01:24.879 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [/Users/lihebin/github/merchant-manage-backend/manage-war/target/classes/spring/interceptor-config.xml]
+20:01:25.191 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+20:01:25.290 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerDao.
+20:01:25.293 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.OrderDao.
+20:01:25.294 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantUserDao.
+20:01:25.295 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantDao.
+20:01:25.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lihebin.manage.dao.manage.MerchantConsumerWalletDao.
+20:01:25.874 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$87a3d913] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:01:27.346 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+20:01:27.363 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:01:27.365 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+20:01:27.507 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:01:27.507 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3669 ms
+20:01:27.793 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:01:27.794 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+20:01:27.794 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+20:01:32.860 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:01:32.914 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'managePersistenceUnit'
+20:01:32.936 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: managePersistenceUnit
+	...]
+20:01:33.028 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+20:01:33.030 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+20:01:33.032 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+20:01:33.086 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20:01:33.249 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+20:01:33.549 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+20:01:34.056 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
+20:01:34.085 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'userPersistenceUnit'
+20:01:34.086 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: userPersistenceUnit
+	...]
+20:01:34.096 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+20:01:34.118 [main] WARN  o.h.b.i.SessionFactoryBuilderImpl - Unrecognized hbm2ddl_auto value : none.  Supported values include create, create-drop, update, and validate.  Ignoring
+20:01:34.170 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
+20:01:34.949 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/merchant/listMerchantCustomerPaging],methods=[GET]}" onto public com.lihebin.manage.bean.Result com.lihebin.manage.web.MerchantController.listMerchantCustomerPaging(java.lang.String,java.lang.String,java.lang.String,int,int)
+20:01:34.951 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/merchant/addMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.Result com.lihebin.manage.web.MerchantController.addMerchant(com.lihebin.manage.bean.MerchantNew)
+20:01:34.952 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/merchant/updateMerchant],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.Result com.lihebin.manage.web.MerchantController.updateMerchant(com.lihebin.manage.bean.MerchantUpdate)
+20:01:34.952 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/merchant/deleteMerchantConsumer/{id:\d+}],methods=[DELETE]}" onto public com.lihebin.manage.bean.Result com.lihebin.manage.web.MerchantController.deleteMerchantConsumer(java.lang.String,long)
+20:01:34.954 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/api/check],methods=[GET]}" onto public com.lihebin.manage.bean.Result com.lihebin.manage.web.MerchantUserController.checkToken()
+20:01:34.955 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/login],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public com.lihebin.manage.bean.Result com.lihebin.manage.web.MerchantUserController.login(com.lihebin.manage.bean.Login)
+20:01:34.955 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/logout],methods=[GET]}" onto public com.lihebin.manage.bean.Result com.lihebin.manage.web.MerchantUserController.logout(java.lang.String)
+20:01:34.962 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:01:34.963 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:01:35.090 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22f59fa: startup date [Mon Jun 17 20:01:23 CST 2019]; root of context hierarchy
+20:01:35.185 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in exceptionHandle
+20:01:36.478 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+20:01:36.479 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'userDataSource' has been autodetected for JMX exposure
+20:01:36.480 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'manageDataSource' has been autodetected for JMX exposure
+20:01:36.486 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'userDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=userDataSource,type=DruidDataSource]
+20:01:36.487 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'manageDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=manageDataSource,type=DruidDataSource]
+20:01:36.492 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+20:01:36.579 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+20:01:36.586 [main] INFO  com.lihebin.manage.Application - Started Application in 13.399 seconds (JVM running for 14.07)
+20:05:48.094 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:05:48.095 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+20:05:48.125 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+20:05:48.171 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:05:48.565 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+20:05:48.946 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+20:05:49.841 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+20:13:19.837 [http-nio-8080-exec-5] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:13:20.161 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][checkToken] web request>>:[[]]
+20:13:20.167 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+20:13:20.369 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:13:20.527 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+20:13:21.127 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+20:15:04.515 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:15:04.782 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+20:15:05.377 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+20:15:54.382 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:15:54.539 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web request>>:[[]]
+20:15:54.540 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+20:15:54.719 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:15:54.877 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+20:15:55.667 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+20:16:17.384 [http-nio-8080-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/api/merchant/deleteMerchantCustomer/1] in DispatcherServlet with name 'dispatcherServlet'
+20:17:58.443 [http-nio-8080-exec-9] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:17:58.712 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][checkToken] web request>>:[[]]
+20:17:58.712 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+20:17:58.901 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:17:59.062 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+20:17:59.661 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+20:18:23.092 [http-nio-8080-exec-3] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+20:18:23.258 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][checkToken] web request>>:[[]]
+20:18:23.258 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]

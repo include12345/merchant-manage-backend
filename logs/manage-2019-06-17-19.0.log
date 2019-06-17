@@ -1,0 +1,54 @@
+19:38:43.289 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:a62668337b5f3ca04bf922c1078ce559
+19:43:07.130 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID31][login] web request>>:[[com.lihebin.manage.bean.Login@5e1d80ab]]
+19:43:07.974 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID31][login] web response>>:[{"code":0,"data":{"merchantId":1,"token":"ba6e256a16a288e97c8051e99f87abad","type":1},"msg":"SUCCESS"}]
+19:43:08.007 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:43:08.167 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID33][checkToken] web request>>:[[]]
+19:43:08.167 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID33][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+19:43:10.570 [http-nio-8080-exec-8] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:43:10.729 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID34][checkToken] web request>>:[[]]
+19:43:10.730 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID34][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+19:43:11.111 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:43:11.273 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID36][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+19:43:11.815 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID36][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:44:15.508 [http-nio-8080-exec-3] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:44:15.668 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID29][checkToken] web request>>:[[]]
+19:44:15.669 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID29][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+19:44:15.848 [http-nio-8080-exec-5] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:44:16.045 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID31][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+19:44:16.642 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID31][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:44:29.105 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:44:29.266 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID33][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, 18301900685, 0, 10]]
+19:44:29.817 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID33][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:44:36.010 [http-nio-8080-exec-9] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:44:36.169 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, 18301900685, 0, 10]]
+19:44:36.780 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:44:47.982 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:44:48.144 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, 1830, 0, 10]]
+19:44:48.694 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+19:45:46.086 [http-nio-8080-exec-3] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:45:46.248 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, 213, 0, 10]]
+19:45:46.795 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+19:46:12.972 [http-nio-8080-exec-5] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:46:13.133 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID31][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+19:46:13.676 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID31][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:47:27.790 [http-nio-8080-exec-8] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:47:27.951 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID34][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+19:47:28.554 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID34][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:47:40.202 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:47:40.363 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID36][checkToken] web request>>:[[]]
+19:47:40.363 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID36][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+19:47:40.551 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:47:40.715 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 1, 10]]
+19:47:41.323 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":10,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:47:59.653 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:47:59.813 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID30][checkToken] web request>>:[[]]
+19:47:59.813 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID30][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+19:47:59.995 [http-nio-8080-exec-6] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:48:00.155 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+19:48:00.701 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+19:56:33.475 [http-nio-8080-exec-9] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:56:33.742 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web request>>:[[]]
+19:56:33.743 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+19:56:33.914 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ba6e256a16a288e97c8051e99f87abad
+19:56:34.076 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web request>>:[[ba6e256a16a288e97c8051e99f87abad, null, null, 0, 10]]
+19:56:34.697 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantCustomerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerSn":"1","consumerWechat":"18301900685","id":1,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]

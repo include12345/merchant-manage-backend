@@ -22,7 +22,7 @@ public interface MerchantService {
      * @param pageSize
      * @return
      */
-    Page<MerchantConsumerRes> listMerchantCustomerPaging(String token, Optional<String> name, Optional<String> cellphone, int pageNo, int pageSize);
+    Page<MerchantConsumerRes> listMerchantConsumerPaging(String token, Optional<String> name, Optional<String> cellphone, int pageNo, int pageSize);
 
     /**
      * 创建商户
@@ -39,4 +39,12 @@ public interface MerchantService {
      * @return
      */
     MerchantRes updateMerchant(MerchantUpdate merchant);
+
+    /**
+     * 删除商户会员
+     *
+     * @param id
+     */
+    void deleteMerchantConsumer(String token, long id);
+
 }
