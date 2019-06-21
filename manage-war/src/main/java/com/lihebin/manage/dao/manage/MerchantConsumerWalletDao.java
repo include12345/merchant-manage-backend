@@ -2,6 +2,8 @@ package com.lihebin.manage.dao.manage;
 
 import com.lihebin.manage.model.MerchantConsumerWallet;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,4 +14,9 @@ public interface MerchantConsumerWalletDao extends JpaRepository<MerchantConsume
 
 
     MerchantConsumerWallet findByConsumerId(long consumerId);
+
+
+    @Modifying
+    @Query(nativeQuery = true, value ="delete from merchant_consumer_wallet where id = ?1")
+    void deleteById(long id);
 }

@@ -1,0 +1,69 @@
+21:06:06.542 [http-nio-8080-exec-3] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:06:06.749 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:06:09.176 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:16:50.909 [http-nio-8080-exec-6] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:16:51.108 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web request>>:[[]]
+21:16:51.108 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+21:16:51.280 [http-nio-8080-exec-8] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:16:51.400 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:16:53.845 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:20:42.615 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:20:42.836 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:20:43.322 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:25:19.722 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:25:19.948 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:25:22.363 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:27:33.318 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:27:33.537 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][checkToken] web request>>:[[]]
+21:27:33.538 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+21:28:22.857 [http-nio-8080-exec-9] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:28:22.991 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:28:23.482 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:28:40.514 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:28:40.648 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:28:41.102 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:31:50.722 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:31:50.945 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:31:51.439 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:33:01.102 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:33:01.241 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:33:01.737 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:34:13.403 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:34:13.537 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web request>>:[[]]
+21:34:13.537 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+21:34:13.694 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:34:13.828 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:34:14.316 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:35:03.138 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:35:03.271 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web request>>:[[839df8e26fd13caa673d43c34d9a40ba, null, null, 0, 10]]
+21:35:03.716 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:39:14.926 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:839df8e26fd13caa673d43c34d9a40ba
+21:39:26.719 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web request>>:[[com.lihebin.manage.bean.Login@442b2c32]]
+21:39:29.299 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web response>>:[{"code":0,"data":{"merchantId":1,"token":"18997ef875ead36f941f6b97735dc1d8","type":1},"msg":"SUCCESS"}]
+21:39:29.323 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:39:29.453 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][checkToken] web request>>:[[]]
+21:39:29.454 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+21:39:34.101 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:39:34.234 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web request>>:[[]]
+21:39:34.235 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+21:39:34.692 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:39:34.822 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web request>>:[[18997ef875ead36f941f6b97735dc1d8, null, null, 0, 10]]
+21:39:35.228 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:41:32.060 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:41:32.280 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantConsumerPaging] web request>>:[[18997ef875ead36f941f6b97735dc1d8, null, null, 0, 10]]
+21:41:32.728 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:47:00.727 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:47:00.934 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantConsumerPaging] web request>>:[[18997ef875ead36f941f6b97735dc1d8, null, null, 0, 10]]
+21:47:03.374 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:48:54.172 [http-nio-8080-exec-3] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:48:54.410 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantConsumerPaging] web request>>:[[18997ef875ead36f941f6b97735dc1d8, null, null, 0, 10]]
+21:48:54.859 [http-nio-8080-exec-3] INFO  c.l.manage.config.ServiceLogAspect - [ID28][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:49:02.676 [http-nio-8080-exec-5] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:49:02.808 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][checkToken] web request>>:[[]]
+21:49:02.809 [http-nio-8080-exec-5] INFO  c.l.manage.config.ServiceLogAspect - [ID30][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+21:49:02.986 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:49:03.117 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantConsumerPaging] web request>>:[[18997ef875ead36f941f6b97735dc1d8, null, null, 0, 10]]
+21:49:03.523 [http-nio-8080-exec-7] INFO  c.l.manage.config.ServiceLogAspect - [ID32][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]
+21:59:22.030 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:18997ef875ead36f941f6b97735dc1d8
+21:59:22.253 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantConsumerPaging] web request>>:[[18997ef875ead36f941f6b97735dc1d8, null, null, 0, 10]]
+21:59:24.700 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[],"first":true,"last":true,"number":0,"numberOfElements":0,"size":0,"totalElements":0,"totalPages":1},"msg":"SUCCESS"}]

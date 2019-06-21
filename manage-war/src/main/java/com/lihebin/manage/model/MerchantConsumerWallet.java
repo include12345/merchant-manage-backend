@@ -39,9 +39,9 @@ public class MerchantConsumerWallet {
     private Date mtime;
 
     @Column
-    private Boolean deleted;
+    private Boolean deleted = false;
 
-    @Column
+    @Version
     private Long version;
 
     public Long getId() {

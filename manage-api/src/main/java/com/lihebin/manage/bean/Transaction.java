@@ -1,14 +1,11 @@
 package com.lihebin.manage.bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * 流水
  * Created by lihebin on 2019/4/15.
  */
-public class Transaction extends Base {
+public class Transaction {
 
     private String tsn;
 

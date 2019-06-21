@@ -30,6 +30,10 @@ public class MerchantConsumerRes {
 
     private Date mtime;
 
+    private Date walletCtime;
+
+    private Date walletMtime;
+
     public Long getWalletId() {
         return walletId;
     }
@@ -108,5 +112,21 @@ public class MerchantConsumerRes {
 
     public void setMtime(Date mtime) {
         this.mtime = mtime;
+    }
+
+    public Date getWalletCtime() {
+        return walletCtime;
+    }
+
+    public void setWalletCtime(Date walletCtime) {
+        this.walletCtime = walletCtime;
+    }
+
+    public Date getWalletMtime() {
+        return walletMtime;
+    }
+
+    public void setWalletMtime(Date walletMtime) {
+        this.walletMtime = walletMtime;
     }
 }

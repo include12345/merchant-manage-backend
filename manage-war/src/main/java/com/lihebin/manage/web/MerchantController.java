@@ -36,11 +36,11 @@ public class MerchantController {
 //        merchantUserService.logout(token);
 //    }
 
-    @RequestMapping(value = "/getMerchantConsumerWallet", method = RequestMethod.GET)
-    public Result getMerchantConsumerWallet(@RequestHeader("token") String token,
+    @RequestMapping(value = "/getMerchantConsumer", method = RequestMethod.GET)
+    public Result getMerchantConsumer(@RequestHeader("token") String token,
                                              @RequestParam(value = "consumerId", required = true) Long consumerId
     ) {
-        return ResultUtil.success(merchantService.getMerchantConsumerWallet(token, consumerId));
+        return ResultUtil.success(merchantService.getMerchantConsumer(token, consumerId));
     }
 
     @DeleteMapping(value = "/deleteMerchantConsumer/{id:\\d+}")

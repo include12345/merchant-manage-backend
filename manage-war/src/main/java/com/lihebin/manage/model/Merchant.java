@@ -40,7 +40,7 @@ public class Merchant {
     private Date mtime;
 
     @Column
-    private Boolean deleted;
+    private Boolean deleted = false;
 
     @Version
     private Long version;

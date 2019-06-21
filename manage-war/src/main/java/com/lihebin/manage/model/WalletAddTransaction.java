@@ -42,9 +42,9 @@ public class WalletAddTransaction {
     private Date mtime;
 
     @Column
-    private Boolean deleted;
+    private Boolean deleted = false;
 
-    @Column
+    @Version
     private Long version;
 
     public Long getId() {

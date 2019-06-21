@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "order")
-public class Order extends Base {
+public class Order{
 
     @Column
     private String sn;

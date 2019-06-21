@@ -119,32 +119,39 @@ public class MerchantServiceImpl implements MerchantService {
         return merchantRes;
     }
 
+    @Transactional
     @Override
     public void deleteMerchantConsumer(String token, long id) {
         checkMerchantConsumer(token, id);
         long walletId = checkMerchantConsumerWallet(id);
         if (walletId != 0L) {
-            merchantConsumerWalletDao.delete(walletId);
+            merchantConsumerWalletDao.deleteById(walletId);
         }
-        merchantConsumerDao.delete(id);
+        merchantConsumerDao.deleteById(id);
     }
 
 
 
     @Override
-    public MerchantConsumerWalletRes getMerchantConsumerWallet(String token, long consumerId) {
-        checkMerchantConsumer(token, consumerId);
+    public MerchantConsumerRes getMerchantConsumer(String token, long consumerId) {
+        MerchantConsumer merchantConsumer = checkMerchantConsumer(token, consumerId);
         MerchantConsumerWallet merchantConsumerWallet = merchantConsumerWalletDao.findByConsumerId(consumerId);
-        MerchantConsumerWalletRes merchantConsumerWalletRes = new MerchantConsumerWalletRes();
+        MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();
+        merchantConsumerRes.setId(merchantConsumer.getId());
+        merchantConsumerRes.setMerchantId(merchantConsumer.getMerchantId());
+        merchantConsumerRes.setConsumerName(merchantConsumer.getName());
+        merchantConsumerRes.setConsumerCellphone(merchantConsumer.getCellphone());
+        merchantConsumerRes.setConsumerEmail(merchantConsumer.getEmail());
+        merchantConsumerRes.setConsumerWechat(merchantConsumer.getWechat());
+        merchantConsumerRes.setCtime(merchantConsumer.getCtime());
+        merchantConsumerRes.setMtime(merchantConsumer.getMtime());
         if (merchantConsumerWallet != null) {
-            merchantConsumerWalletRes.setId(merchantConsumerWallet.getId());
-            merchantConsumerWalletRes.setMerchantId(merchantConsumerWallet.getMerchantId());
-            merchantConsumerWalletRes.setConsumerId(merchantConsumerWallet.getConsumerId());
-            merchantConsumerWalletRes.setBalance(merchantConsumerWallet.getBalance());
-            merchantConsumerWalletRes.setCtime(merchantConsumerWallet.getCtime());
-            merchantConsumerWalletRes.setMtime(merchantConsumerWallet.getMtime());
+            merchantConsumerRes.setWalletId(merchantConsumerWallet.getId());
+            merchantConsumerRes.setBalance(merchantConsumerWallet.getBalance());
+            merchantConsumerRes.setWalletCtime(merchantConsumerWallet.getCtime());
+            merchantConsumerRes.setWalletMtime(merchantConsumerWallet.getMtime());
         }
-        return merchantConsumerWalletRes;
+        return merchantConsumerRes;
     }
 
     @Transactional
@@ -163,8 +170,8 @@ public class MerchantServiceImpl implements MerchantService {
         merchantConsumer.setMerchantId(merchantId);
         merchantConsumer.setName(merchantConsumerAdd.getName());
         merchantConsumer.setCellphone(merchantConsumerAdd.getCellphone());
-        merchantConsumer.setEmail(merchantConsumer.getEmail());
-        merchantConsumer.setWechat(merchantConsumer.getWechat());
+        merchantConsumer.setEmail(merchantConsumerAdd.getEmail());
+        merchantConsumer.setWechat(merchantConsumerAdd.getWechat());
         merchantConsumer = merchantConsumerDao.save(merchantConsumer);
         initMerchantConsumerWallet(merchantId, merchantConsumer.getId());
         MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();

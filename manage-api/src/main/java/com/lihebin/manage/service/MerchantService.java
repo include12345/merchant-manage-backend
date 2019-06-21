@@ -51,7 +51,7 @@ public interface MerchantService {
      * @param consumerId
      * @return
      */
-    MerchantConsumerWalletRes getMerchantConsumerWallet(String token, long consumerId);
+    MerchantConsumerRes getMerchantConsumer(String token, long consumerId);
 
     /**
      * 新增商户会员

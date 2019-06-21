@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant` (
   `cellphone` VARCHAR(36) NOT NULL COMMENT '部门id',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '',
-  `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
+  `deleted` TINYINT(1) DEFAULT 0 COMMENT '',
+  `version` BIGINT(20) UNSIGNED NULL COMMENT '',
   PRIMARY KEY (`id`) COMMENT '')
   ENGINE = InnoDB
   COMMENT = '商户基本信息表';
@@ -25,34 +25,18 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(36) NOT NULL COMMENT '商户用户名',
   `password` VARCHAR(64) NOT NULL COMMENT '商户登录密码',
-  `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
+  `merchant_id` bigint(20)  NOT NULL COMMENT '商户id',
   `type` int(1) NOT NULL DEFAULT '1' COMMENT '用户类型 1:管理员 2:收银员',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '',
-  `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
+  `deleted` TINYINT(1) DEFAULT '0' COMMENT '',
+  `version` BIGINT(20) UNSIGNED NULL COMMENT '',
   PRIMARY KEY (`id`) COMMENT '',
   KEY `idx_merchant_id` (`merchant_id`) USING BTREE,
   UNIQUE INDEX `username` (`username`))
   ENGINE = InnoDB
   COMMENT = '商户账户表';
 
--- -----------------------------------------------------
--- Table `business`.`consumer`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `business`.`consumer` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(128) NOT NULL COMMENT '会员名称',
-  `cellphone` VARCHAR(36) NOT NULL COMMENT '会员手机号',
-  `email` VARCHAR(36) NOT NULL COMMENT '会员email',
-  `wechat` VARCHAR(36) NOT NULL COMMENT '微信',
-  `ctime` timestamp NULL COMMENT '开始时间',
-  `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '',
-  `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
-  PRIMARY KEY (`id`) COMMENT '')
-  ENGINE = InnoDB
-  COMMENT = '会员基本信息表';
 
 
 -- -----------------------------------------------------
@@ -62,13 +46,13 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(128) NOT NULL COMMENT '会员名称',
   `cellphone` VARCHAR(36) NOT NULL COMMENT '会员手机号',
-  `email` VARCHAR(36) NOT NULL COMMENT '会员email',
-  `wechat` VARCHAR(36) NOT NULL COMMENT '微信',
-  `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
+  `email` VARCHAR(36) NULL COMMENT '会员email',
+  `wechat` VARCHAR(36) NULL COMMENT '微信',
+  `merchant_id` bigint(20) NOT NULL COMMENT '商户id',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '',
-  `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
+  `deleted` TINYINT(1) DEFAULT '0' COMMENT '',
+  `version` BIGINT(20) UNSIGNED NULL COMMENT '',
   PRIMARY KEY (`id`) COMMENT '',
   KEY `idx_merchant_id` (`merchant_id`) USING BTREE)
   ENGINE = InnoDB
@@ -79,13 +63,13 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer_wallet` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
-  `consumer_id` VARCHAR(36) NOT NULL COMMENT '会员id',
+  `merchant_id` bigint(20)  NOT NULL COMMENT '商户id',
+  `consumer_id` bigint(20)  NOT NULL COMMENT '会员id',
   `balance` BIGINT(20) NULL DEFAULT '0' COMMENT '会员余额',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '',
-  `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
+  `deleted` TINYINT(1) DEFAULT '0' COMMENT '',
+  `version` BIGINT(20) UNSIGNED NULL COMMENT '',
   PRIMARY KEY (`id`) COMMENT '',
   KEY `idx_merchant_id` (`merchant_id`) USING BTREE,
   KEY `idx_consumer_id` (`consumer_id`) USING BTREE,
@@ -98,14 +82,14 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer_wallet` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`wallet_add_transaction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `wallet_id` VARCHAR(36) NOT NULL COMMENT '商户会员钱包id',
+  `wallet_id` bigint(20)  NOT NULL COMMENT '商户会员钱包id',
   `before_balance` BIGINT(20) NULL DEFAULT '0' COMMENT '变更前金额',
   `add_amount` BIGINT(20) NULL DEFAULT '0' COMMENT '会员充值金额',
   `after_balance` BIGINT(20) NULL DEFAULT '0' COMMENT '变更后余额',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '',
-  `version` BIGINT(20) UNSIGNED NOT NULL COMMENT '',
+  `deleted` TINYINT(1) DEFAULT '0' COMMENT '',
+  `version` BIGINT(20) UNSIGNED NULL COMMENT '',
   PRIMARY KEY (`id`) COMMENT '',
   KEY `idx_wallet_id` (`wallet_id`) USING BTREE)
   ENGINE = InnoDB
@@ -123,13 +107,13 @@ create table if not exists `business`.`transaction`(
   `original_amount` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '原始金额',
   `pay_amount` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '实付金额',
   `discount` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '优惠金额',
-  `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
-  `consumer_id` VARCHAR(36) NOT NULL COMMENT '会员id',
+  `merchant_id` bigint(20)  NOT NULL COMMENT '商户id',
+  `consumer_id` bigint(20)  NOT NULL COMMENT '会员id',
   `type` int(2) NOT NULL DEFAULT '1' COMMENT '流水类型 1:支付 2:退款 3:部分退款',
   `status` int(10) unsigned null default null comment '流水状态 1000:待支付 1001:支付中 1002:支付成功 1003:支付失败 1004:支付异常 1005:退款成功 1006:退款失败 1007:退款异常',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` tinyint(1) not null default '0' comment '',
+  `deleted` tinyint(1) default '0' comment '',
   primary key (`id`) comment '',
   unique index `idx_tsn` (`tsn` asc) comment '',
   index `order_sn` (`order_sn` asc) comment ''
@@ -147,13 +131,13 @@ create table if not exists `business`.`order`(
   `original_amount` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '原始金额',
   `pay_amount` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '实付金额',
   `discount` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '优惠金额',
-  `merchant_id` VARCHAR(36) NOT NULL COMMENT '商户id',
-  `consumer_id` VARCHAR(36) NOT NULL COMMENT '会员id',
+  `merchant_id` bigint(20)  NOT NULL COMMENT '商户id',
+  `consumer_id` bigint(20)  NOT NULL COMMENT '会员id',
   `type` int(2) NOT NULL DEFAULT '1' COMMENT '流水类型 1:支付 2:退款 3:部分退款',
   `status` int(10) unsigned null default null comment '订单状态 0:待支付 1:支付中 2:支付成功 3:支付失败 4:支付异常 5:退款成功 6:退款失败 7:退款异常',
   `ctime` timestamp NULL COMMENT '开始时间',
   `mtime` timestamp NULL COMMENT '最近一次更新时间',
-  `deleted` tinyint(1) not null default '0' comment '',
+  `deleted` tinyint(1) default '0' comment '',
   primary key (`id`) comment '',
   unique index `idx_sn` (`sn` asc) comment ''
 )engine=InnoDB
