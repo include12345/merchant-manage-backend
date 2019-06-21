@@ -1,0 +1,3 @@
+11:09:13.516 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:d7a9eba15f04625807f99bfc0abb46d6
+11:10:46.083 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:d7a9eba15f04625807f99bfc0abb46d6
+11:10:46.544 [http-nio-8080-exec-9] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:d7a9eba15f04625807f99bfc0abb46d6

@@ -1,0 +1,13 @@
+08:54:13.102 [http-nio-8080-exec-5] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ae53abeaee6ae6566fa77c854c203b6c
+08:54:14.075 [http-nio-8080-exec-7] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:ae53abeaee6ae6566fa77c854c203b6c
+08:54:24.671 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web request>>:[[com.lihebin.manage.bean.Login@64b4c922]]
+08:54:26.317 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][login] web response>>:[{"code":0,"data":{"merchantId":1,"token":"e60aec97f7a11e835f1d91d82cbd295e","type":1},"msg":"SUCCESS"}]
+08:54:26.354 [http-nio-8080-exec-1] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:e60aec97f7a11e835f1d91d82cbd295e
+08:54:26.515 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][checkToken] web request>>:[[]]
+08:54:26.515 [http-nio-8080-exec-1] INFO  c.l.manage.config.ServiceLogAspect - [ID26][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+08:54:28.436 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:e60aec97f7a11e835f1d91d82cbd295e
+08:54:28.655 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web request>>:[[]]
+08:54:28.656 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+08:54:29.033 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:e60aec97f7a11e835f1d91d82cbd295e
+08:54:29.223 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web request>>:[[e60aec97f7a11e835f1d91d82cbd295e, null, null, 0, 10]]
+08:54:29.871 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"21321233","consumerEmail":"231231","consumerName":"test","consumerSn":"3","consumerWechat":"213312","id":3,"merchantId":1}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]

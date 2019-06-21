@@ -36,7 +36,12 @@ public class MerchantController {
 //        merchantUserService.logout(token);
 //    }
 
-
+    @RequestMapping(value = "/getMerchantConsumerWallet", method = RequestMethod.GET)
+    public Result getMerchantConsumerWallet(@RequestHeader("token") String token,
+                                             @RequestParam(value = "consumerId", required = true) Long consumerId
+    ) {
+        return ResultUtil.success(merchantService.getMerchantConsumerWallet(token, consumerId));
+    }
 
     @DeleteMapping(value = "/deleteMerchantConsumer/{id:\\d+}")
     public Result deleteMerchantConsumer(@RequestHeader("token") String token, @PathVariable long id) {
@@ -44,9 +49,25 @@ public class MerchantController {
         return ResultUtil.success(null);
     }
 
+
+    @RequestMapping(value = "/addMerchantConsumer", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public Result addMerchantConsumer(@Valid @RequestHeader("token") String token, @RequestBody MerchantConsumerAdd merchantConsumerAdd) {
+        return ResultUtil.success(merchantService.addMerchantConsumer(token, merchantConsumerAdd));
+    }
+
+    @RequestMapping(value = "/updateMerchantConsumer", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public Result updateMerchantConsumer(@Valid @RequestHeader("token") String token, @RequestBody MerchantConsumerUpdate merchantConsumerUpdate) {
+        return ResultUtil.success(merchantService.updateMerchantConsumer(token, merchantConsumerUpdate));
+    }
+
     @RequestMapping(value = "/addMerchant", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Result addMerchant(@Valid @RequestBody MerchantNew merchant) {
         return ResultUtil.success(merchantService.addMerchant(merchant));
+    }
+
+    @RequestMapping(value = "/rechargeMerchantConsumerBalance", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public Result rechargeMerchantConsumerBalance(@Valid @RequestHeader("token") String token, @RequestBody ConsumerBalanceReCharge consumerBalanceReCharge) {
+        return ResultUtil.success(merchantService.rechargeMerchantConsumerBalance(token, consumerBalanceReCharge));
     }
 
     @RequestMapping(value = "/updateMerchant", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

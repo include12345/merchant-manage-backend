@@ -19,6 +19,11 @@ public class BackendException extends RuntimeException {
         this.message = message;
     }
 
+
+    public BackendException(Integer code, String message, Object... args) {
+        this(code, String.format(message, args));
+    }
+
     public Integer getCode() {
         return code;
     }

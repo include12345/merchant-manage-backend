@@ -17,10 +17,21 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 public class WalletAddTransaction {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "wallet_id")
+    private Long walletId;
+
+    @Column(name = "before_balance")
+    private Long beforeBalance;
+
+    @Column(name = "add_amount")
+    private Long addAmount;
+
+    @Column(name = "after_balance")
+    private Long afterBalance;
 
     @CreatedDate
     @Column(name = "ctime")
@@ -77,47 +88,35 @@ public class WalletAddTransaction {
     }
 
 
-    @Column
-    private String wallet_id;
-
-    @Column
-    private Long before_balance;
-
-    @Column
-    private Long add_amount;
-
-    @Column
-    private Long after_balance;
-
-    public String getWallet_id() {
-        return wallet_id;
+    public Long getWalletId() {
+        return walletId;
     }
 
-    public void setWallet_id(String wallet_id) {
-        this.wallet_id = wallet_id;
+    public void setWalletId(Long walletId) {
+        this.walletId = walletId;
     }
 
-    public Long getBefore_balance() {
-        return before_balance;
+    public Long getBeforeBalance() {
+        return beforeBalance;
     }
 
-    public void setBefore_balance(Long before_balance) {
-        this.before_balance = before_balance;
+    public void setBeforeBalance(Long beforeBalance) {
+        this.beforeBalance = beforeBalance;
     }
 
-    public Long getAdd_amount() {
-        return add_amount;
+    public Long getAddAmount() {
+        return addAmount;
     }
 
-    public void setAdd_amount(Long add_amount) {
-        this.add_amount = add_amount;
+    public void setAddAmount(Long addAmount) {
+        this.addAmount = addAmount;
     }
 
-    public Long getAfter_balance() {
-        return after_balance;
+    public Long getAfterBalance() {
+        return afterBalance;
     }
 
-    public void setAfter_balance(Long after_balance) {
-        this.after_balance = after_balance;
+    public void setAfterBalance(Long afterBalance) {
+        this.afterBalance = afterBalance;
     }
 }

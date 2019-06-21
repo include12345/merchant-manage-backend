@@ -74,4 +74,9 @@ public class MerchantUserServiceImpl implements MerchantUserService{
         userMessage.setMerchantId(Long.valueOf(userValue[1]));
         return userMessage;
     }
+
+    @Override
+    public Long getMerchantId(String token) {
+        return getUserMessage(token).getMerchantId();
+    }
 }

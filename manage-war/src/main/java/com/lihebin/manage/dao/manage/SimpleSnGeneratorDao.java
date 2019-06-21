@@ -50,6 +50,15 @@ public class SimpleSnGeneratorDao {
             "3142780596",
     };
 
+    /**
+     * 商户会员号生成器
+     *
+     * @return
+     * @throws BackendRepeatException
+     */
+    public String nextConsumerSn() throws BackendException {
+        return orderSnPrefix + nextSn("table_name_sn_prefix", orderSnPrefix, 10);
+    }
 
     /**
      * 商户号生成器

@@ -1,9 +1,6 @@
 package com.lihebin.manage.service;
 
-import com.lihebin.manage.bean.MerchantNew;
-import com.lihebin.manage.bean.MerchantConsumerRes;
-import com.lihebin.manage.bean.MerchantRes;
-import com.lihebin.manage.bean.MerchantUpdate;
+import com.lihebin.manage.bean.*;
 import org.springframework.data.domain.Page;
 
 import java.util.Optional;
@@ -46,5 +43,41 @@ public interface MerchantService {
      * @param id
      */
     void deleteMerchantConsumer(String token, long id);
+
+    /**
+     * 获取商户会员余额信息
+     *
+     * @param token
+     * @param consumerId
+     * @return
+     */
+    MerchantConsumerWalletRes getMerchantConsumerWallet(String token, long consumerId);
+
+    /**
+     * 新增商户会员
+     *
+     * @param token
+     * @param merchantConsumerAdd
+     * @return
+     */
+    MerchantConsumerRes addMerchantConsumer(String token, MerchantConsumerAdd merchantConsumerAdd);
+
+    /**
+     * 编辑商户会员
+     *
+     * @param token
+     * @param merchantConsumerUpdate
+     * @return
+     */
+    MerchantConsumerRes updateMerchantConsumer(String token, MerchantConsumerUpdate merchantConsumerUpdate);
+
+    /**
+     * 会员充值
+     *
+     * @param token
+     * @param consumerBalanceReCharge
+     * @return
+     */
+    MerchantConsumerWalletRes rechargeMerchantConsumerBalance(String token, ConsumerBalanceReCharge consumerBalanceReCharge);
 
 }

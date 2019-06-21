@@ -31,4 +31,12 @@ public interface MerchantUserService {
      * @return
      */
     UserMessage getUserMessage(String token);
+
+    /**
+     * 根据token获取用户信息
+     *
+     * @param token
+     * @return
+     */
+    Long getMerchantId(String token);
 }

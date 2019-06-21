@@ -10,8 +10,6 @@ import java.util.Date;
 public class MerchantConsumerRes {
 
 
-    private String consumerSn;
-
     private String consumerName;
 
     private String consumerCellphone;
@@ -24,16 +22,28 @@ public class MerchantConsumerRes {
 
     private Long id;
 
+    private Long walletId;
+
+    private Long balance;
+
     private Date ctime;
 
     private Date mtime;
 
-    public String getConsumerSn() {
-        return consumerSn;
+    public Long getWalletId() {
+        return walletId;
     }
 
-    public void setConsumerSn(String consumerSn) {
-        this.consumerSn = consumerSn;
+    public void setWalletId(Long walletId) {
+        this.walletId = walletId;
+    }
+
+    public Long getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Long balance) {
+        this.balance = balance;
     }
 
     public String getConsumerName() {

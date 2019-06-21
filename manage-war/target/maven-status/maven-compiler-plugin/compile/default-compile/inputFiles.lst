@@ -2,7 +2,6 @@
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/exception/JobDefaultErrorResolver.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/utils/JWTUtil.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/config/jwt/JWTFilter.java
-/Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/MerchantConsumerInfo.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/config/CorsConfig.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/WalletAddTransaction.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/utils/DateTimeUtil.java
@@ -11,7 +10,6 @@
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/web/MerchantController.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/config/jwt/ShiroConfig.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/web/MerchantUserController.java
-/Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/Consumer.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/service/MerchantUserServiceImpl.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/dao/manage/MerchantConsumerDao.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/dao/manage/MerchantConsumerWalletDao.java
@@ -34,12 +32,10 @@
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/MerchantConsumerWallet.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/MerchantConsumer.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/Order.java
-/Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/Base.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/utils/MD5Util.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/config/ManageJpaConfig.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/exception/BackendException.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/model/Merchant.java
-/Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/dao/manage/ConsumerDao.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/service/MerchantServiceImpl.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/config/jwt/MyRealm.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/exception/BackendRepeatException.java

@@ -11,6 +11,22 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MerchantConsumerDao extends JpaRepository<MerchantConsumer, Long>, JpaSpecificationExecutor<MerchantConsumer> {
 
+    /**
+     * 根据name查询会员是否存在
+     *
+     * @param merchantId
+     * @param name
+     * @return
+     */
+    MerchantConsumer findByMerchantIdAndName(long merchantId, String name);
 
 
+    /**
+     * 根据cellphone查询会员是否存在
+     *
+     * @param merchantId
+     * @param cellphone
+     * @return
+     */
+    MerchantConsumer findByMerchantIdAndCellphone(long merchantId, String cellphone);
 }

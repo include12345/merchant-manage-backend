@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface MerchantConsumerWalletDao extends JpaRepository<MerchantConsumerWallet, Long> {
 
 
+    MerchantConsumerWallet findByConsumerId(long consumerId);
 }

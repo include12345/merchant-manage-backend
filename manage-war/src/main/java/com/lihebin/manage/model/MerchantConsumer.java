@@ -24,9 +24,6 @@ public class MerchantConsumer {
     private Long id;
 
     @Column
-    private String sn;
-
-    @Column
     private String name;
 
     @Column
@@ -38,9 +35,8 @@ public class MerchantConsumer {
     @Column
     private String wechat;
 
-
-    @Column
-    private Long merchant_id;
+    @Column(name = "merchant_id")
+    private Long merchantId;
 
     @CreatedDate
     @Column(name = "ctime")
@@ -62,14 +58,6 @@ public class MerchantConsumer {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getSn() {
-        return sn;
-    }
-
-    public void setSn(String sn) {
-        this.sn = sn;
     }
 
     public String getName() {
@@ -104,12 +92,12 @@ public class MerchantConsumer {
         this.wechat = wechat;
     }
 
-    public Long getMerchant_id() {
-        return merchant_id;
+    public Long getMerchantId() {
+        return merchantId;
     }
 
-    public void setMerchant_id(Long merchant_id) {
-        this.merchant_id = merchant_id;
+    public void setMerchantId(Long merchantId) {
+        this.merchantId = merchantId;
     }
 
     public Date getCtime() {

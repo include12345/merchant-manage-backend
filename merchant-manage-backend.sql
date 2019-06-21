@@ -42,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_user` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`consumer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `sn` VARCHAR(36) NOT NULL COMMENT '会员sn',
   `name` VARCHAR(128) NOT NULL COMMENT '会员名称',
   `cellphone` VARCHAR(36) NOT NULL COMMENT '会员手机号',
   `email` VARCHAR(36) NOT NULL COMMENT '会员email',
@@ -61,7 +60,6 @@ CREATE TABLE IF NOT EXISTS `business`.`consumer` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `sn` VARCHAR(36) NOT NULL COMMENT '会员sn',
   `name` VARCHAR(128) NOT NULL COMMENT '会员名称',
   `cellphone` VARCHAR(36) NOT NULL COMMENT '会员手机号',
   `email` VARCHAR(36) NOT NULL COMMENT '会员email',

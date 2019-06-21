@@ -21,6 +21,15 @@ public class MerchantConsumerWallet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "merchant_id")
+    private Long merchantId;
+
+    @Column(name = "consumer_id")
+    private Long consumerId;
+
+    @Column
+    private Long balance;
+
     @CreatedDate
     @Column(name = "ctime")
     private Date ctime;
@@ -76,29 +85,20 @@ public class MerchantConsumerWallet {
     }
 
 
-    @Column
-    private String merchant_id;
-
-    @Column
-    private String consumer_id;
-
-    @Column
-    private Long balance;
-
-    public String getMerchant_id() {
-        return merchant_id;
+    public Long getMerchantId() {
+        return merchantId;
     }
 
-    public void setMerchant_id(String merchant_id) {
-        this.merchant_id = merchant_id;
+    public void setMerchantId(Long merchantId) {
+        this.merchantId = merchantId;
     }
 
-    public String getConsumer_id() {
-        return consumer_id;
+    public Long getConsumerId() {
+        return consumerId;
     }
 
-    public void setConsumer_id(String consumer_id) {
-        this.consumer_id = consumer_id;
+    public void setConsumerId(Long consumerId) {
+        this.consumerId = consumerId;
     }
 
     public Long getBalance() {

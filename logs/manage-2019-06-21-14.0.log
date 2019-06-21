@@ -1,0 +1,2 @@
+14:38:25.951 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][logout] web request>>:[[0aeeec693c1929af75e61075c6a5dc75]]
+14:38:26.227 [http-nio-8080-exec-9] INFO  c.l.manage.config.ServiceLogAspect - [ID34][logout] web response>>:[{"code":0,"msg":"SUCCESS"}]
