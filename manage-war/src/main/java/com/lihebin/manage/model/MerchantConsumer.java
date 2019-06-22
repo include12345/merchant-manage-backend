@@ -50,6 +50,12 @@ public class MerchantConsumer {
     @Column(name = "mtime")
     private Date mtime;
 
+    @Column(name = "operator_create")
+    private String operatorCreate;
+
+    @Column(name = "operator_update")
+    private String operatorUpdate;
+
     @Column
     private Boolean deleted = false;
 
@@ -134,5 +140,21 @@ public class MerchantConsumer {
 
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    public String getOperatorCreate() {
+        return operatorCreate;
+    }
+
+    public void setOperatorCreate(String operatorCreate) {
+        this.operatorCreate = operatorCreate;
+    }
+
+    public String getOperatorUpdate() {
+        return operatorUpdate;
+    }
+
+    public void setOperatorUpdate(String operatorUpdate) {
+        this.operatorUpdate = operatorUpdate;
     }
 }

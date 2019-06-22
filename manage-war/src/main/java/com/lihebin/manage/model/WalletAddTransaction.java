@@ -33,6 +33,9 @@ public class WalletAddTransaction {
     @Column(name = "after_balance")
     private Long afterBalance;
 
+    @Column
+    private String remark;
+
     @CreatedDate
     @Column(name = "ctime")
     private Date ctime;
@@ -40,6 +43,12 @@ public class WalletAddTransaction {
     @LastModifiedDate
     @Column(name = "mtime")
     private Date mtime;
+
+    @Column(name = "operator_create")
+    private String operatorCreate;
+
+    @Column(name = "operator_update")
+    private String operatorUpdate;
 
     @Column
     private Boolean deleted = false;
@@ -53,6 +62,15 @@ public class WalletAddTransaction {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 
     public Date getCtime() {
@@ -118,5 +136,22 @@ public class WalletAddTransaction {
 
     public void setAfterBalance(Long afterBalance) {
         this.afterBalance = afterBalance;
+    }
+
+
+    public String getOperatorCreate() {
+        return operatorCreate;
+    }
+
+    public void setOperatorCreate(String operatorCreate) {
+        this.operatorCreate = operatorCreate;
+    }
+
+    public String getOperatorUpdate() {
+        return operatorUpdate;
+    }
+
+    public void setOperatorUpdate(String operatorUpdate) {
+        this.operatorUpdate = operatorUpdate;
     }
 }

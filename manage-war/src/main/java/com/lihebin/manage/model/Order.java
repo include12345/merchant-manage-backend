@@ -30,6 +30,12 @@ public class Order {
     @Column(name = "mtime")
     private Date mtime;
 
+    @Column(name = "operator_create")
+    private String operatorCreate;
+
+    @Column(name = "operator_update")
+    private String operatorUpdate;
+
     @Column
     private Boolean deleted = false;
 
@@ -185,5 +191,21 @@ public class Order {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public String getOperatorCreate() {
+        return operatorCreate;
+    }
+
+    public void setOperatorCreate(String operatorCreate) {
+        this.operatorCreate = operatorCreate;
+    }
+
+    public String getOperatorUpdate() {
+        return operatorUpdate;
+    }
+
+    public void setOperatorUpdate(String operatorUpdate) {
+        this.operatorUpdate = operatorUpdate;
     }
 }

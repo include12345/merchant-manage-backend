@@ -1,6 +1,9 @@
 package com.lihebin.manage.bean;
 
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -17,7 +20,11 @@ public class ConsumerBalanceReCharge {
 
     @NotNull
     @Pattern(regexp = "\\d{9}", message = "金额不合法")
-    private Long balance;
+    private Long amount;
+
+    @NotBlank
+    @Length(max = 128, message = "备注长度范围0-128个字符")
+    private String remark;
 
 
     public Long getConsumerId() {
@@ -36,11 +43,19 @@ public class ConsumerBalanceReCharge {
         this.walletId = walletId;
     }
 
-    public Long getBalance() {
-        return balance;
+    public Long getAmount() {
+        return amount;
     }
 
-    public void setBalance(Long balance) {
-        this.balance = balance;
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 }

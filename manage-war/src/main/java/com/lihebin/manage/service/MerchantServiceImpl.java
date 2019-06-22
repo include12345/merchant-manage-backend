@@ -219,34 +219,31 @@ public class MerchantServiceImpl implements MerchantService {
         if (merchantConsumerOld == null || !merchantConsumerOld.getMerchantId().equals(merchantId)) {
             throw new BackendException(Code.CODE_NOT_EXIST, "商户会员不存在");
         }
-        long walletId;
         long balanceOld;
+        MerchantConsumerWallet merchantConsumerWalletOld;
         if (consumerBalanceReCharge.getWalletId() == null) {
-            walletId = initMerchantConsumerWallet(merchantId, consumerBalanceReCharge.getConsumerId());
+            merchantConsumerWalletOld = initMerchantConsumerWallet(merchantId, consumerBalanceReCharge.getConsumerId());
             balanceOld = 0L;
         } else {
-            MerchantConsumerWallet merchantConsumerWalletOld = merchantConsumerWalletDao.findOne(consumerBalanceReCharge.getWalletId());
+            merchantConsumerWalletOld = merchantConsumerWalletDao.findOne(consumerBalanceReCharge.getWalletId());
             if (merchantConsumerWalletOld == null
                     || !merchantConsumerWalletOld.getConsumerId().equals(consumerBalanceReCharge.getConsumerId())) {
                 throw new BackendException(Code.CODE_NOT_EXIST, "商户会员钱包不存在");
             }
-            walletId = consumerBalanceReCharge.getWalletId();
             balanceOld = merchantConsumerWalletOld.getBalance();
         }
-        long afterBalance = balanceOld + consumerBalanceReCharge.getBalance();
-        MerchantConsumerWallet merchantConsumerWallet = new MerchantConsumerWallet();
-        merchantConsumerWallet.setId(walletId);
-        merchantConsumerWallet.setBalance(afterBalance);
-        merchantConsumerWallet = merchantConsumerWalletDao.save(merchantConsumerWallet);
+        long afterBalance = balanceOld + consumerBalanceReCharge.getAmount();
+        merchantConsumerWalletOld.setBalance(afterBalance);
+        merchantConsumerWalletOld = merchantConsumerWalletDao.save(merchantConsumerWalletOld);
         WalletAddTransaction walletAddTransaction = new WalletAddTransaction();
-        walletAddTransaction.setWalletId(walletId);
+        walletAddTransaction.setWalletId(merchantConsumerWalletOld.getId());
         walletAddTransaction.setBeforeBalance(balanceOld);
-        walletAddTransaction.setAddAmount(consumerBalanceReCharge.getBalance());
+        walletAddTransaction.setAddAmount(consumerBalanceReCharge.getAmount());
         walletAddTransaction.setAfterBalance(afterBalance);
         walletAddTransactionDao.save(walletAddTransaction);
         MerchantConsumerWalletRes merchantConsumerWalletRes = new MerchantConsumerWalletRes();
-        merchantConsumerWalletRes.setId(walletId);
-        merchantConsumerWalletRes.setBalance(merchantConsumerWallet.getBalance());
+        merchantConsumerWalletRes.setId(merchantConsumerWalletOld.getId());
+        merchantConsumerWalletRes.setBalance(merchantConsumerWalletOld.getBalance());
         return merchantConsumerWalletRes;
     }
 
@@ -274,13 +271,12 @@ public class MerchantServiceImpl implements MerchantService {
      * @param merchantId
      * @param consumerId
      */
-    private long initMerchantConsumerWallet(long merchantId, long consumerId) {
+    private MerchantConsumerWallet initMerchantConsumerWallet(long merchantId, long consumerId) {
         MerchantConsumerWallet merchantConsumerWallet = new MerchantConsumerWallet();
         merchantConsumerWallet.setMerchantId(merchantId);
         merchantConsumerWallet.setConsumerId(consumerId);
         merchantConsumerWallet.setBalance(0L);
-        merchantConsumerWallet = merchantConsumerWalletDao.save(merchantConsumerWallet);
-        return merchantConsumerWallet.getId();
+        return merchantConsumerWalletDao.save(merchantConsumerWallet);
     }
 
     /**
