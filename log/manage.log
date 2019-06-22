@@ -1,62 +1,36 @@
-01:00:27.540 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:1d4466ef0677b9566bd69462daa815e5
-01:00:27.768 [http-nio-8080-exec-4] ERROR c.l.manage.exception.ExceptionHandle - 【系统异常】
-org.springframework.web.bind.MissingServletRequestParameterException: Required Long parameter 'consumerId' is not present
-	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:198)
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:109)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-01:00:29.527 [http-nio-8080-exec-6] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:1d4466ef0677b9566bd69462daa815e5
-01:00:29.658 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web request>>:[[]]
-01:00:29.659 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
-01:00:29.822 [http-nio-8080-exec-8] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:1d4466ef0677b9566bd69462daa815e5
-01:00:29.954 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][getMerchantConsumer] web request>>:[[1d4466ef0677b9566bd69462daa815e5, 2]]
-01:00:32.454 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][getMerchantConsumer] web response>>:[{"code":0,"data":{"balance":0,"consumerCellphone":"18317713498","consumerName":"test2","ctime":1561130802000,"id":2,"merchantId":1,"mtime":1561130802000,"walletCtime":1561130802000,"walletId":2,"walletMtime":1561130802000},"msg":"SUCCESS"}]
-01:01:14.437 [Thread-5] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@22f59fa: startup date [Sat Jun 22 00:55:59 CST 2019]; root of context hierarchy
-01:01:14.439 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
-01:01:14.439 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
-01:01:14.440 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-01:01:14.441 [Thread-5] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-01:01:14.445 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'userPersistenceUnit'
-01:01:14.447 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'managePersistenceUnit'
-01:01:14.452 [Thread-5] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+15:00:47.575 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:00:47.706 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][addMerchantConsumer] web request>>:[["667f31a25878e20c1014f8534254bd61",{"cellphone":"18301900685","name":"test"}]]
+15:00:48.178 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][addMerchantConsumer] web response>>:[{"code":0,"data":{"id":1},"msg":"SUCCESS"}]
+15:00:48.208 [http-nio-8080-exec-6] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:00:48.331 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][listMerchantConsumerPaging] web request>>:[["667f31a25878e20c1014f8534254bd61",null,null,0,10]]
+15:00:48.798 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerName":"test","ctime":1561186848000,"id":1,"merchantId":1,"mtime":1561186848000}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+15:00:52.084 [http-nio-8080-exec-8] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:00:52.201 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][checkToken] web request>>:[[]]
+15:00:52.208 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+15:00:52.551 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:00:52.670 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][getMerchantConsumer] web request>>:[["667f31a25878e20c1014f8534254bd61",1]]
+15:00:53.162 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][getMerchantConsumer] web response>>:[{"code":0,"data":{"balance":0,"consumerCellphone":"18301900685","consumerName":"test","ctime":1561186848000,"id":1,"merchantId":1,"mtime":1561186848000,"walletCtime":1561186848000,"walletId":10,"walletMtime":1561186848000},"msg":"SUCCESS"}]
+15:00:59.125 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:00:59.256 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][updateMerchantConsumer] web request>>:[["667f31a25878e20c1014f8534254bd61",{"cellphone":"18301900685","id":1,"name":"test","wechat":"wwqe"}]]
+15:00:59.934 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][updateMerchantConsumer] web response>>:[{"code":0,"data":{"id":1},"msg":"SUCCESS"}]
+15:00:59.958 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:01:00.076 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][getMerchantConsumer] web request>>:[["667f31a25878e20c1014f8534254bd61",1]]
+15:01:00.558 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][getMerchantConsumer] web response>>:[{"code":0,"data":{"balance":0,"consumerCellphone":"18301900685","consumerName":"test","consumerWechat":"wwqe","ctime":1561186848000,"id":1,"merchantId":1,"mtime":1561186860000,"walletCtime":1561186848000,"walletId":10,"walletMtime":1561186848000},"msg":"SUCCESS"}]
+15:01:52.357 [http-nio-8080-exec-6] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:01:52.474 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web request>>:[[]]
+15:01:52.475 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+15:01:52.820 [http-nio-8080-exec-8] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:01:52.937 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][listMerchantConsumerPaging] web request>>:[["667f31a25878e20c1014f8534254bd61",null,null,0,10]]
+15:01:53.364 [http-nio-8080-exec-8] INFO  c.l.manage.config.ServiceLogAspect - [ID33][listMerchantConsumerPaging] web response>>:[{"code":0,"data":{"content":[{"consumerCellphone":"18301900685","consumerName":"test","consumerWechat":"wwqe","ctime":1561186848000,"id":1,"merchantId":1,"mtime":1561186860000}],"first":true,"last":true,"number":0,"numberOfElements":1,"size":0,"totalElements":1,"totalPages":1},"msg":"SUCCESS"}]
+15:02:14.373 [http-nio-8080-exec-10] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:02:14.491 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web request>>:[[]]
+15:02:14.491 [http-nio-8080-exec-10] INFO  c.l.manage.config.ServiceLogAspect - [ID35][checkToken] web response>>:[{"code":0,"msg":"SUCCESS"}]
+15:02:14.846 [http-nio-8080-exec-2] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:02:14.964 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][getMerchantConsumer] web request>>:[["667f31a25878e20c1014f8534254bd61",1]]
+15:02:15.442 [http-nio-8080-exec-2] INFO  c.l.manage.config.ServiceLogAspect - [ID27][getMerchantConsumer] web response>>:[{"code":0,"data":{"balance":0,"consumerCellphone":"18301900685","consumerName":"test","consumerWechat":"wwqe","ctime":1561186848000,"id":1,"merchantId":1,"mtime":1561186860000,"walletCtime":1561186848000,"walletId":10,"walletMtime":1561186848000},"msg":"SUCCESS"}]
+15:02:30.678 [http-nio-8080-exec-4] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:02:30.797 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][updateMerchantConsumer] web request>>:[["667f31a25878e20c1014f8534254bd61",{"cellphone":"18301900685","email":"include_lihebin@163.com","id":1,"name":"test","wechat":"wwqe12321332"}]]
+15:02:31.456 [http-nio-8080-exec-4] INFO  c.l.manage.config.ServiceLogAspect - [ID29][updateMerchantConsumer] web response>>:[{"code":0,"data":{"id":1},"msg":"SUCCESS"}]
+15:02:31.477 [http-nio-8080-exec-6] INFO  c.l.manage.config.TokenInterceptor - TokenInterceptor:667f31a25878e20c1014f8534254bd61
+15:02:31.593 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][getMerchantConsumer] web request>>:[["667f31a25878e20c1014f8534254bd61",1]]
+15:02:32.067 [http-nio-8080-exec-6] INFO  c.l.manage.config.ServiceLogAspect - [ID31][getMerchantConsumer] web response>>:[{"code":0,"data":{"balance":0,"consumerCellphone":"18301900685","consumerEmail":"include_lihebin@163.com","consumerName":"test","consumerWechat":"wwqe12321332","ctime":1561186848000,"id":1,"merchantId":1,"mtime":1561186951000,"walletCtime":1561186848000,"walletId":10,"walletMtime":1561186848000},"msg":"SUCCESS"}]

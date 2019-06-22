@@ -76,7 +76,7 @@ public class ServiceLogAspect {
   //请求method前打印内容
   @Before(value = "webAspect()")
   public void webBefore(JoinPoint joinPoint){
-    log.info("[ID{}][{}] web request>>:[{}]", Thread.currentThread().getId(), joinPoint.getSignature().getName(), joinPoint.getArgs());
+    log.info("[ID{}][{}] web request>>:[{}]", Thread.currentThread().getId(), joinPoint.getSignature().getName(), JSON.toJSONString(joinPoint.getArgs()));
   }
 
   //在方法执行完结后打印返回内容

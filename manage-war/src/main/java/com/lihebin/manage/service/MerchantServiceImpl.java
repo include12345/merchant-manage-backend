@@ -188,21 +188,24 @@ public class MerchantServiceImpl implements MerchantService {
         if (merchantConsumerOld == null || !merchantConsumerOld.getMerchantId().equals(merchantId)) {
             throw new BackendException(Code.CODE_NOT_EXIST, "商户会员不存在");
         }
-        MerchantConsumer merchantConsumerCheck = merchantConsumerDao.findByMerchantIdAndName(merchantId, merchantConsumerUpdate.getName());
-        if (null != merchantConsumerCheck) {
-            throw new BackendException(Code.CODE_EXIST, "商户会员名称[%s]已存在", merchantConsumerUpdate.getName());
+        if (!merchantConsumerOld.getName().equals(merchantConsumerUpdate.getName())) {
+            MerchantConsumer merchantConsumerCheck = merchantConsumerDao.findByMerchantIdAndName(merchantId, merchantConsumerUpdate.getName());
+            if (null != merchantConsumerCheck) {
+                throw new BackendException(Code.CODE_EXIST, "商户会员名称[%s]已存在", merchantConsumerUpdate.getName());
+            }
         }
-        merchantConsumerCheck = merchantConsumerDao.findByMerchantIdAndCellphone(merchantId, merchantConsumerUpdate.getCellphone());
-        if (null != merchantConsumerCheck) {
-            throw new BackendException(Code.CODE_EXIST, "商户会员手机号[%s]已存在", merchantConsumerUpdate.getCellphone());
+        if (!merchantConsumerOld.getCellphone().equals(merchantConsumerUpdate.getCellphone())) {
+            MerchantConsumer merchantConsumerCheck = merchantConsumerDao.findByMerchantIdAndCellphone(merchantId, merchantConsumerUpdate.getCellphone());
+            if (null != merchantConsumerCheck) {
+                throw new BackendException(Code.CODE_EXIST, "商户会员手机号[%s]已存在", merchantConsumerUpdate.getCellphone());
+            }
         }
-        MerchantConsumer merchantConsumer = new MerchantConsumer();
-        merchantConsumer.setId(merchantConsumerUpdate.getId());
-        merchantConsumer.setName(merchantConsumerUpdate.getName());
-        merchantConsumer.setCellphone(merchantConsumerUpdate.getCellphone());
-        merchantConsumer.setEmail(merchantConsumerUpdate.getEmail());
-        merchantConsumer.setWechat(merchantConsumerUpdate.getWechat());
-        merchantConsumerDao.save(merchantConsumer);
+        merchantConsumerOld.setId(merchantConsumerUpdate.getId());
+        merchantConsumerOld.setName(merchantConsumerUpdate.getName());
+        merchantConsumerOld.setCellphone(merchantConsumerUpdate.getCellphone());
+        merchantConsumerOld.setEmail(merchantConsumerUpdate.getEmail());
+        merchantConsumerOld.setWechat(merchantConsumerUpdate.getWechat());
+        merchantConsumerDao.save(merchantConsumerOld);
         MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();
         merchantConsumerRes.setId(merchantConsumerUpdate.getId());
         return merchantConsumerRes;
