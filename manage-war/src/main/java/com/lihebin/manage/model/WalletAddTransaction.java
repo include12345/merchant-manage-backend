@@ -21,6 +21,9 @@ public class WalletAddTransaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "consumer_id")
+    private Long consumerId;
+
     @Column(name = "wallet_id")
     private Long walletId;
 
@@ -64,6 +67,13 @@ public class WalletAddTransaction {
         this.id = id;
     }
 
+    public Long getConsumerId() {
+        return consumerId;
+    }
+
+    public void setConsumerId(Long consumerId) {
+        this.consumerId = consumerId;
+    }
 
     public String getRemark() {
         return remark;

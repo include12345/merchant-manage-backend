@@ -11,11 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.criteria.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -49,19 +51,24 @@ public class MerchantServiceImpl implements MerchantService {
 
 
     @Override
-    public Page<MerchantConsumerRes> listMerchantConsumerPaging(String token, Optional<String> name, Optional<String> cellphone,  int pageNo, int pageSize) {
+    public Page<MerchantConsumerRes> listMerchantConsumerPaging(String token, Optional<Date> ctimeStart, Optional<Date> ctimeEnd, Optional<String> name, Optional<String> cellphone, int pageNo, int pageSize) {
         UserMessage userMessage = merchantUserService.getUserMessage(token);
+        Sort sort = new Sort(Sort.Direction.DESC,"ctime");
         Page<MerchantConsumer> merchantPage = merchantConsumerDao.findAll((root, criteriaQuery, criteriaBuilder) -> {
             Path<Long> merchantIdPath = root.get("merchantId");
             Path<String> namePath = root.get("name");
             Path<String> cellphonePath = root.get("cellphone");
+            Path<Date> timePath = root.get("ctime");
             List<Predicate> predicateList = new ArrayList<>();
             predicateList.add(criteriaBuilder.equal(merchantIdPath, userMessage.getMerchantId()));
             name.ifPresent(s -> predicateList.add(criteriaBuilder.like(namePath, "%" + s + "%")));
             cellphone.ifPresent(s -> predicateList.add(criteriaBuilder.equal(cellphonePath, s)));
+            if (ctimeStart.isPresent() && ctimeEnd.isPresent()) {
+                predicateList.add(criteriaBuilder.between(timePath, ctimeStart.get(), ctimeEnd.get()));
+            }
             Predicate[] p = new Predicate[predicateList.size()];
             return criteriaBuilder.and(predicateList.toArray(p));
-        }, new PageRequest(pageNo, pageSize));
+        }, new PageRequest(pageNo, pageSize, sort));
         return new PageImpl<>(
                 merchantPage.getContent()
                         .stream()
@@ -157,7 +164,8 @@ public class MerchantServiceImpl implements MerchantService {
     @Transactional
     @Override
     public MerchantConsumerRes addMerchantConsumer(String token, MerchantConsumerAdd merchantConsumerAdd) {
-        long merchantId = merchantUserService.getUserMessage(token).getMerchantId();
+        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        long merchantId = userMessage.getMerchantId();
         MerchantConsumer merchantConsumer = merchantConsumerDao.findByMerchantIdAndName(merchantId, merchantConsumerAdd.getName());
         if (null != merchantConsumer) {
             throw new BackendException(Code.CODE_EXIST, "商户会员名称[%s]已存在", merchantConsumerAdd.getName());
@@ -172,8 +180,10 @@ public class MerchantServiceImpl implements MerchantService {
         merchantConsumer.setCellphone(merchantConsumerAdd.getCellphone());
         merchantConsumer.setEmail(merchantConsumerAdd.getEmail());
         merchantConsumer.setWechat(merchantConsumerAdd.getWechat());
+        merchantConsumer.setOperatorCreate(userMessage.getUsername());
+        merchantConsumer.setOperatorUpdate(userMessage.getUsername());
         merchantConsumer = merchantConsumerDao.save(merchantConsumer);
-        initMerchantConsumerWallet(merchantId, merchantConsumer.getId());
+        initMerchantConsumerWallet(merchantId, userMessage.getUsername(), merchantConsumer.getId());
         MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();
         merchantConsumerRes.setId(merchantConsumer.getId());
         return merchantConsumerRes;
@@ -183,7 +193,8 @@ public class MerchantServiceImpl implements MerchantService {
 
     @Override
     public MerchantConsumerRes updateMerchantConsumer(String token, MerchantConsumerUpdate merchantConsumerUpdate) {
-        long merchantId = merchantUserService.getUserMessage(token).getMerchantId();
+        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        long merchantId = userMessage.getMerchantId();
         MerchantConsumer merchantConsumerOld = merchantConsumerDao.findOne(merchantConsumerUpdate.getId());
         if (merchantConsumerOld == null || !merchantConsumerOld.getMerchantId().equals(merchantId)) {
             throw new BackendException(Code.CODE_NOT_EXIST, "商户会员不存在");
@@ -205,6 +216,7 @@ public class MerchantServiceImpl implements MerchantService {
         merchantConsumerOld.setCellphone(merchantConsumerUpdate.getCellphone());
         merchantConsumerOld.setEmail(merchantConsumerUpdate.getEmail());
         merchantConsumerOld.setWechat(merchantConsumerUpdate.getWechat());
+        merchantConsumerOld.setOperatorUpdate(userMessage.getUsername());
         merchantConsumerDao.save(merchantConsumerOld);
         MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();
         merchantConsumerRes.setId(merchantConsumerUpdate.getId());
@@ -214,7 +226,8 @@ public class MerchantServiceImpl implements MerchantService {
     @Transactional
     @Override
     public MerchantConsumerWalletRes rechargeMerchantConsumerBalance(String token, ConsumerBalanceReCharge consumerBalanceReCharge) {
-        long merchantId = merchantUserService.getUserMessage(token).getMerchantId();
+        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        long merchantId = userMessage.getMerchantId();
         MerchantConsumer merchantConsumerOld = merchantConsumerDao.findOne(consumerBalanceReCharge.getConsumerId());
         if (merchantConsumerOld == null || !merchantConsumerOld.getMerchantId().equals(merchantId)) {
             throw new BackendException(Code.CODE_NOT_EXIST, "商户会员不存在");
@@ -222,7 +235,7 @@ public class MerchantServiceImpl implements MerchantService {
         long balanceOld;
         MerchantConsumerWallet merchantConsumerWalletOld;
         if (consumerBalanceReCharge.getWalletId() == null) {
-            merchantConsumerWalletOld = initMerchantConsumerWallet(merchantId, consumerBalanceReCharge.getConsumerId());
+            merchantConsumerWalletOld = initMerchantConsumerWallet(merchantId, userMessage.getUsername(), consumerBalanceReCharge.getConsumerId());
             balanceOld = 0L;
         } else {
             merchantConsumerWalletOld = merchantConsumerWalletDao.findOne(consumerBalanceReCharge.getWalletId());
@@ -234,17 +247,44 @@ public class MerchantServiceImpl implements MerchantService {
         }
         long afterBalance = balanceOld + consumerBalanceReCharge.getAmount();
         merchantConsumerWalletOld.setBalance(afterBalance);
+        merchantConsumerWalletOld.setOperatorUpdate(userMessage.getUsername());
         merchantConsumerWalletOld = merchantConsumerWalletDao.save(merchantConsumerWalletOld);
         WalletAddTransaction walletAddTransaction = new WalletAddTransaction();
+        walletAddTransaction.setConsumerId(merchantConsumerWalletOld.getConsumerId());
         walletAddTransaction.setWalletId(merchantConsumerWalletOld.getId());
         walletAddTransaction.setBeforeBalance(balanceOld);
         walletAddTransaction.setAddAmount(consumerBalanceReCharge.getAmount());
         walletAddTransaction.setAfterBalance(afterBalance);
+        walletAddTransaction.setOperatorCreate(userMessage.getUsername());
+        walletAddTransaction.setOperatorUpdate(userMessage.getUsername());
+        walletAddTransaction.setRemark(consumerBalanceReCharge.getRemark());
         walletAddTransactionDao.save(walletAddTransaction);
         MerchantConsumerWalletRes merchantConsumerWalletRes = new MerchantConsumerWalletRes();
         merchantConsumerWalletRes.setId(merchantConsumerWalletOld.getId());
         merchantConsumerWalletRes.setBalance(merchantConsumerWalletOld.getBalance());
         return merchantConsumerWalletRes;
+    }
+
+    @Override
+    public Page<WalletTransactionRes> listWalletTransactionPaging(long consumerId, Optional<Date> ctimeStart, Optional<Date> ctimeEnd, int pageNo, int pageSize) {
+        Sort sort = new Sort(Sort.Direction.DESC,"ctime");
+        Page<WalletAddTransaction> walletAddTransactionPage = walletAddTransactionDao.findAll((root, criteriaQuery, criteriaBuilder) -> {
+            Path<Long> consumerIdPath = root.get("consumerId");
+            Path<Date> timePath = root.get("ctime");
+            List<Predicate> predicateList = new ArrayList<>();
+            predicateList.add(criteriaBuilder.equal(consumerIdPath, consumerId));
+            if (ctimeStart.isPresent() && ctimeEnd.isPresent()) {
+                predicateList.add(criteriaBuilder.between(timePath, ctimeStart.get(), ctimeEnd.get()));
+            }
+            Predicate[] p = new Predicate[predicateList.size()];
+            return criteriaBuilder.and(predicateList.toArray(p));
+        }, new PageRequest(pageNo, pageSize, sort));
+        return new PageImpl<>(
+                walletAddTransactionPage.getContent()
+                        .stream()
+                        .map(this::buildWalletTransactionRes)
+                        .collect(Collectors.toList()),
+                walletAddTransactionPage.previousPageable(), walletAddTransactionPage.getTotalElements());
     }
 
 
@@ -271,11 +311,13 @@ public class MerchantServiceImpl implements MerchantService {
      * @param merchantId
      * @param consumerId
      */
-    private MerchantConsumerWallet initMerchantConsumerWallet(long merchantId, long consumerId) {
+    private MerchantConsumerWallet initMerchantConsumerWallet(long merchantId, String username, long consumerId) {
         MerchantConsumerWallet merchantConsumerWallet = new MerchantConsumerWallet();
         merchantConsumerWallet.setMerchantId(merchantId);
         merchantConsumerWallet.setConsumerId(consumerId);
         merchantConsumerWallet.setBalance(0L);
+        merchantConsumerWallet.setOperatorCreate(username);
+        merchantConsumerWallet.setOperatorUpdate(username);
         return merchantConsumerWalletDao.save(merchantConsumerWallet);
     }
 
@@ -316,5 +358,26 @@ public class MerchantServiceImpl implements MerchantService {
         merchantConsumerRes.setCtime(merchantConsumer.getCtime());
         merchantConsumerRes.setMtime(merchantConsumer.getMtime());
         return merchantConsumerRes;
+    }
+
+    /**
+     * build MerchantConsumerRes
+     *
+     * @param walletAddTransaction
+     * @return
+     */
+    private WalletTransactionRes buildWalletTransactionRes(WalletAddTransaction walletAddTransaction) {
+        WalletTransactionRes walletTransactionRes = new WalletTransactionRes();
+        walletTransactionRes.setConsumerId(walletAddTransaction.getConsumerId());
+        walletTransactionRes.setWalletId(walletAddTransaction.getWalletId());
+        walletTransactionRes.setAddAmount(walletAddTransaction.getAddAmount());
+        walletTransactionRes.setBeforeBalance(walletAddTransaction.getBeforeBalance());
+        walletTransactionRes.setAfterBalance(walletAddTransaction.getAfterBalance());
+        walletTransactionRes.setOperatorCreate(walletAddTransaction.getOperatorCreate());
+        walletTransactionRes.setOperatorUpdate(walletAddTransaction.getOperatorUpdate());
+        walletTransactionRes.setRemark(walletAddTransaction.getRemark());
+        walletTransactionRes.setCtime(walletAddTransaction.getCtime());
+        walletTransactionRes.setMtime(walletAddTransaction.getMtime());
+        return walletTransactionRes;
     }
 }

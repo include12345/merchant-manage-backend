@@ -3,6 +3,7 @@ package com.lihebin.manage.service;
 import com.lihebin.manage.bean.*;
 import org.springframework.data.domain.Page;
 
+import java.util.Date;
 import java.util.Optional;
 
 /**
@@ -19,7 +20,7 @@ public interface MerchantService {
      * @param pageSize
      * @return
      */
-    Page<MerchantConsumerRes> listMerchantConsumerPaging(String token, Optional<String> name, Optional<String> cellphone, int pageNo, int pageSize);
+    Page<MerchantConsumerRes> listMerchantConsumerPaging(String token, Optional<Date> ctimeStart, Optional<Date> ctimeEnd, Optional<String> name, Optional<String> cellphone, int pageNo, int pageSize);
 
     /**
      * 创建商户
@@ -79,5 +80,16 @@ public interface MerchantService {
      * @return
      */
     MerchantConsumerWalletRes rechargeMerchantConsumerBalance(String token, ConsumerBalanceReCharge consumerBalanceReCharge);
+
+
+    /**
+     * 获取商户下会员钱包充值流水
+     *
+     * @param consumerId
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
+    Page<WalletTransactionRes> listWalletTransactionPaging(long consumerId, Optional<Date> ctimeStart, Optional<Date> ctimeEnd, int pageNo, int pageSize);
 
 }

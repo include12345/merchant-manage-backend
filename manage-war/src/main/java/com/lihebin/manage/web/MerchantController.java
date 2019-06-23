@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Date;
 import java.util.Optional;
 
 /**
@@ -24,11 +25,13 @@ public class MerchantController {
     @RequestMapping(value = "/listMerchantConsumerPaging", method = RequestMethod.GET)
     public Result listMerchantConsumerPaging(@RequestHeader("token") String token,
                                              @RequestParam(value = "name", required = false) String name,
+                                             @RequestParam(value = "ctimeStart", required = false) Date ctimeStart,
+                                             @RequestParam(value = "ctimeEnd", required = false) Date ctimeEnd,
                                              @RequestParam(value = "cellphone", required = false) String cellphone,
                                              @RequestParam(value = "pageNo", defaultValue = "0") int pageNo,
                                              @RequestParam(value = "pageSize", defaultValue = "30") int pageSize
     ) {
-        return ResultUtil.success(merchantService.listMerchantConsumerPaging(token, Optional.ofNullable(name), Optional.ofNullable(cellphone), pageNo, pageSize));
+        return ResultUtil.success(merchantService.listMerchantConsumerPaging(token, Optional.ofNullable(ctimeStart), Optional.ofNullable(ctimeEnd), Optional.ofNullable(name), Optional.ofNullable(cellphone), pageNo, pageSize));
     }
 
 //    @RequestMapping(value = "/logout", method = RequestMethod.GET)
@@ -75,7 +78,15 @@ public class MerchantController {
         return ResultUtil.success(merchantService.updateMerchant(merchant));
     }
 
-
+    @RequestMapping(value = "/listConsumerWalletTransactionPaging/{consumerId:\\d+}", method = RequestMethod.GET)
+    public Result listConsumerWalletTransactionPaging(@PathVariable(value = "consumerId") long consumerId,
+                                             @RequestParam(value = "ctimeStart", required = false) Date ctimeStart,
+                                             @RequestParam(value = "ctimeEnd", required = false) Date ctimeEnd,
+                                             @RequestParam(value = "pageNo", defaultValue = "0") int pageNo,
+                                             @RequestParam(value = "pageSize", defaultValue = "30") int pageSize
+    ) {
+        return ResultUtil.success(merchantService.listWalletTransactionPaging(consumerId, Optional.ofNullable(ctimeStart), Optional.ofNullable(ctimeEnd), pageNo, pageSize));
+    }
 
 
 }

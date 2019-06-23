@@ -86,6 +86,7 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_consumer_wallet` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`wallet_add_transaction` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `consumer_id` bigint(20)  NOT NULL COMMENT '会员id',
   `wallet_id` bigint(20)  NOT NULL COMMENT '商户会员钱包id',
   `before_balance` BIGINT(20) NULL DEFAULT '0' COMMENT '变更前金额',
   `add_amount` BIGINT(20) NULL DEFAULT '0' COMMENT '会员充值金额',
