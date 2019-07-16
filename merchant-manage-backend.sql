@@ -7,7 +7,6 @@ create schema if not exists `business` default character set utf8mb4 collate utf
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `business`.`merchant` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `sn` VARCHAR(36) NOT NULL COMMENT '商户sn',
   `name` VARCHAR(128) NOT NULL COMMENT '商户名',
   `cellphone` VARCHAR(36) NOT NULL COMMENT '部门id',
   `ctime` timestamp NULL COMMENT '开始时间',
@@ -108,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `business`.`wallet_add_transaction` (
 -- -----------------------------------------------------
 create table if not exists `business`.`transaction`(
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `tsn` varchar(32) not null comment '订单流水号',
+  `order_id` bigint(20)  NOT NULL COMMENT '订单id',
   `order_sn` varchar(32) not null comment '订单号',
   `name` varchar(128) not null comment '流水描述',
   `remark` varchar(128) null comment '流水备注',

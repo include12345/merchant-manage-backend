@@ -46,7 +46,7 @@ public class MerchantUserServiceImpl implements MerchantUserService{
         String sign = MD5Util.getSign(con);
         String value = String.format("%s-%d", login.getUsername(), merchantUser.getMerchant_id());
         redisDao.removeValue(sign);
-        redisDao.cacheValue(sign, value, 60, TimeUnit.MINUTES);
+        redisDao.cacheValue(sign, value, 120, TimeUnit.MINUTES);
         LoginRes loginRes = new LoginRes();
         loginRes.setToken(sign);
         loginRes.setMerchantId(merchantUser.getMerchant_id());
@@ -60,23 +60,5 @@ public class MerchantUserServiceImpl implements MerchantUserService{
         if (!result) {
             throw new BackendException(Code.CODE_NOT_EXIST, "退出失败");
         }
-    }
-
-    @Override
-    public UserMessage getUserMessage(String token) {
-        UserMessage userMessage = new UserMessage();
-        String value = redisDao.getValue(token);
-        if (StringUtil.empty(value)) {
-            throw new BackendException(Code.CODE_NOT_EXIST, "用户信息不存在");
-        }
-        String[] userValue = value.split("-");
-        userMessage.setUsername(userValue[0]);
-        userMessage.setMerchantId(Long.valueOf(userValue[1]));
-        return userMessage;
-    }
-
-    @Override
-    public Long getMerchantId(String token) {
-        return getUserMessage(token).getMerchantId();
     }
 }

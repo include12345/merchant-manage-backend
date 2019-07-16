@@ -1,7 +1,10 @@
 package com.lihebin.manage.web;
 
 import com.lihebin.manage.bean.*;
+import com.lihebin.manage.model.MerchantConsumer;
+import com.lihebin.manage.model.MerchantConsumerWallet;
 import com.lihebin.manage.service.MerchantService;
+import com.lihebin.manage.service.common.ConsumerDomainService;
 import com.lihebin.manage.utils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -21,6 +24,7 @@ public class MerchantController {
 
     @Autowired
     private MerchantService merchantService;
+
 
     @RequestMapping(value = "/listMerchantConsumerPaging", method = RequestMethod.GET)
     public Result listMerchantConsumerPaging(@RequestHeader("token") String token,
@@ -73,6 +77,13 @@ public class MerchantController {
         return ResultUtil.success(merchantService.rechargeMerchantConsumerBalance(token, consumerBalanceReCharge));
     }
 
+
+    @RequestMapping(value = "/reduceMerchantConsumerBalance", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public Result reduceMerchantConsumerBalance(@Valid @RequestHeader("token") String token, @RequestBody ConsumerBalanceReCharge consumerBalanceReCharge) {
+        return ResultUtil.success(merchantService.reduceMerchantConsumerBalance(token, consumerBalanceReCharge));
+    }
+
+
     @RequestMapping(value = "/updateMerchant", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Result updateMerchant(@Valid @RequestBody MerchantUpdate merchant) {
         return ResultUtil.success(merchantService.updateMerchant(merchant));
@@ -87,6 +98,5 @@ public class MerchantController {
     ) {
         return ResultUtil.success(merchantService.listWalletTransactionPaging(consumerId, Optional.ofNullable(ctimeStart), Optional.ofNullable(ctimeEnd), pageNo, pageSize));
     }
-
 
 }

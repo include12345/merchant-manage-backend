@@ -24,19 +24,4 @@ public interface MerchantUserService {
      */
     void logout(String token);
 
-    /**
-     * 根据token获取用户信息
-     *
-     * @param token
-     * @return
-     */
-    UserMessage getUserMessage(String token);
-
-    /**
-     * 根据token获取用户信息
-     *
-     * @param token
-     * @return
-     */
-    Long getMerchantId(String token);
 }

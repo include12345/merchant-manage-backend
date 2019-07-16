@@ -6,6 +6,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
@@ -16,14 +17,11 @@ import java.util.Set;
 @Entity
 @Table(name = "merchant")
 @EntityListeners(AuditingEntityListener.class)
-public class Merchant {
+public class Merchant implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column
-    private String sn;
 
     @Column
     private String name;
@@ -94,14 +92,6 @@ public class Merchant {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSn() {
-        return sn;
-    }
-
-    public void setSn(String sn) {
-        this.sn = sn;
     }
 
     public String getCellphone() {

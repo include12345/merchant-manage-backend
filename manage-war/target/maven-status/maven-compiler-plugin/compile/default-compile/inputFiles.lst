@@ -10,6 +10,7 @@
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/web/MerchantController.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/config/jwt/ShiroConfig.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/web/MerchantUserController.java
+/Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/dao/manage/WalletAddTransactionDao.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/service/MerchantUserServiceImpl.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/dao/manage/MerchantConsumerDao.java
 /Users/lihebin/github/merchant-manage-backend/manage-war/src/main/java/com/lihebin/manage/dao/manage/MerchantConsumerWalletDao.java

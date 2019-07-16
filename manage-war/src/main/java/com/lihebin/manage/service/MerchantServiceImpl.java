@@ -7,6 +7,8 @@ import com.lihebin.manage.model.Merchant;
 import com.lihebin.manage.model.MerchantConsumer;
 import com.lihebin.manage.model.MerchantConsumerWallet;
 import com.lihebin.manage.model.WalletAddTransaction;
+import com.lihebin.manage.service.common.ConsumerDomainService;
+import com.lihebin.manage.service.common.MerchantDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -31,6 +33,12 @@ public class MerchantServiceImpl implements MerchantService {
 
 
     @Autowired
+    private ConsumerDomainService consumerDomainService;
+
+    @Autowired
+    private MerchantDomainService merchantDomainService;
+
+    @Autowired
     private MerchantUserService merchantUserService;
 
     @Autowired
@@ -52,7 +60,7 @@ public class MerchantServiceImpl implements MerchantService {
 
     @Override
     public Page<MerchantConsumerRes> listMerchantConsumerPaging(String token, Optional<Date> ctimeStart, Optional<Date> ctimeEnd, Optional<String> name, Optional<String> cellphone, int pageNo, int pageSize) {
-        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        UserMessage userMessage = merchantDomainService.getUserMessage(token);
         Sort sort = new Sort(Sort.Direction.DESC,"ctime");
         Page<MerchantConsumer> merchantPage = merchantConsumerDao.findAll((root, criteriaQuery, criteriaBuilder) -> {
             Path<Long> merchantIdPath = root.get("merchantId");
@@ -86,9 +94,7 @@ public class MerchantServiceImpl implements MerchantService {
         if (merchantQuery != null) {
             throw new BackendException(Code.CODE_EXIST, "商户名称已存在");
         }
-        String merchantSn = simpleSnGeneratorDao.nextMerchantSn();
         Merchant merchantAdd = new Merchant();
-        merchantAdd.setSn(merchantSn);
         merchantAdd.setCellphone(merchant.getCellphone());
         merchantAdd.setName(merchant.getName());
         merchantAdd.setDeleted(false);
@@ -135,6 +141,7 @@ public class MerchantServiceImpl implements MerchantService {
             merchantConsumerWalletDao.deleteById(walletId);
         }
         merchantConsumerDao.deleteById(id);
+        consumerDomainService.removeMerchantConsumerCache(id);
     }
 
 
@@ -164,7 +171,7 @@ public class MerchantServiceImpl implements MerchantService {
     @Transactional
     @Override
     public MerchantConsumerRes addMerchantConsumer(String token, MerchantConsumerAdd merchantConsumerAdd) {
-        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        UserMessage userMessage = merchantDomainService.getUserMessage(token);
         long merchantId = userMessage.getMerchantId();
         MerchantConsumer merchantConsumer = merchantConsumerDao.findByMerchantIdAndName(merchantId, merchantConsumerAdd.getName());
         if (null != merchantConsumer) {
@@ -193,7 +200,7 @@ public class MerchantServiceImpl implements MerchantService {
 
     @Override
     public MerchantConsumerRes updateMerchantConsumer(String token, MerchantConsumerUpdate merchantConsumerUpdate) {
-        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        UserMessage userMessage = merchantDomainService.getUserMessage(token);
         long merchantId = userMessage.getMerchantId();
         MerchantConsumer merchantConsumerOld = merchantConsumerDao.findOne(merchantConsumerUpdate.getId());
         if (merchantConsumerOld == null || !merchantConsumerOld.getMerchantId().equals(merchantId)) {
@@ -218,6 +225,7 @@ public class MerchantServiceImpl implements MerchantService {
         merchantConsumerOld.setWechat(merchantConsumerUpdate.getWechat());
         merchantConsumerOld.setOperatorUpdate(userMessage.getUsername());
         merchantConsumerDao.save(merchantConsumerOld);
+        consumerDomainService.removeMerchantConsumerCache(merchantConsumerUpdate.getId());
         MerchantConsumerRes merchantConsumerRes = new MerchantConsumerRes();
         merchantConsumerRes.setId(merchantConsumerUpdate.getId());
         return merchantConsumerRes;
@@ -226,25 +234,10 @@ public class MerchantServiceImpl implements MerchantService {
     @Transactional
     @Override
     public MerchantConsumerWalletRes rechargeMerchantConsumerBalance(String token, ConsumerBalanceReCharge consumerBalanceReCharge) {
-        UserMessage userMessage = merchantUserService.getUserMessage(token);
+        UserMessage userMessage = merchantDomainService.getUserMessage(token);
         long merchantId = userMessage.getMerchantId();
-        MerchantConsumer merchantConsumerOld = merchantConsumerDao.findOne(consumerBalanceReCharge.getConsumerId());
-        if (merchantConsumerOld == null || !merchantConsumerOld.getMerchantId().equals(merchantId)) {
-            throw new BackendException(Code.CODE_NOT_EXIST, "商户会员不存在");
-        }
-        long balanceOld;
-        MerchantConsumerWallet merchantConsumerWalletOld;
-        if (consumerBalanceReCharge.getWalletId() == null) {
-            merchantConsumerWalletOld = initMerchantConsumerWallet(merchantId, userMessage.getUsername(), consumerBalanceReCharge.getConsumerId());
-            balanceOld = 0L;
-        } else {
-            merchantConsumerWalletOld = merchantConsumerWalletDao.findOne(consumerBalanceReCharge.getWalletId());
-            if (merchantConsumerWalletOld == null
-                    || !merchantConsumerWalletOld.getConsumerId().equals(consumerBalanceReCharge.getConsumerId())) {
-                throw new BackendException(Code.CODE_NOT_EXIST, "商户会员钱包不存在");
-            }
-            balanceOld = merchantConsumerWalletOld.getBalance();
-        }
+        MerchantConsumerWallet merchantConsumerWalletOld = getMerchantConsumerWalletOld(merchantId, consumerBalanceReCharge);
+        long balanceOld = merchantConsumerWalletOld.getBalance();
         long afterBalance = balanceOld + consumerBalanceReCharge.getAmount();
         merchantConsumerWalletOld.setBalance(afterBalance);
         merchantConsumerWalletOld.setOperatorUpdate(userMessage.getUsername());
@@ -259,6 +252,47 @@ public class MerchantServiceImpl implements MerchantService {
         walletAddTransaction.setOperatorUpdate(userMessage.getUsername());
         walletAddTransaction.setRemark(consumerBalanceReCharge.getRemark());
         walletAddTransactionDao.save(walletAddTransaction);
+        MerchantConsumerWalletRes merchantConsumerWalletRes = new MerchantConsumerWalletRes();
+        merchantConsumerWalletRes.setId(merchantConsumerWalletOld.getId());
+        merchantConsumerWalletRes.setBalance(merchantConsumerWalletOld.getBalance());
+        return merchantConsumerWalletRes;
+    }
+
+    /**
+     * 获取老的会员余额
+     *
+     * @param merchantId
+     * @param consumerBalanceReCharge
+     * @return
+     */
+    private MerchantConsumerWallet getMerchantConsumerWalletOld(long merchantId, ConsumerBalanceReCharge consumerBalanceReCharge) {
+        MerchantConsumer merchantConsumerOld = merchantConsumerDao.findOne(consumerBalanceReCharge.getConsumerId());
+        if (merchantConsumerOld == null || !merchantConsumerOld.getMerchantId().equals(merchantId)) {
+            throw new BackendException(Code.CODE_NOT_EXIST, "商户会员不存在");
+        }
+        MerchantConsumerWallet merchantConsumerWalletOld = merchantConsumerWalletDao.findByConsumerId(consumerBalanceReCharge.getConsumerId());
+        if (merchantConsumerWalletOld == null
+                || !merchantConsumerWalletOld.getConsumerId().equals(consumerBalanceReCharge.getConsumerId())) {
+            throw new BackendException(Code.CODE_NOT_EXIST, "商户会员钱包不存在");
+        }
+        return merchantConsumerWalletOld;
+    }
+
+    @Transactional
+    @Override
+    public MerchantConsumerWalletRes reduceMerchantConsumerBalance(String token, ConsumerBalanceReCharge consumerBalanceReCharge) {
+        UserMessage userMessage = merchantDomainService.getUserMessage(token);
+        long merchantId = userMessage.getMerchantId();
+        MerchantConsumerWallet merchantConsumerWalletOld = getMerchantConsumerWalletOld(merchantId, consumerBalanceReCharge);
+        long balanceOld = merchantConsumerWalletOld.getBalance();
+        if (balanceOld < consumerBalanceReCharge.getAmount()) {
+            throw new BackendException(Code.CODE_NOT_EXIST, "商户会员钱包余额不足");
+        }
+        long afterBalance = balanceOld - consumerBalanceReCharge.getAmount();
+        merchantConsumerWalletOld.setBalance(afterBalance);
+        merchantConsumerWalletOld.setOperatorUpdate(userMessage.getUsername());
+        merchantConsumerWalletOld = merchantConsumerWalletDao.save(merchantConsumerWalletOld);
+
         MerchantConsumerWalletRes merchantConsumerWalletRes = new MerchantConsumerWalletRes();
         merchantConsumerWalletRes.setId(merchantConsumerWalletOld.getId());
         merchantConsumerWalletRes.setBalance(merchantConsumerWalletOld.getBalance());
@@ -329,7 +363,7 @@ public class MerchantServiceImpl implements MerchantService {
      * @return
      */
     private MerchantConsumer checkMerchantConsumer(String token, long id) {
-        long merchantId = merchantUserService.getUserMessage(token).getMerchantId();
+        long merchantId = merchantDomainService.getUserMessage(token).getMerchantId();
         MerchantConsumer merchantConsumer = merchantConsumerDao.findOne(id);
         if (merchantConsumer == null) {
             throw new BackendException(Code.CODE_NOT_EXIST, "商户不存在");

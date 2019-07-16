@@ -1,9 +1,13 @@
 package com.lihebin.manage.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.interceptor.CacheErrorHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheManager;
@@ -19,7 +23,8 @@ import java.util.Map;
  */
 @Configuration
 @EnableCaching
-public class RedisConfig extends CachingConfigurerSupport{
+public class RedisConfig extends CachingConfigurerSupport {
+    private static final Logger logger = LoggerFactory.getLogger(RedisConfig.class);
 
     @Autowired
     private RedisTemplate redisTemplate;
@@ -44,5 +49,28 @@ public class RedisConfig extends CachingConfigurerSupport{
         redisTemplate.setKeySerializer(stringSerializer);
         redisTemplate.setHashKeySerializer(stringSerializer);
         this.redisTemplate = redisTemplate;
+    }
+
+    public CacheErrorHandler errorHandler() {
+        return new CacheErrorHandler(){
+        @Override
+        public void handleCacheGetError(RuntimeException exception, Cache cache, Object key) {
+            logger.warn("handleCacheGetError in redis: {}", exception.getMessage());
+        }
+
+        @Override
+        public void handleCachePutError(RuntimeException exception, Cache cache, Object key, Object value) {
+            logger.warn("handleCachePutError in redis: {}", exception.getMessage());
+        }
+
+        @Override
+        public void handleCacheEvictError(RuntimeException exception, Cache cache, Object key) {
+            logger.warn("handleCacheEvictError in redis: {}", exception.getMessage());
+        }
+
+        @Override
+        public void handleCacheClearError(RuntimeException exception, Cache cache) {
+            logger.warn("handleCacheClearError in redis: {}", exception.getMessage());
+        }};
     }
 }

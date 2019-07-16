@@ -81,6 +81,16 @@ public interface MerchantService {
      */
     MerchantConsumerWalletRes rechargeMerchantConsumerBalance(String token, ConsumerBalanceReCharge consumerBalanceReCharge);
 
+    /**
+     * 会员金额扣减
+     *
+     * @param token
+     * @param consumerBalanceReCharge
+     * @return
+     */
+    MerchantConsumerWalletRes reduceMerchantConsumerBalance(String token, ConsumerBalanceReCharge consumerBalanceReCharge);
+
+
 
     /**
      * 获取商户下会员钱包充值流水

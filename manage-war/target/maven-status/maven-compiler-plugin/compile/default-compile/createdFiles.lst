@@ -1,4 +1,5 @@
 com/lihebin/manage/config/CorsConfig.class
+com/lihebin/manage/dao/manage/WalletAddTransactionDao.class
 com/lihebin/manage/config/TokenInterceptor.class
 com/lihebin/manage/dao/manage/MerchantConsumerDao.class
 com/lihebin/manage/config/ScheduleConfig.class

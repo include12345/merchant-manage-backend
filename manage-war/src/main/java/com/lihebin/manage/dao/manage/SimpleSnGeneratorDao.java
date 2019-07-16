@@ -33,7 +33,7 @@ public class SimpleSnGeneratorDao {
     private static final Random random = new Random();
     private int retries = 3;
 
-    private String orderSnPrefix = "12345";
+    private String orderSnPrefix = "order";
 
     private static String[] permTables = {
             "2076943518",
@@ -56,7 +56,7 @@ public class SimpleSnGeneratorDao {
      * @return
      * @throws BackendRepeatException
      */
-    public String nextConsumerSn() throws BackendException {
+    public String nextOrderSn() throws BackendException {
         return orderSnPrefix + nextSn("table_name_sn_prefix", orderSnPrefix, 10);
     }
 
