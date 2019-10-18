@@ -38,6 +38,8 @@ CREATE TABLE IF NOT EXISTS `business`.`merchant_user` (
 
 
 
+
+
 -- -----------------------------------------------------
 -- Table `business`.`merchant_consumer`
 -- -----------------------------------------------------
@@ -164,3 +166,18 @@ CREATE TABLE `business`.`table_name_sn_prefix_12345` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `stub` (`stub`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+CREATE TABLE IF NOT EXISTS `sso`.`sso_user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(36) NOT NULL COMMENT '商户用户名',
+  `password` VARCHAR(64) NOT NULL COMMENT '商户登录密码',
+  `type` int(1) NOT NULL DEFAULT '1' COMMENT '用户类型 1:管理员 2:收银员',
+  `ctime` timestamp NULL COMMENT '开始时间',
+  `mtime` timestamp NULL COMMENT '最近一次更新时间',
+  `deleted` TINYINT(1) DEFAULT '0' COMMENT '',
+  `version` BIGINT(20) UNSIGNED NULL COMMENT '',
+  PRIMARY KEY (`id`) COMMENT '',
+  UNIQUE INDEX `username` (`username`))
+  ENGINE = InnoDB
+  COMMENT = '商户账户表';

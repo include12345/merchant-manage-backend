@@ -29,6 +29,7 @@ public class StringUtil {
     }
 
 
+
     public static String randomParam() {
         return (new Random().nextInt(899) + 100) + "";
     }

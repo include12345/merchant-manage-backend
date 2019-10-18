@@ -72,8 +72,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
 
-    private Order createOrder(OrderNew orderNew, long merchantId, String username) {
-        Order order = new Order();
-
-    }
+//    private Order createOrder(OrderNew orderNew, long merchantId, String username) {
+//        Order order = new Order();
+//
+//    }
 }

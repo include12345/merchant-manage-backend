@@ -4,9 +4,11 @@ com/lihebin/manage/bean/MerchantUpdate.class
 com/lihebin/manage/bean/ConsumerBalanceReCharge.class
 com/lihebin/manage/bean/MerchantConsumerAdd.class
 com/lihebin/manage/bean/Login.class
-com/lihebin/manage/bean/Order.class
+com/lihebin/manage/bean/OrderRes.class
 com/lihebin/manage/bean/Result.class
 com/lihebin/manage/service/MerchantService.class
+com/lihebin/manage/service/OrderService.class
+com/lihebin/manage/bean/OrderNew.class
 com/lihebin/manage/bean/MerchantConsumerUpdate.class
 com/lihebin/manage/bean/UserMessage.class
 com/lihebin/manage/bean/Code.class
@@ -14,5 +16,5 @@ com/lihebin/manage/bean/MerchantConsumerRes.class
 com/lihebin/manage/service/MerchantUserService.class
 com/lihebin/manage/bean/MerchantConsumerWalletRes.class
 com/lihebin/manage/bean/WalletTransactionRes.class
-com/lihebin/manage/bean/Transaction.class
+com/lihebin/manage/bean/TransactionRes.class
 com/lihebin/manage/bean/MerchantNew.class

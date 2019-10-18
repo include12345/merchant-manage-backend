@@ -21,8 +21,8 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        entityManagerFactoryRef = "entityManagerFactoryUser",
-        transactionManagerRef = "transactionManagerUser",
+        entityManagerFactoryRef = "entitySsoFactoryUser",
+        transactionManagerRef = "transactionSsoUser",
         basePackages = {"com.lihebin.manage.dao.user"}) //设置Repository所在位置
 public class UserJpaConfig {
 
@@ -34,20 +34,20 @@ public class UserJpaConfig {
 
     @Bean
     public EntityManager entityManager(EntityManagerFactoryBuilder builder) {
-        return entityManagerFactoryUser(builder).getObject().createEntityManager();
+        return entitySsoFactoryUser(builder).getObject().createEntityManager();
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryUser(EntityManagerFactoryBuilder builder) {
+    public LocalContainerEntityManagerFactoryBean entitySsoFactoryUser(EntityManagerFactoryBuilder builder) {
         return builder
-                .dataSource(userDataSource).packages("com.lihebin.manage.model")//设置实体类所在位置
+                .dataSource(userDataSource).packages("com.lihebin.manage.sso.model")//设置实体类所在位置
                 .properties(jpaUserProperties.getProperties())
                 .persistenceUnit("userPersistenceUnit")//持久化单元创建一个默认即可，多个便要分别命名
                 .build();
     }
 
     @Bean
-    public PlatformTransactionManager transactionManagerUser(EntityManagerFactoryBuilder builder) {
-        return new JpaTransactionManager(entityManagerFactoryUser(builder).getObject());
+    public PlatformTransactionManager transactionSsoUser(EntityManagerFactoryBuilder builder) {
+        return new JpaTransactionManager(entitySsoFactoryUser(builder).getObject());
     }
 }

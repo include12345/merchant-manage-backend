@@ -1,7 +1,7 @@
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/service/OrderService.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Code.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Login.java
-/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Order.java
-/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Transaction.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/OrderNew.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/UserMessage.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/Result.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/service/MerchantUserService.java
@@ -10,9 +10,11 @@
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/WalletTransactionRes.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumerWalletRes.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/ConsumerBalanceReCharge.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/OrderRes.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumerAdd.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumerRes.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantConsumerUpdate.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantUpdate.java
+/Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/TransactionRes.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/MerchantRes.java
 /Users/lihebin/github/merchant-manage-backend/manage-api/src/main/java/com/lihebin/manage/bean/LoginRes.java
